@@ -1,18 +1,18 @@
-import Navbar from "../components/Navbar";
-import Banner from "../sections/Banner";
-import Contact from "../sections/Contact/Contact";
-import Expertise from "../sections/Expertise";
-import Features from "../sections/Features";
-import Footer from "../sections/Footer";
-import Testimonials from "../sections/Testimonials";
-import ScrollToTopBtn from "./../components/ScrollToTopBtn/index";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { getFeatures } from "../services/features";
-import { getShowCases } from "../services/showCases";
-import { getExpertises } from "../services/expertises";
-import { getCustomers } from "../services/customers";
+import Navbar from '../components/Navbar';
+import Banner from '../sections/Banner';
+import Contact from '../sections/Contact/Contact';
+import Expertise from '../sections/Expertise';
+import Features from '../sections/Features';
+import Footer from '../sections/Footer';
+import Testimonials from '../sections/Testimonials';
+import ScrollToTopBtn from './../components/ScrollToTopBtn/index';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import { getFeatures } from '../services/features';
+import { getShowCases } from '../services/showCases';
+import { getExpertises } from '../services/expertises';
+import { getCustomers } from '../services/customers';
 
 const Home = () => {
 	useEffect(() => {
@@ -27,32 +27,32 @@ const Home = () => {
 			</header>
 			<main>
 				<Features
-					label="Services"
-					heading="Get your apps built for any device"
-					headingBody="You've got the idea, we've got the expertise. From a wide variety of frameworks and technologies, our company can help turn your idea into a reality. With constant changes happening in the digital world, it is vital to stay on top of developing technologies. We can make it happen for you."
+					label='Services'
+					heading='What I Offer'
+					headingBody='I help individuals, startups, and businesses transform ideas into real digital products. From concept to deployment, I design and build reliable, scalable, and modern applications using proven technologies and best practices.'
 					features={getFeatures()}
 					useAOS={true}
-					id="section-services"
+					id='section-services'
 				/>
 				<Expertise
-					heading="Common Technologies We Use"
+					heading='Technologies I Work With'
 					expertises={getExpertises()}
-					id="section-expertise"
+					id='section-expertise'
 				/>
 				<Features
-					label="Showcase"
-					heading="Why People Choose Us?"
-					headingBody="Our clients love how we always strive to fulfill their core needs. Here is what differentiates us from the rest."
+					label='Showcase'
+					heading='Why People Choose Me?'
+					headingBody='My clients love how I always strive to fulfill their core needs. Here is what differentiates me from the rest.'
 					features={getShowCases()}
 					useAOS={true}
-					id="section-showcase"
+					id='section-showcase'
 				/>
 				<Testimonials
-					heading="What our Customers are Saying"
-					headingBody="We are delighted to have such happy and satisfied customers."
+					heading='What my Customers are Saying'
+					headingBody='I am delighted to have such happy and satisfied customers.'
 					customers={getCustomers()}
 					useAOS={true}
-					id="section-testimonials"
+					id='section-testimonials'
 				/>
 				<Contact />
 			</main>

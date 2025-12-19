@@ -9,10 +9,22 @@
 	border-bottom: 2px solid #222;
 }
 
+.nav__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .nav__logo {
 	height: 45px;
+	width: 45px;
 	margin: 0;
 	margin-left: 3px;
+	margin-top: 1px;
+}
+
+.nav__header:hover :global(.logo__text) {
+	color: #fff;
 }
 
 .nav__list {
@@ -42,9 +54,10 @@
 	opacity: 0.5;
 	border: 2px solid #000;
 	border-radius: 5px;
-	padding: 0 5px;
 	cursor: pointer;
 	transition: all 0.3s;
+	margin-top: 7px;
+	margin-bottom: 0px;
 }
 
 .nav__toggler:hover {
@@ -54,6 +67,7 @@
 .navbar:global(.collapsible--expanded) .nav__toggler {
 	opacity: 1;
 	border: 2px solid #fff;
+	padding: 0 5px;
 }
 
 .navbar:global(.collapsible--expanded) .nav__toggler:hover {
@@ -89,10 +103,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-	.nav__logo {
-		height: 40px;
-	}
-
 	.navbar {
 		padding: 1rem;
 	}

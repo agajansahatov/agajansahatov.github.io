@@ -68,6 +68,7 @@ a:active {
 /* Grids */
 .grid {
 	display: grid;
+	align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -81,5 +82,20 @@ a:active {
 	.grid--1x3 {
 		/* Divide into 2 and give each child 1 slice */
 		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.logo__text {
+	font-family: 'Segoe Print', sans-serif;
+	font-style: bold;
+	color: #e2e0e8;
+	transition: color 0.3s;
+	padding-left: 10px;
+	display: none;
+}
+
+@media screen and (min-width: 275px) {
+	.logo__text {
+		display: inline;
 	}
 }

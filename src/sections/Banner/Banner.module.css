@@ -2,6 +2,7 @@
 	min-height: fit-content;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .banner__tagline {
@@ -24,12 +25,17 @@
 	}
 
 	.banner__image {
-		margin-top: 1rem;
+		margin-top: 0;
+		object-fit: scale-down;
+		min-height: 79%;
+		max-height: 80%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	.banner {
 		min-height: 96vh;
+		margin-top: 0;
+		padding-top: 20px;
 	}
 }
