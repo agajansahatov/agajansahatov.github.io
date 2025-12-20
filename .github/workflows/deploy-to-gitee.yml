@@ -1,0 +1,67 @@
+name: Build and Deploy dist to Gitee (portfolio)
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build (Vite)
+        run: npm run build
+
+      # Optional but recommended for SPA routing on static hosts
+      - name: Add 404 fallback (SPA)
+        run: |
+          if [ -f dist/index.html ]; then
+            cp dist/index.html dist/404.html
+          fi
+
+      - name: Push dist to Gitee repo (agajansahatov/portfolio)
+        env:
+          GITEE_DEPLOY_KEY: ${{ secrets.GITEE_DEPLOY_KEY }}
+        run: |
+          set -e
+
+          # Setup SSH
+          mkdir -p ~/.ssh
+          echo "$GITEE_DEPLOY_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan gitee.com >> ~/.ssh/known_hosts
+
+          # Prepare deploy folder
+          rm -rf out
+          mkdir out
+          cp -R dist/* out/
+
+          # Commit and force-push to Gitee
+          cd out
+          git init
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+          git add .
+          git commit -m "Deploy from GitHub $GITHUB_SHA"
+
+          git branch -M main
+          git remote add origin git@gitee.com:agajansahatov/portfolio.git
+          git push -f origin main
