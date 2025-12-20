@@ -90,6 +90,10 @@
 }
 
 @media screen and (min-width: 768px) {
+	.navbar {
+		margin-bottom: 0;
+	}
+
 	.nav__toggler {
 		display: none;
 	}
@@ -109,11 +113,17 @@
 
 	.nav__item {
 		border: 0;
-		padding: 1rem 2rem;
+		padding: 1rem 0.8rem;
 	}
 
 	.nav__item:last-child {
 		padding-right: 1rem;
+	}
+}
+
+@media screen and (min-width: 850px) {
+	.nav__item {
+		padding: 1rem 2rem;
 	}
 }
 

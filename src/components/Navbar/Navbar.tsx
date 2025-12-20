@@ -16,6 +16,16 @@ const Navbar = () => {
 			target: '_self',
 		},
 		{
+			label: 'Why me?',
+			link: '#section-showcase',
+			target: '_self',
+		},
+		{
+			label: 'Testimonials',
+			link: '#section-testimonials',
+			target: '_self',
+		},
+		{
 			label: 'Projects',
 			link: 'https://github.com/agajansahatov',
 			target: '_blank',
