@@ -52,13 +52,18 @@ const footerLinks = [
 		links: [
 			{ link: '/', label: 'Home', target: '_self' },
 			{
+				link: '#section-showcase',
+				label: 'Why Work With Me?',
+				target: '_self',
+			},
+			{
 				link: 'https://github.com/agajansahatov/',
-				label: 'GitHub Profile',
+				label: 'My GitHub Profile',
 				target: '_blank',
 			},
 			{
-				link: '#section-showcase',
-				label: 'Why Work With Me?',
+				link: 'mailto:agajansahatovofficial@gmail.com',
+				label: 'agajansahatovofficial@gmail.com',
 				target: '_self',
 			},
 		],

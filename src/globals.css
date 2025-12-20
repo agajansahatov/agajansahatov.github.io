@@ -84,18 +84,3 @@ a:active {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-
-.logo__text {
-	font-family: 'Segoe Print', sans-serif;
-	font-style: bold;
-	color: #e2e0e8;
-	transition: color 0.3s;
-	padding-left: 10px;
-	display: none;
-}
-
-@media screen and (min-width: 275px) {
-	.logo__text {
-		display: inline;
-	}
-}

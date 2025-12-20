@@ -23,7 +23,22 @@
 	margin-top: 1px;
 }
 
-.nav__header:hover :global(.logo__text) {
+.logo__text {
+	font-family: 'Segoe Print', sans-serif;
+	font-style: bold;
+	color: #e2e0e8;
+	transition: color 0.3s;
+	padding-left: 10px;
+	display: none;
+}
+
+@media screen and (min-width: 275px) {
+	.logo__text {
+		display: inline;
+	}
+}
+
+.nav__header:hover .logo__text {
 	color: #fff;
 }
 

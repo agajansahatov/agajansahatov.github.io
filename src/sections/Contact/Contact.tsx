@@ -1,10 +1,10 @@
-import Block from "../../components/Block";
-import Callout from "../../components/Callout";
-import styles from "./Contact.module.css";
+import Block from '../../components/Block';
+import Callout from '../../components/Callout';
+import styles from './Contact.module.css';
 
 const Contact = () => {
 	return (
-		<Block className={styles["section-contact"]}>
+		<Block className={styles['section-contact']} id='contact'>
 			<Callout />
 		</Block>
 	);

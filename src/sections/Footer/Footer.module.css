@@ -1,4 +1,4 @@
-/* Footer */
+/* Footer.module.css */
 .footer {
 	background: #1d1d1d;
 	padding-top: 12rem;
@@ -14,7 +14,7 @@
 .footer__heading {
 	text-transform: uppercase;
 	font-weight: 600;
-	font-size: 2.4rem;
+	font-size: 1.8rem;
 }
 
 .footer__toggler-container {
@@ -40,7 +40,7 @@
 }
 
 .footer__article :global(.list) {
-	font-size: 2.2rem;
+	font-size: 1.6rem;
 	margin: 0;
 	width: 100%;
 }
@@ -52,6 +52,8 @@
 .footer a {
 	color: #777;
 	transition: color 0.3s;
+	overflow-wrap: anywhere;
+	word-break: break-word;
 }
 
 .footer a:hover {
@@ -70,11 +72,23 @@
 }
 
 .footer__copyright {
-	font-size: 2.1rem;
+	font-size: 1.6rem;
 	color: #777;
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0.3rem 0;
+}
+
+@media screen and (min-width: 300px) {
+	.footer__copyright {
+		font-size: 2.1rem;
+	}
+	.footer__article :global(.list) {
+		font-size: 2.1rem;
+	}
+	.footer__heading {
+		font-size: 2.4rem;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -111,7 +125,7 @@
 	}
 
 	.footer__article :global(.list) {
-		font-size: 1.8rem;
+		font-size: 1.7rem;
 	}
 
 	.footer__heading {

@@ -22,7 +22,7 @@ const Banner = () => {
 							color='accent'
 							style='stretched'
 						>
-							Hire me
+							Get to know me
 						</Button>
 					</div>
 				</BlockHeader>

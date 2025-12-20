@@ -27,7 +27,7 @@ const Navbar = () => {
 			<Collapsible className={styles['navbar']} isHidden={true}>
 				<a aria-label='Güýmenje' className={styles['nav__header']} href='/'>
 					<img className={styles['nav__logo']} src={logo} alt='' />
-					<span className='logo__text'>Agajan Sahatov</span>
+					<span className={styles['logo__text']}>Agajan Sahatov</span>
 				</a>
 				<span>
 					<Icon

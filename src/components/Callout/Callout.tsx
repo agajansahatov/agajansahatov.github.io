@@ -89,7 +89,7 @@ const Callout = () => {
 						href='https://x.com/AgajanSahatov'
 						target='_blank'
 					>
-						<Icon name='twitter' color='white' className={styles['icon']} />
+						<Icon name='x' color='white' className={styles['icon']} />
 					</a>
 					<a
 						className={styles['contact-type']}
