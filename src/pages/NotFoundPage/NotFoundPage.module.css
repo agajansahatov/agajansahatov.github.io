@@ -1,0 +1,30 @@
+.page {
+	display: grid;
+	place-items: center;
+	min-height: calc(100vh - 100px);
+	padding: 2rem;
+
+	background: var(--color-background);
+	color: var(--color-foreground);
+}
+
+.container {
+	text-align: center;
+	max-width: 60rem;
+}
+
+.title {
+	margin-bottom: 1rem;
+}
+
+.link {
+	display: inline-block;
+	margin-top: 1rem;
+	text-decoration: underline;
+	font-weight: 500;
+	transition: opacity 0.2s ease;
+}
+
+.link:hover {
+	opacity: 0.7;
+}

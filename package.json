@@ -1,31 +1,45 @@
 {
-  "name": "agajansahatov",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@types/aos": "^3.0.4",
-    "aos": "^2.3.4",
-    "clipboard": "^2.0.11",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "typescript": "^5.0.2",
-    "vite": "^7.2.7"
-  }
+	"name": "portfolio",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "node scripts/generate-ie11-fallback.mjs && vite",
+		"build": "node scripts/fetch-github-contributions.mjs && node scripts/generate-ie11-fallback.mjs && tsc -b && vite build",
+		"generate:ie11-fallback": "node scripts/generate-ie11-fallback.mjs",
+		"lint": "eslint .",
+		"preview": "vite preview",
+		"typecheck": "tsc -b --noEmit",
+		"format": "prettier --write \"src/**/*.{ts,tsx}\"",
+		"check": "npm run lint && npm run typecheck && npm run build"
+	},
+	"dependencies": {
+		"aos": "^2.3.4",
+		"clipboard": "^2.0.11",
+		"clsx": "^2.1.1",
+		"jotai": "^2.20.0",
+		"normalize.css": "^8.0.1",
+		"react": "^19.2.6",
+		"react-dom": "^19.2.6",
+		"react-hot-toast": "^2.6.0",
+		"react-icons": "^5.6.0",
+		"react-router-dom": "^7.15.1",
+		"zod": "^4.4.3"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@types/aos": "^3.0.8",
+		"@types/node": "^25.9.1",
+		"@types/react": "^19.2.14",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^6.0.1",
+		"eslint": "^10.3.0",
+		"eslint-plugin-react-hooks": "^7.1.1",
+		"eslint-plugin-react-refresh": "^0.5.2",
+		"globals": "^17.6.0",
+		"prettier": "^3.8.3",
+		"typescript": "~6.0.2",
+		"typescript-eslint": "^8.59.2",
+		"vite": "^8.0.12"
+	}
 }

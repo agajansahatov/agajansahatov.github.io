@@ -1,0 +1,165 @@
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+
+.heading {
+	margin: 0;
+}
+
+.subheading {
+	margin: 1rem auto 0;
+	max-width: 900px;
+	line-height: 1.7;
+	opacity: 0.9;
+}
+
+.formCard {
+	max-width: 860px;
+	margin: 0 auto;
+	background: var(--color-background-strong-inverted);
+}
+
+/* custom header content */
+.cardHeader {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+}
+
+.cardTitle {
+	margin: 0;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.grid {
+	gap: 1.4rem;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.fieldFull {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+.label {
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	color: var(--color-foreground-strong-inverted);
+}
+
+.input {
+	/* IMPORTANT: make inputs/select full-width so wrappers don't shrink */
+	width: 100%;
+	display: block;
+
+	border-radius: 14px;
+	border: 2px solid var(--color-background-strong-inverted);
+	background: var(--color-background-medium-inverted);
+	color: var(--color-foreground-strong-inverted);
+	padding: 1.2rem;
+	font-size: 1.6rem;
+	outline: none;
+	transition:
+		border-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.input:focus {
+	border-color: var(--color-foreground-inverted);
+	transform: translateY(-1px);
+}
+
+.textarea {
+	resize: vertical;
+	min-height: 160px;
+	line-height: 1.6;
+}
+
+.error {
+	margin: 0;
+	color: var(--color-warning);
+	font-weight: 700;
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.hint {
+	margin: 0;
+	opacity: 0.85;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* --- Select (proper custom chevron) --- */
+
+.selectWrap {
+	position: relative;
+	width: 100%;
+}
+
+/* remove native arrow everywhere */
+.select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background-image: none;
+
+	/* space for icon */
+	padding-right: 4.4rem;
+
+	/* normalizes inner alignment a bit */
+	line-height: 1.2;
+}
+
+/* IE/old Edge */
+.select::-ms-expand {
+	display: none;
+}
+
+.selectIcon {
+	position: absolute;
+	right: 1.4rem;
+	top: 50%;
+	transform: translateY(-50%);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	pointer-events: none;
+	opacity: 0.9;
+
+	/* keep it consistent */
+	font-size: 2.2rem;
+	color: var(--color-foreground-strong-inverted);
+}
+
+.selectWrap:focus-within .selectIcon {
+	opacity: 1;
+}
+
+@media screen and (min-width: 900px) {
+	.input {
+		font-size: 1.8rem;
+	}
+}

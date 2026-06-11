@@ -1,33 +1,41 @@
-import { ReactNode } from "react";
-import styles from "./Block.module.css";
+import type { ReactNode } from 'react';
+import styles from './Block.module.css';
 
 interface Props {
-	color?: "light" | "dark";
-	direction?: "left" | "right";
-	children: ReactNode;
-	className?: string;
 	id?: string;
+	variant?: 'default' | 'inverted';
+	direction?: 'left' | 'right';
+	className?: string;
+	style?: React.CSSProperties;
+	children: ReactNode;
+	containerClassName?: string;
 }
 
 // When Block component is used, it's better to pass BlockHeader as its child.
 const Block = ({
-	color = "light",
+	variant = 'default',
 	direction,
 	children,
 	className,
+	style,
+	containerClassName,
 	id,
 }: Props) => {
 	const idAttr = id ? { id: id } : {};
 
-	let classNames = [styles["block"]];
-	if (color === "dark") {
-		classNames.push(styles["block--dark"]);
-		classNames.push(styles[`block--skewed-${direction}`]);
+	const classNames = [styles['block']];
+
+	if (variant === 'inverted') {
+		classNames.push(styles['block--inverted']);
+		if (direction) {
+			classNames.push(styles[`block--skewed-${direction}`]);
+		}
 	}
+
 	if (className) classNames.push(className);
 	return (
-		<section className={classNames.join(" ")} {...idAttr}>
-			<div className={styles["container"]}>{children}</div>
+		<section className={classNames.join(' ')} {...idAttr} style={style}>
+			<div className={`container ${containerClassName ?? ''}`}>{children}</div>
 		</section>
 	);
 };

@@ -1,0 +1,53 @@
+.collapsible {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin: 0;
+	padding-top: 1rem;
+	padding-bottom: 0;
+}
+
+.collapsible__header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: -0.5rem;
+	color: var(--color-foreground-strong);
+	font-weight: 600;
+}
+
+.collapsible__heading {
+	margin: 0;
+	font-size: 2.4rem;
+	font-weight: inherit;
+	color: inherit;
+}
+
+.collapsible__chevron {
+	display: inline-grid;
+	place-items: center;
+	border: 0;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.collapsible--expanded .collapsible__chevron {
+	transform: rotate(90deg);
+}
+
+.collapsible__content {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+	max-height: 100vh;
+	opacity: 1;
+	padding-bottom: 2px;
+}

@@ -1,41 +1,289 @@
+/* ---------------------------
+   Default theme (LIGHT)
+
+   app colors:
+   - blue: #057efe;
+   - yellow: #fec200;
+   - red: #ec0002;
+   - green: #00ff0c;
+   --------------------------- */
 :root {
-	--color-primary: #2584ff;
-	--color-secondary: #00d9ff;
-	--color-accent: #ff3400;
-	--color-headings: #1b0760;
-	--color-body: #918ca4;
-	--color-body-darker: #5c5577;
-	--color-border: #ccc;
-	--border-radius: 30px;
-	--iconWidth: 52px;
-	--iconHeight: 52px;
+	--color-background: #fff;
+	--color-background-medium: #f5f5f5;
+	--color-footer-background: var(--color-background-medium);
+	--color-background-strong: #e5e5e5;
+
+	--color-background-inverted: #1c1c1c;
+	--color-background-medium-inverted: #222222;
+	--color-background-strong-inverted: #444;
+
+	--color-foreground: #797391;
+	--color-foreground-strong: #11043f;
+
+	--color-foreground-inverted: #b9c3cf;
+	--color-foreground-strong-inverted: #fff;
+
+	--color-light: #f1f1f1;
+	--color-light-content: #303030;
+
+	--color-dark: #303030;
+	--color-dark-content: #f1f1f1;
+
+	--color-primary: #003cff;
+	--color-primary-content: #fff;
+	--color-primary-content-darker: #f1f1f1;
+	--color-primary-hover: #05258c;
+
+	--color-secondary: #fd00fc;
+	--color-secondary-content: #000;
+	--color-secondary-hover: #db00fd;
+
+	--color-accent: #ec0002;
+	--color-accent-content: #fff;
+	--color-accent-hover: #c00000;
+
+	--color-success: #00ff0c;
+	--color-success-content: #000;
+	--color-success-hover: #005f18;
+
+	--color-danger: #600;
+	--color-danger-content: #fff;
+	--color-danger-hover: #634747;
+
+	--color-warning: #fec200;
+	--color-warning-content: #000;
+	--color-warning-hover: #ff8c00;
+
+	--color-info: #00fff6;
+	--color-info-content: #000;
+	--color-info-hover: #00d4cc;
+
+	--color-overlay: rgba(0, 0, 0, 0.6);
+
+	--color-shadow: rgba(0, 0, 0, 0.08);
+	--color-shadow-inverted: rgba(255, 255, 255, 0.08);
+
+	/* Scrollbars (WebKit); dark overrides in html[data-theme='dark'] */
+	--scrollbar-width: 12px;
+	--scrollbar-button-height: 13px;
+	--scrollbar-arrow-color: rgba(0, 0, 0, 0.52);
+	--scrollbar-gutter-background: var(--color-background-medium);
+	--scrollbar-track-background: var(--color-background-strong);
+	--scrollbar-thumb-background: rgba(0, 0, 0, 0.22);
+	--scrollbar-thumb-border: #c8c8c8;
+	--scrollbar-thumb-hover-background: rgba(0, 0, 0, 0.35);
+
+	--min-width: 150px !important;
+
+	/* Shared fixed navbar height */
+	--app-topbar-height: 52px;
+
+	/*
+	 * Supporting copy under labels (form hints, radio descriptions, helper lines).
+	 * `em` scales with the surrounding UI font (e.g. modal body inherits from `body`).
+	 */
+	--font-size-ui-supporting: 0.82em;
+	--line-height-ui-supporting: 1.4;
 }
 
+/* Tell the browser this is a light UI by default */
+html {
+	color-scheme: light;
+}
+
+/* ---------------------------
+   Dark theme overrides
+   (enabled by: <html data-theme="dark">)
+   --------------------------- */
+html[data-theme='dark'] {
+	--color-background: #1c1c1c;
+	--color-background-medium: #222222;
+	--color-background-strong: #444;
+
+	--color-background-inverted: #fff;
+	--color-background-medium-inverted: #f5f5f5;
+	--color-background-strong-inverted: #e5e5e5;
+
+	--color-foreground: #b9c3cf;
+	--color-foreground-strong: #fff;
+
+	--color-foreground-inverted: #797391;
+	--color-foreground-strong-inverted: #11043f;
+
+	--color-overlay: rgba(0, 0, 0, 0.5);
+
+	--color-shadow: rgba(255, 255, 255, 0.07);
+	--color-shadow-inverted: rgba(0, 0, 0, 0.08);
+
+	--scrollbar-gutter-background: var(--color-background);
+	--scrollbar-track-background: var(--color-background-medium);
+	--scrollbar-thumb-background: rgba(255, 255, 255, 0.7);
+	--scrollbar-thumb-border: var(--color-background-medium);
+	--scrollbar-thumb-hover-background: #fff;
+	--scrollbar-arrow-color: rgba(255, 255, 255, 0.78);
+
+	color-scheme: dark;
+}
+
+/* Optional explicit light mode when: <html data-theme="light"> */
+html[data-theme='light'] {
+	color-scheme: light;
+	--scrollbar-gutter-background: var(--color-background-medium);
+	--scrollbar-track-background: var(--color-background-strong);
+	--scrollbar-thumb-background: rgba(0, 0, 0, 0.22);
+	--scrollbar-thumb-border: #c8c8c8;
+	--scrollbar-thumb-hover-background: rgba(0, 0, 0, 0.35);
+	--scrollbar-arrow-color: rgba(0, 0, 0, 0.52);
+}
+
+/* ---------------------------
+   Base styles
+   --------------------------- */
 *,
 *::after,
 *::before {
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
+	padding: 0;
+	margin: 0;
 }
 
 html {
 	scroll-behavior: smooth;
+	font-size: 62.5%;
 }
 
 html,
 body {
-	overflow-x: hidden !important;
-	max-width: 100%;
+	max-width: 100vw;
+	min-width: var(--min-width);
+	/* overflow-x: hidden !important; */
+	z-index: 1;
+	box-sizing: border-box;
+	overflow-x: clip;
 }
 
-img {
-	width: 100%;
+#root {
+	overflow-x: clip;
+}
+@supports not (overflow-x: clip) {
+	html,
+	body {
+		overflow-x: hidden;
+	}
+}
+
+body {
+	position: relative;
+	/* Fixed navbar + body offset */
+	--navbar-height: calc(var(--app-topbar-height) + 10px);
+	color: var(--color-foreground);
+	background: var(--color-background-medium);
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-top: var(--navbar-height);
+	font-weight: normal;
+	line-height: 1.3;
+	font-size: 1.4rem;
+}
+
+h1 {
+	font-size: 4rem;
+}
+
+h2 {
+	font-size: 3rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+	margin-top: 0;
+	margin-bottom: 2rem;
+	line-height: 1.1;
+	color: var(--color-foreground-strong);
+}
+
+@media screen and (min-width: 400px) {
+	body {
+		font-size: 1.6rem;
+	}
+
+	h1 {
+		font-size: 4.5rem;
+	}
+
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	h3 {
+		font-size: 1.8rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 1.8rem;
+	}
+
+	h1 {
+		font-size: 4.5rem;
+	}
+
+	h2 {
+		font-size: 3.5rem;
+	}
+
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	body {
+		font-size: 2rem;
+	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 3.7rem;
+	}
+
+	h3 {
+		font-size: 2.2rem;
+	}
+}
+
+li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
 
 a {
+	color: inherit;
 	text-decoration: none;
 	display: inline-block;
-	color: inherit;
 }
 
 a:focus,
@@ -44,43 +292,239 @@ a:active {
 	outline: none;
 }
 
-/* Scrolbar */
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.word-break {
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+::selection {
+	background: #baff00;
+	color: #000;
+}
+
+/* Scrollbar (WebKit/Chromium; theme via --scrollbar-* on :root / html) */
 *::-webkit-scrollbar {
-	width: 10px;
-	background: #000;
+	width: var(--scrollbar-width);
+	height: var(--scrollbar-width);
+	background: var(--scrollbar-gutter-background);
+}
+
+*::-webkit-scrollbar-corner {
+	background: var(--scrollbar-gutter-background);
 }
 
 *::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background: #393939;
+	border-radius: 6px;
+	background: var(--scrollbar-track-background);
 }
 
 *::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background: rgba(255, 255, 255, 0.7);
-	border: 1px solid #393939;
+	border-radius: 6px;
+	background: var(--scrollbar-thumb-background);
+	border: 1px solid var(--scrollbar-thumb-border);
 }
 
 *::-webkit-scrollbar-thumb:hover {
-	background: #fff;
+	background: var(--scrollbar-thumb-hover-background);
 }
 
-/* Grids */
+/*
+ * Arrow buttons (WebKit only). Scrollbar chrome appears only when the element
+ * actually overflows (`overflow: auto` / default viewport scroll).
+ * SVG uses fill="currentColor" so triangles follow --scrollbar-arrow-color.
+ */
+*::-webkit-scrollbar-button:vertical:start:increment,
+*::-webkit-scrollbar-button:vertical:end:decrement,
+*::-webkit-scrollbar-button:horizontal:start:increment,
+*::-webkit-scrollbar-button:horizontal:end:decrement {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+*::-webkit-scrollbar-button:vertical:start:decrement,
+*::-webkit-scrollbar-button:vertical:end:increment {
+	display: block;
+	width: var(--scrollbar-width);
+	height: var(--scrollbar-button-height);
+	color: var(--scrollbar-arrow-color);
+	background-color: var(--scrollbar-track-background);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 8px 5px;
+}
+
+*::-webkit-scrollbar-button:vertical:start:decrement {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='currentColor' d='M5 0L10 6H0z'/%3E%3C/svg%3E");
+}
+
+*::-webkit-scrollbar-button:vertical:end:increment {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath fill='currentColor' d='M0 0h10L5 6z'/%3E%3C/svg%3E");
+}
+
+*::-webkit-scrollbar-button:horizontal:start:decrement,
+*::-webkit-scrollbar-button:horizontal:end:increment {
+	display: block;
+	width: var(--scrollbar-button-height);
+	height: var(--scrollbar-width);
+	color: var(--scrollbar-arrow-color);
+	background-color: var(--scrollbar-track-background);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 5px 8px;
+}
+
+*::-webkit-scrollbar-button:horizontal:start:decrement {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 10'%3E%3Cpath fill='currentColor' d='M0 5l6-5v10z'/%3E%3C/svg%3E");
+}
+
+*::-webkit-scrollbar-button:horizontal:end:increment {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 6 10'%3E%3Cpath fill='currentColor' d='M6 5L0 0v10z'/%3E%3C/svg%3E");
+}
+
+*::-webkit-scrollbar-button:vertical:start:decrement:hover,
+*::-webkit-scrollbar-button:vertical:end:increment:hover,
+*::-webkit-scrollbar-button:horizontal:start:decrement:hover,
+*::-webkit-scrollbar-button:horizontal:end:increment:hover {
+	filter: brightness(0.9);
+}
+
+/* Grid */
 .grid {
 	display: grid;
-	align-items: center;
 }
 
+/* Columns (no breakpoint) */
+.grid--cols-1 {
+	grid-template-columns: repeat(1, 1fr);
+}
+.grid--cols-2 {
+	grid-template-columns: repeat(2, 1fr);
+}
+.grid--cols-3 {
+	grid-template-columns: repeat(3, 1fr);
+}
+.grid--cols-4 {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* Breakpoint wrappers */
 @media screen and (min-width: 768px) {
-	.grid--1x2 {
-		/* Divide into 2 and give each child 1 slice */
+	.md\:.grid {
+		display: grid;
+	}
+	.md\:grid--cols-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.md\:grid--cols-2 {
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.md\:grid--cols-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.md\:grid--cols-4 {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.grid--1x3 {
-		/* Divide into 2 and give each child 1 slice */
+	.lg\:.grid {
+		display: grid;
+	}
+	.lg\:grid--cols-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.lg\:grid--cols-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.lg\:grid--cols-3 {
 		grid-template-columns: repeat(3, 1fr);
 	}
+	.lg\:grid--cols-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media screen and (min-width: 1600px) {
+	.xl\:.grid {
+		display: grid;
+	}
+	.xl\:grid--cols-1 {
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.xl\:grid--cols-2 {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.xl\:grid--cols-3 {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	.xl\:grid--cols-4 {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+/* container */
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+@media screen and (min-width: 440px) {
+	.container {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.container {
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.container {
+		padding-left: 7rem;
+		padding-right: 7rem;
+	}
+}
+
+/* Underline beautiful hover effect */
+
+.link-underline {
+	position: relative;
+	width: fit-content;
+	box-sizing: border-box;
+}
+
+.link-underline::after {
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	left: 50%;
+	bottom: -2px;
+	width: 0;
+	height: 1px;
+	border-bottom: 2px solid currentColor;
+	transform: translateX(-50%);
+	transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+	width: 100%;
 }

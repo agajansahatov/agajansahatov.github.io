@@ -1,0 +1,59 @@
+.card {
+	max-width: 700px;
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+@media screen and (min-width: 250px) {
+	.header {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.title {
+	margin: 0;
+	/* let h3 sizing come from globals */
+}
+
+.desc {
+	line-height: 1.6;
+}
+
+.actions {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ButtonLink already has margin: 1rem 0; remove that spacing inside cards */
+.actionBtn {
+	margin: 0 !important;
+}
+
+/* Make icon buttons visually align with the pill buttons */
+.iconBtn {
+	/* override IconButton's small padding so it matches button height better */
+	padding: 0.8rem !important;
+}
+
+/* Make the SVG a bit larger (Button text is big on md+) */
+.iconBtn svg {
+	width: 26px;
+	height: 26px;
+}
+
+/* Optional note text */
+.note {
+	margin-top: 1.2rem;
+	opacity: 0.9;
+	line-height: 1.6;
+}

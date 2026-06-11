@@ -1,0 +1,37 @@
+.logo {
+	display: inline-flex;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+}
+
+.logo__icon {
+	height: 45px;
+	margin: 0;
+	margin-left: 3px;
+}
+
+.logo__title {
+	margin-left: 10px;
+	color: var(--color-foreground-strong);
+	font-family: 'Segoe Print', sans-serif;
+	font-weight: normal;
+	font-size: 1.4rem;
+	transition: color 0.3s;
+}
+
+@media screen and (min-width: 1024px) {
+	.logo__title {
+		font-size: 1.6rem;
+	}
+}
+
+.logo__title--hideable {
+	display: none;
+}
+
+@media screen and (min-width: 300px) {
+	.logo__title--hideable {
+		display: block;
+	}
+}

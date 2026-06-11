@@ -1,0 +1,130 @@
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 2.4rem;
+}
+
+.heading {
+	margin: 0;
+	padding-top: 2rem !important;
+	padding-bottom: 2rem !important;
+}
+
+/* Address section styles (unchanged) */
+.addressCn {
+	margin: 0rem 0 2rem;
+	opacity: 0.9;
+}
+
+.mapWrap {
+	margin-top: 1.6rem;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 0 18px 6px var(--color-shadow);
+	background: var(--color-background-medium);
+}
+
+.map {
+	width: 100%;
+	height: 260px;
+	border: 0;
+	display: block;
+}
+
+.mapNote {
+	margin: 1rem 0 0;
+	opacity: 0.85;
+	line-height: 1.5;
+}
+
+.contactMethods {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+/* phone/email body */
+.contactBody {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+}
+
+.lead {
+	margin: 0;
+	line-height: 1.6;
+	opacity: 0.9;
+}
+
+.meta {
+	margin: 0;
+	line-height: 1.6;
+	opacity: 0.85;
+}
+
+.kvList {
+	display: grid;
+	gap: 1rem;
+}
+
+.kvRow {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 1.2rem;
+	padding-bottom: 0.8rem;
+	border-bottom: 1px solid var(--color-background-strong);
+}
+
+.kvKey {
+	font-weight: 700;
+	opacity: 0.95;
+}
+
+.kvValueWrap {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 0.6rem;
+	min-width: 0;
+}
+
+.kvValue {
+	font-weight: 700;
+	color: var(--color-foreground-strong);
+	text-align: right;
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-break: break-word;
+	line-height: 1.1;
+}
+
+/* Inline copy button: make it small, subtle, and aligned */
+.copyBtn {
+	/* your IconButton has padding: 4px, keep it compact */
+	padding: 4px !important;
+	border-radius: 10px !important;
+}
+
+/* make the icon size balanced with text */
+.copyBtn svg {
+	width: 20px;
+	height: 20px;
+}
+
+@media screen and (max-width: 520px) {
+	.kvRow {
+		grid-template-columns: 1fr;
+	}
+
+	.kvValueWrap {
+		justify-content: flex-start;
+	}
+
+	.kvValue {
+		text-align: left;
+	}
+}

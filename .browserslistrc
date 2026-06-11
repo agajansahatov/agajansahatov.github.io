@@ -1,0 +1,4 @@
+# SPA (Vite + React 19): evergreen browsers. IE 11 is not a transpile target;
+# it gets the static fallback in public/ie11-fallback.js instead of the app bundle.
+defaults
+not op_mini all

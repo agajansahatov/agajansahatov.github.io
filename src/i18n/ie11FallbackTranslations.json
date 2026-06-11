@@ -1,0 +1,79 @@
+{
+	"languageOptions": {
+		"tk": "Türkmen",
+		"tr": "Türkçe",
+		"en": "English",
+		"zh": "中文",
+		"ru": "Русский"
+	},
+	"tk": {
+		"pageTitle": "Brauzer goldanmaýar – Agajan Sahatow",
+		"title": "Agajan Sahatow portfeli — brauzer goldanmaýar",
+		"lead": "Bu programma Internet Explorer goldamaýan tehnologiýalary ulanyýar (meselem, ES modullary we häzirki React wersiýasy). Agajan Sahatow portfelini täze brauzerde açyň.",
+		"browsers": {
+			"edge": "Microsoft Edge (Windows-da maslahat berilýär)",
+			"chromeFirefox": "Google Chrome ýa-da Mozilla Firefox",
+			"safari": "macOS ýa-da iOS-de Safari"
+		},
+		"getEdge": "Microsoft Edge al",
+		"browseHappy": "Browse Happy",
+		"footnote": "Eger kompýuteriňiz merkezi dolandyrylýan bolsa, administratoryňyzdan täze brauzeri ulanmaga rugsat bermegini ýa-da Microsoft Edge gurnamagyny haýyş ediň.",
+		"languageLabel": "Dil"
+	},
+	"tr": {
+		"pageTitle": "Tarayıcı desteklenmiyor – Ağacan Sahatov",
+		"title": "Ağacan Sahatov portföyü — tarayıcı desteklenmiyor",
+		"lead": "Bu uygulama Internet Explorer'ın desteklemediği teknolojiler kullanır (örneğin ES modülleri ve güncel React sürümü). Lütfen Ağacan Sahatov portföyünü güncel bir tarayıcıda açın.",
+		"browsers": {
+			"edge": "Microsoft Edge (Windows'ta önerilir)",
+			"chromeFirefox": "Google Chrome veya Mozilla Firefox",
+			"safari": "macOS veya iOS'ta Safari"
+		},
+		"getEdge": "Microsoft Edge'i indir",
+		"browseHappy": "Browse Happy",
+		"footnote": "Yönetilen bir bilgisayar kullanıyorsanız, yöneticinizden modern bir tarayıcıya izin vermesini veya Microsoft Edge yüklemesini isteyin.",
+		"languageLabel": "Dil"
+	},
+	"en": {
+		"pageTitle": "Browser not supported – Agajan Sahatov",
+		"title": "Agajan Sahatov's Portfolio — browser not supported",
+		"lead": "This application uses technology that Internet Explorer does not support (for example ES modules and the current React runtime). Please open Agajan Sahatov's Portfolio in a recent browser.",
+		"browsers": {
+			"edge": "Microsoft Edge (recommended on Windows)",
+			"chromeFirefox": "Google Chrome or Mozilla Firefox",
+			"safari": "Safari on macOS or iOS"
+		},
+		"getEdge": "Get Microsoft Edge",
+		"browseHappy": "Browse Happy",
+		"footnote": "If you are on a managed PC, ask your administrator to allow a modern browser or to install Microsoft Edge.",
+		"languageLabel": "Language"
+	},
+	"zh": {
+		"pageTitle": "浏览器不受支持 – 阿哥战",
+		"title": "阿哥战作品集 — 浏览器不受支持",
+		"lead": "本应用使用了 Internet Explorer 不支持的技术（例如 ES 模块和当前的 React 运行时）。请在较新的浏览器中打开阿哥战作品集。",
+		"browsers": {
+			"edge": "Microsoft Edge（推荐在 Windows 上使用）",
+			"chromeFirefox": "Google Chrome 或 Mozilla Firefox",
+			"safari": "macOS 或 iOS 上的 Safari"
+		},
+		"getEdge": "获取 Microsoft Edge",
+		"browseHappy": "Browse Happy",
+		"footnote": "如果您使用的是受管控的电脑，请向管理员申请允许使用现代浏览器或安装 Microsoft Edge。",
+		"languageLabel": "语言"
+	},
+	"ru": {
+		"pageTitle": "Браузер не поддерживается – Агаджан Сахатов",
+		"title": "Портфолио Агаджана Сахатова — браузер не поддерживается",
+		"lead": "Это приложение использует технологии, которые Internet Explorer не поддерживает (например, ES-модули и текущую версию React). Откройте портфолио Агаджана Сахатова в современном браузере.",
+		"browsers": {
+			"edge": "Microsoft Edge (рекомендуется в Windows)",
+			"chromeFirefox": "Google Chrome или Mozilla Firefox",
+			"safari": "Safari в macOS или iOS"
+		},
+		"getEdge": "Скачать Microsoft Edge",
+		"browseHappy": "Browse Happy",
+		"footnote": "Если вы используете управляемый компьютер, попросите администратора разрешить современный браузер или установить Microsoft Edge.",
+		"languageLabel": "Язык"
+	}
+}

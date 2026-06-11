@@ -1,0 +1,24 @@
+.iconButton {
+	cursor: pointer;
+	padding: 4px;
+	transition: all 0.3s;
+	background: transparent;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	align-items: center;
+	justify-content: center;
+	opacity: 0.8;
+	color: var(--color-foreground-strong);
+	display: inline-flex;
+}
+
+.iconButton:hover,
+.iconButton:focus-visible {
+	opacity: 1;
+	border-color: var(--color-foreground);
+}
+
+.iconButton:active {
+	transform: scale(0.96);
+	border-color: var(--color-foreground);
+}

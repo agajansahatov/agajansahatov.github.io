@@ -1,22 +1,44 @@
-import styles from "./Icon.module.css";
-import Icons from "../../assets/icons.svg";
+import type { ComponentType } from 'react';
+import type { SkinVariant } from '../types';
+import styles from './Icon.module.css';
 
 interface Props {
+	icon: ComponentType | string;
+	variant?: SkinVariant;
 	className?: string;
-	color: "primary" | "accent" | "white";
-	size?: "small";
-	name: string;
+	isSmall?: boolean;
+	/** Overrides variant foreground color (e.g. brand icon colors). */
+	foregroundColor?: string;
 }
 
-const Icon = ({ className, color = "primary", size, name }: Props) => {
-	let classNames = [styles["icon"], styles[`icon--${color}`]];
-	if (size) classNames.push(styles["icon--small"]);
+const Icon = ({
+	icon,
+	variant = 'default',
+	className = '',
+	isSmall = false,
+	foregroundColor,
+}: Props) => {
+	const classNames = [styles.icon];
+	if (variant) classNames.push(styles[`icon--${variant}`]);
 	if (className) classNames.push(className);
+	if (isSmall) classNames.push(styles['icon--small']);
+
+	const isImage = typeof icon === 'string';
 
 	return (
-		<svg className={classNames.join(" ")}>
-			<use xlinkHref={`${Icons}#${name}`}></use>
-		</svg>
+		<span
+			className={classNames.join(' ')}
+			style={foregroundColor ? { color: foregroundColor } : undefined}
+		>
+			{isImage ? (
+				<img src={icon} alt='' className={styles.icon__image} />
+			) : (
+				(() => {
+					const IconComponent = icon;
+					return <IconComponent />;
+				})()
+			)}
+		</span>
 	);
 };
 

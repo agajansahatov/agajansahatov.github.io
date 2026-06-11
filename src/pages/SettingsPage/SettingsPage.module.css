@@ -1,0 +1,32 @@
+.page {
+	min-height: calc(70dvh - var(--navbar-height));
+	background: var(--color-background-medium);
+}
+
+.header {
+	display: grid;
+	gap: 1rem;
+	max-width: 78rem;
+	margin: 0 auto 2.4rem;
+	text-align: center;
+}
+
+.header p {
+	color: var(--color-foreground);
+}
+
+.cardDescription {
+	color: var(--color-primary-content);
+	opacity: 0.92;
+}
+
+.card {
+	max-width: 72rem;
+	margin: 0 auto;
+}
+
+.cardTitle {
+	margin-bottom: 0.8rem;
+	font-size: 2.4rem;
+}
+

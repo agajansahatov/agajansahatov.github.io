@@ -1,0 +1,47 @@
+.section__pricing {
+	padding-top: 5rem;
+	padding-bottom: 7rem;
+}
+
+.section__heading {
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 1.2rem;
+}
+
+.section__tagline {
+	max-width: 720px;
+	margin: 0 auto 5rem;
+	text-align: center;
+	font-size: 1.7rem;
+	line-height: 1.7;
+	color: var(--color-foreground);
+}
+
+.plans {
+	gap: 4rem 2rem;
+	justify-items: center;
+}
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	margin: auto;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.button:hover {
+	transform: scale(1.02);
+}
+
+.button__icon {
+	transition: transform 0.3s ease;
+}
+
+.button:hover .button__icon {
+	transform: translateX(5px);
+}

@@ -1,6 +1,5 @@
-import Icon from "../Icon";
-import styles from "./Quote.module.css";
-import Media from "./../Media/index";
+import Media from '../Media';
+import styles from './Quote.module.css';
 
 interface Props {
 	author: string;
@@ -9,19 +8,18 @@ interface Props {
 }
 
 const Quote = ({ author, children, company }: Props) => {
-	const mediaImage = (
-		<Icon name="line" color="primary" className={styles["quote__line"]} />
-	);
+	const mediaImage = <span className={styles['quote__line']} aria-hidden />;
 
 	return (
-		<blockquote className={styles["quote"]}>
-			<p className={styles["quote__text"]}>{children}</p>
+		<blockquote className={styles.quote}>
+			<p className={styles['quote__text']}>{children}</p>
 			<div>
 				<Media
 					image={mediaImage}
 					title={author}
-					titleStyles={styles["quote__author"]}>
-					<p className={styles["quote__company"]}>{company}</p>
+					titleStyles={styles['quote__author']}
+				>
+					<p className={styles['quote__company']}>{company}</p>
 				</Media>
 			</div>
 		</blockquote>

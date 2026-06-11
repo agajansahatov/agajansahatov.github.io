@@ -1,57 +1,96 @@
-:global(.icon-container) {
+.icon {
+	--size: 52px;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-	width: var(--iconWidth);
-	height: var(--iconHeight);
+	width: var(--size);
+	height: var(--size);
+	min-width: var(--size);
+	font-size: calc(var(--size) - 30px);
 	border-radius: 100%;
-	background: #f3f9fa;
 	overflow: hidden;
-}
-
-.icon-container--accent {
-	background: var(--color-accent);
-}
-
-.icon-container--dark {
-	background: #1d1d1d;
-}
-
-.icon {
-	width: calc(var(--iconWidth) - 17px);
-	height: calc(var(--iconHeight) - 17px);
+	flex-shrink: 0;
 }
 
 .icon--small {
-	width: calc(var(--iconWidth) - 36px);
-	height: calc(var(--iconHeight) - 36px);
+	--size: 40px;
+	font-size: calc(var(--size) - 20px);
 }
 
-.icon--primary {
-	fill: var(--color-primary);
-}
-
-.icon--accent {
-	fill: var(--color-accent);
-}
-
-.icon--white {
-	fill: #fff;
+.icon__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 @media screen and (min-width: 400px) {
-	:global(.icon-container) {
-		width: calc(var(--iconWidth) + 12px);
-		height: calc(var(--iconHeight) + 12px);
-	}
-
 	.icon {
-		width: calc(var(--iconWidth) - 12px);
-		height: calc(var(--iconHeight) - 12px);
+		--size: 64px;
 	}
 
 	.icon--small {
-		width: calc(var(--iconWidth) - 22px);
-		height: calc(var(--iconHeight) - 22px);
+		--size: 42px;
+		font-size: calc(var(--size) - 22px);
 	}
+}
+
+.icon--default {
+	background: var(--color-background-strong);
+	color: var(--color-foreground-strong);
+}
+
+.icon--inverted {
+	background: var(--color-background-strong-inverted);
+	color: var(--color-foreground-strong-inverted);
+}
+
+.icon--light {
+	background: var(--color-light);
+	color: var(--color-light-content);
+}
+
+.icon--dark {
+	background: var(--color-dark);
+	color: var(--color-dark-content);
+}
+
+.icon--outline {
+	background: transparent;
+	color: var(--color-foreground-strong);
+	border: 2px solid currentColor;
+}
+
+.icon--primary {
+	background: var(--color-primary);
+	color: var(--color-primary-content);
+}
+
+.icon--secondary {
+	background: var(--color-secondary);
+	color: var(--color-secondary-content);
+}
+
+.icon--accent {
+	background: var(--color-accent);
+	color: var(--color-accent-content);
+}
+
+.icon--success {
+	background: var(--color-success);
+	color: var(--color-success-content);
+}
+
+.icon--danger {
+	background: var(--color-danger);
+	color: var(--color-danger-content);
+}
+
+.icon--warning {
+	background: var(--color-warning);
+	color: var(--color-warning-content);
+}
+
+.icon--info {
+	background: var(--color-info);
+	color: var(--color-info-content);
 }

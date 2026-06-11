@@ -1,0 +1,183 @@
+/* Base layer: works without inset, min(), dvh, color-mix, or backdrop-filter */
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 5000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2.5rem;
+	box-sizing: border-box;
+	background: transparent;
+	isolation: isolate;
+}
+
+.overlay::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	background: rgba(0, 0, 0, 0.7);
+	animation: modalOverlayFadeIn 200ms ease-out forwards;
+	pointer-events: none;
+}
+
+@supports (
+	(-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+) {
+	.overlay::before {
+		-webkit-backdrop-filter: blur(3px);
+		backdrop-filter: blur(3px);
+	}
+}
+
+.panel {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 60rem;
+	max-height: 92vh;
+	overflow: hidden;
+	font: inherit;
+	border-radius: 1rem;
+	border: 1px solid var(--color-background-strong);
+	background: var(--color-background-medium);
+	box-shadow:
+		0 0.25rem 1.5rem var(--color-shadow),
+		0 1.5rem 3rem var(--color-shadow);
+	animation: modalPanelEnter 280ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@supports (max-height: min(1vh, 2vh)) {
+	.panel {
+		max-height: min(92vh, 52rem);
+	}
+}
+
+@supports (height: 1dvh) {
+	@supports (max-height: min(1vh, 2vh)) {
+		.panel {
+			max-height: min(92dvh, 52rem);
+		}
+	}
+}
+
+@supports (
+	(-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))
+) {
+	.panel {
+		-webkit-backdrop-filter: blur(24px) saturate(1.85);
+		backdrop-filter: blur(24px) saturate(1.85);
+	}
+}
+
+@supports (background: color-mix(in srgb, red 10%, blue)) {
+	.panel {
+		border: 1px solid
+			color-mix(in srgb, var(--color-background-strong) 35%, transparent);
+		box-shadow:
+			0 0.25rem 1.5rem color-mix(in srgb, var(--color-shadow) 85%, transparent),
+			0 1.5rem 3rem color-mix(in srgb, var(--color-shadow) 70%, transparent),
+			inset 0 1px 0 color-mix(in srgb, var(--color-background) 35%, transparent);
+	}
+
+	html[data-theme='dark'] .panel {
+		box-shadow:
+			0 0.25rem 1.5rem color-mix(in srgb, var(--color-shadow) 85%, transparent),
+			0 1.5rem 3rem color-mix(in srgb, var(--color-shadow) 70%, transparent),
+			inset 0 1px 0
+				color-mix(in srgb, var(--color-background-medium) 35%, transparent);
+	}
+}
+
+.header {
+	flex-shrink: 0;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1.5rem 2rem 1.5rem 2.7rem;
+	border-bottom: 1px solid var(--color-background-strong);
+}
+
+.title {
+	margin: 0;
+	padding-top: 0.15rem;
+	font: inherit;
+	font-size: 1.2em;
+	font-weight: 600;
+	line-height: 1.25;
+	color: var(--color-foreground-strong);
+}
+
+.close {
+	flex-shrink: 0;
+	margin: -0.25rem -0.25rem 0 0;
+}
+
+.body {
+	flex: 1 1 auto;
+	min-height: 0;
+	padding: 1rem 2.7rem 3.2rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font: inherit;
+	line-height: 1.45;
+	color: var(--color-foreground-strong);
+	-webkit-overflow-scrolling: touch;
+}
+
+@keyframes modalOverlayFadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalPanelEnter {
+	from {
+		opacity: 0;
+		transform: translateY(0.8rem) scale(0.98);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.overlay::before {
+		animation: none;
+		opacity: 1;
+	}
+
+	.panel {
+		animation: none;
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.header {
+		padding: 1.5rem 2rem 1.5rem 2.7rem;
+	}
+
+	.title {
+		font-size: 1.2em;
+	}
+
+	.body {
+		padding: 1rem 3.2rem 3.7rem;
+	}
+}

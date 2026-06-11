@@ -1,44 +1,35 @@
-import { ReactNode } from "react";
-import styles from "./Button.module.css";
+import { forwardRef } from 'react';
+import styles from './Button.module.css';
+import type { ButtonLayout, SkinVariant } from './types';
 
-interface Props {
-	children: ReactNode;
-	className?: string;
-	color?: "primary" | "secondary" | "accent" | "outline";
-	style?: "normal" | "block" | "stretched";
-	type: "button" | "link";
-	onClick?: () => void;
-	href?: string;
-	target?: "_self" | "_blank" | "_parent" | "_top";
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	layout?: ButtonLayout;
+	variant?: SkinVariant;
 }
 
-const Button = ({
-	children,
-	className,
-	color = "primary",
-	style,
-	type,
-	onClick,
-	href,
-	target = "_self",
-}: Props) => {
-	let classNames = [styles["btn"], styles["btn--" + color]];
-	if (style && style !== "normal") classNames.push(styles["btn--" + style]);
-	if (className) classNames.push(className);
+const Button = forwardRef<HTMLButtonElement, Props>(
+	(
+		{
+			className,
+			variant = 'primary',
+			layout = 'normal',
+			type = 'button',
+			children,
+			...rest
+		},
+		ref,
+	) => {
+		const classNames = [styles.btn, styles[`btn--${variant}`]];
+		if (layout !== 'normal') classNames.push(styles[`btn--${layout}`]);
+		if (className) classNames.push(className);
 
-	if (type === "link") {
 		return (
-			<a href={href} className={classNames.join(" ")} target={target}>
+			<button ref={ref} type={type} className={classNames.join(' ')} {...rest}>
 				{children}
-			</a>
+			</button>
 		);
-	}
+	},
+);
 
-	return (
-		<button type="button" className={classNames.join(" ")} onClick={onClick}>
-			{children}
-		</button>
-	);
-};
-
+Button.displayName = 'Button';
 export default Button;

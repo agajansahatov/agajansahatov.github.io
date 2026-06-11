@@ -1,0 +1,59 @@
+.controls {
+	display: grid;
+	gap: 1.6rem;
+	width: 100%;
+}
+
+.compact {
+	gap: 1.6rem;
+}
+
+.field {
+	display: grid;
+	gap: 0.65rem;
+}
+
+.label {
+	font-weight: 700;
+	color: var(--color-foreground-strong);
+}
+
+.selectWrap {
+	position: relative;
+}
+
+.select {
+	width: 100%;
+	min-height: 4.4rem;
+	border: 1px solid var(--color-background-strong);
+	border-radius: 6px;
+	background: var(--color-background);
+	color: var(--color-foreground-strong);
+	font: inherit;
+	padding: 0 4rem 0 1.2rem;
+	appearance: none;
+	outline: none;
+}
+
+.selectIcon {
+	position: absolute;
+	top: 50%;
+	right: 1.2rem;
+	display: grid;
+	place-items: center;
+	color: var(--color-foreground-strong);
+	pointer-events: none;
+	transform: translateY(-50%);
+}
+
+.select:focus {
+	border-color: var(--color-primary);
+	box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+.hint {
+	color: var(--color-foreground);
+	font-size: var(--font-size-ui-supporting);
+	line-height: var(--line-height-ui-supporting);
+}
+

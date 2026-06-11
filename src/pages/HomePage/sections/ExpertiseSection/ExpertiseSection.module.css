@@ -1,0 +1,43 @@
+.section__expertise {
+	padding-bottom: 7rem;
+}
+
+.expertise-grid {
+	gap: 5rem 2rem;
+}
+
+.expertise-item {
+	min-width: 0;
+	list-style: none;
+}
+
+.expertise-media {
+	width: 100%;
+	min-width: 0;
+	margin-bottom: 0;
+}
+
+.expertise-media > *:last-child {
+	min-width: 0;
+}
+
+.expertise-title {
+	margin-bottom: 0.7rem;
+}
+
+.expertise-media p {
+	margin: 0;
+	overflow-wrap: break-word;
+}
+
+.section__header {
+	text-align: center;
+	padding-bottom: 2rem;
+	padding-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+	.expertise-grid {
+		gap: 4rem 2.5rem;
+	}
+}

@@ -1,0 +1,21 @@
+.scroll-to-top {
+	position: fixed;
+	bottom: 15px;
+	right: 15px;
+	border-radius: 100%;
+	border: none;
+	display: none;
+	place-items: center;
+	cursor: pointer;
+	box-shadow: 0 0 10px #393939;
+	margin: 0;
+	padding: 0.5rem;
+	opacity: 0.7;
+	transition: opacity 0.2s;
+	overflow: hidden;
+	z-index: 999;
+}
+
+.scroll-to-top:hover {
+	opacity: 1;
+}

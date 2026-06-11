@@ -1,56 +1,58 @@
-import ArrowLink from "./../ArrowLink";
-import Icon from "./../Icon/index";
-import IconContainer from "./../Icon/IconContainer";
-import { ReactNode } from "react";
-import Picture from "../Picture";
-import styles from "./Feature.module.css";
+import type { ReactNode } from 'react';
+import styles from './Feature.module.css';
+import ArrowLink from '../Link/ArrowLink';
+import Picture from '../Picture';
+import { useTranslation } from '../../i18n';
 
 interface Props {
 	children: ReactNode;
 	heading: string;
-	iconName: string;
+	icon: ReactNode;
 	imageUrl: string;
 	link: string;
+	linkLabel?: string;
 	dataAos?: string;
 	id?: string;
+	isTheImageMultiSource?: boolean;
 }
 
 const Feature = ({
 	children,
 	heading,
-	iconName,
+	icon,
 	imageUrl,
 	link,
-	dataAos = "",
+	linkLabel,
+	dataAos = '',
 	id,
+	isTheImageMultiSource = false,
 }: Props) => {
-	const imageExtensionIndex = imageUrl.lastIndexOf(".") + 1;
-	const imageExtension = imageUrl.substring(imageExtensionIndex);
-
-	const AOSAttributes1 = dataAos ? { "data-aos": dataAos } : {};
+	const { t } = useTranslation();
+	const AOSAttributes1 = dataAos ? { 'data-aos': dataAos } : {};
 	const AOSAttributes2 = dataAos
 		? {
-				"data-aos":
-					dataAos === "fade-up-right" ? "fade-up-left" : "fade-up-right",
-		  }
+				'data-aos':
+					dataAos === 'fade-up-right' ? 'fade-up-left' : 'fade-up-right',
+			}
 		: {};
-	const idAtrr = id ? { id: id } : {};
+	const idAtrr = id ? { id } : {};
 
 	return (
-		<article className={"grid grid--1x2 " + styles["feature"]} {...idAtrr}>
-			<div className={styles["feature__content"]} {...AOSAttributes1}>
-				<IconContainer>
-					<Icon color="primary" name={iconName} />
-				</IconContainer>
-				<h3 className={styles["feature__heading"]}>{heading}</h3>
+		<article
+			className={`grid grid--cols-1 md:grid--cols-2 ${styles['feature']}`}
+			{...idAtrr}
+		>
+			<div className={styles['feature__content']} {...AOSAttributes1}>
+				{icon}
+				<h3 className={styles['feature__heading']}>{heading}</h3>
 				<p>{children}</p>
-				<ArrowLink href={link}>Learn More</ArrowLink>
+				<ArrowLink href={link}>{linkLabel ?? t.common.learnMore}</ArrowLink>
 			</div>
-			{/* Image Size: 1140x725 */}
+			{/* Here Image Size should be: 1140x725 */}
 			<div {...AOSAttributes2}>
 				<Picture
-					className={styles["feature__image"]}
-					type={imageExtension === "svg" ? "regular" : "multi-source"}
+					className={styles['feature__image']}
+					type={isTheImageMultiSource ? 'multi-source' : 'regular'}
 					src={imageUrl}
 				/>
 			</div>
