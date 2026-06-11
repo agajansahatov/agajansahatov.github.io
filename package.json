@@ -5,7 +5,9 @@
 	"type": "module",
 	"scripts": {
 		"dev": "node scripts/generate-ie11-fallback.mjs && vite",
-		"build": "node scripts/fetch-github-contributions.mjs && node scripts/generate-ie11-fallback.mjs && tsc -b && vite build",
+		"build": "node scripts/fetch-github-contributions.mjs && node scripts/generate-ie11-fallback.mjs && tsc -b && vite build && npm run prerender && npm run sitemap",
+		"prerender": "node scripts/prerender.mjs",
+		"sitemap": "node scripts/generate-sitemap.mjs",
 		"generate:ie11-fallback": "node scripts/generate-ie11-fallback.mjs",
 		"lint": "eslint .",
 		"preview": "vite preview",
@@ -28,6 +30,8 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
+		"@prerenderer/prerenderer": "^1.2.5",
+		"@prerenderer/renderer-puppeteer": "^1.2.4",
 		"@types/aos": "^3.0.8",
 		"@types/node": "^25.9.1",
 		"@types/react": "^19.2.14",
@@ -38,6 +42,7 @@
 		"eslint-plugin-react-refresh": "^0.5.2",
 		"globals": "^17.6.0",
 		"prettier": "^3.8.3",
+		"puppeteer": "^25.1.0",
 		"typescript": "~6.0.2",
 		"typescript-eslint": "^8.59.2",
 		"vite": "^8.0.12"

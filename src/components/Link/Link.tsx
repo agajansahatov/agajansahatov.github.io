@@ -1,5 +1,7 @@
 import { forwardRef } from 'react';
 import { Link as RouterLink, NavLink } from 'react-router-dom';
+import { useLanguage } from '../../i18n/useLanguage';
+import { localizeHref, stripLanguagePrefix } from '../../i18n/languagePath';
 
 interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 	href: string;
@@ -8,14 +10,16 @@ interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const Link = forwardRef<HTMLAnchorElement, Props>(
 	({ href, activeClassName, className, target = '_self', ...rest }, ref) => {
+		const language = useLanguage();
+
 		const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 			window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
 			if (rest.onClick) rest.onClick(e);
 		};
 
-		// External or hash → normal <a>
-		if (isExternal(href) || isHash(href)) {
+		// External or same-page hash anchor → normal <a>
+		if (isExternal(href) || href.startsWith('#')) {
 			return (
 				<a
 					ref={ref}
@@ -28,12 +32,15 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 			);
 		}
 
+		const localizedHref = localizeHref(href, language);
+
 		// Active link
 		if (activeClassName) {
 			return (
 				<NavLink
 					ref={ref}
-					to={href}
+					to={localizedHref}
+					end={stripLanguagePrefix(href) === '/'}
 					target={target}
 					className={({ isActive }) =>
 						isActive
@@ -50,7 +57,7 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 		return (
 			<RouterLink
 				ref={ref}
-				to={href}
+				to={localizedHref}
 				target={target}
 				className={className}
 				onClick={handleClick}
@@ -63,11 +70,9 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 Link.displayName = 'Link';
 
 function isExternal(to: string) {
-	return /^https?:\/\//i.test(to);
-}
-
-function isHash(to: string) {
-	return to.startsWith('#') || to.includes('#');
+	// Any URI scheme (http:, https:, mailto:, tel:, sms:, ...) or a
+	// protocol-relative URL is handled by a plain anchor, not the router.
+	return /^[a-z][a-z0-9+.-]*:/i.test(to) || to.startsWith('//');
 }
 
 export default Link;

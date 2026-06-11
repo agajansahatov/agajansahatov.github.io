@@ -1,6 +1,9 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import Layout from './Layout';
+import LanguageHomeRedirect from './components/Language/LanguageHomeRedirect';
+import LanguageRoute from './components/Language/LanguageRoute';
+import RootRedirect from './components/Language/RootRedirect';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import ErrorPage from './pages/ErrorPage';
@@ -19,24 +22,32 @@ const router = createBrowserRouter([
 		element: <App />,
 		errorElement: <ErrorPage />,
 		children: [
+			{ index: true, element: <RootRedirect /> },
 			{
-				element: <Layout />,
+				path: ':lang',
+				element: <LanguageRoute />,
 				children: [
-					{ index: true, element: <HomePage /> },
-					{ path: 'pricing', element: <PricingPage /> },
-					{ path: 'experience', element: <ExperiencePage /> },
-					{ path: 'expertise', element: <ExpertisePage /> },
-					{ path: 'projects', element: <ProjectsPage /> },
-					{ path: 'resume-cv', element: <ResumeCvPage /> },
-					{ path: 'resume', element: <Navigate to='/resume-cv' replace /> },
-					{ path: 'cv', element: <Navigate to='/resume-cv' replace /> },
-					{ path: 'contact', element: <ContactPage /> },
-					{ path: 'about', element: <AboutPage /> },
-					{ path: 'settings', element: <SettingsPage /> },
-					{ path: 'docs', element: <Navigate to='/' replace /> },
-					{ path: 'explore', element: <Navigate to='/' replace /> },
-					{ path: 'explore-features', element: <Navigate to='/' replace /> },
-					{ path: '*', element: <NotFoundPage /> },
+					{
+						element: <Layout />,
+						children: [
+							{ index: true, element: <HomePage /> },
+							{ path: 'pricing', element: <PricingPage /> },
+							{ path: 'experience', element: <ExperiencePage /> },
+							{ path: 'expertise', element: <ExpertisePage /> },
+							{ path: 'projects', element: <ProjectsPage /> },
+							{ path: 'resume-cv', element: <ResumeCvPage /> },
+							{ path: 'contact', element: <ContactPage /> },
+							{ path: 'about', element: <AboutPage /> },
+							{ path: 'settings', element: <SettingsPage /> },
+							{ path: 'docs', element: <LanguageHomeRedirect /> },
+							{ path: 'explore', element: <LanguageHomeRedirect /> },
+							{
+								path: 'explore-features',
+								element: <LanguageHomeRedirect />,
+							},
+							{ path: '*', element: <NotFoundPage /> },
+						],
+					},
 				],
 			},
 		],

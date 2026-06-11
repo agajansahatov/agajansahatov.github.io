@@ -1,6 +1,8 @@
 import Block from '../../components/Block';
 import BlockHeader from '../../components/Block/BlockHeader';
+import ButtonLink from '../../components/Button/ButtonLink';
 import ProjectCard from '../../components/ProjectCard';
+import { GITHUB_PROFILE } from '../../config/github';
 import { useTranslation } from '../../i18n';
 import TopProjectsSection from '../HomePage/sections/TopProjectsSection/TopProjectsSection';
 import Footer from '../../sections/Footer';
@@ -30,13 +32,23 @@ const ProjectsPage = () => {
 								image={project.image}
 								imageAlt={project.imageAlt}
 								projectUrl={project.projectUrl}
-								codeUrl={project.codeUrl}
 								viewProjectLabel={t.explore.viewProject}
-								viewCodeLabel={t.explore.viewCode}
 							/>
 						</li>
 					))}
 				</ul>
+
+				<footer className={styles.footer}>
+					<ButtonLink
+						href={`https://github.com/${GITHUB_PROFILE.username}/`}
+						target='_blank'
+						layout='stretched'
+						variant='accent'
+						className={styles['github-profile']}
+					>
+						{t.projects.viewGitHubProfile}
+					</ButtonLink>
+				</footer>
 			</Block>
 			<Footer />
 		</>

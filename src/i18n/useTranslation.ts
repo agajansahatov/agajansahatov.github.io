@@ -1,11 +1,10 @@
-import { usePreferences } from '../hooks/usePreferences';
 import { translations } from './translations';
+import { useLanguage } from './useLanguage';
 
 export const useTranslation = () => {
-	const { language } = usePreferences();
+	const language = useLanguage();
 	return {
 		language,
 		t: translations[language],
 	};
 };
-

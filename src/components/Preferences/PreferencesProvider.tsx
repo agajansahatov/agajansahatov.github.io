@@ -5,12 +5,8 @@ import {
 	useState,
 	type ReactNode,
 } from 'react';
-import { DEFAULT_LANGUAGE_CODE } from '../../config/preferences';
-import {
-	CountryIsGeoCountryService,
-	LanguageResolver,
-	type GeoCountryServicePort,
-} from '../../services/preferences/languageResolver';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { withLanguagePrefix } from '../../i18n/languagePath';
 import {
 	LocalPreferencesStorage,
 	type PreferencesStoragePort,
@@ -22,32 +18,19 @@ import { PreferencesContext } from './preferencesContext';
 type PreferencesProviderProps = {
 	readonly children: ReactNode;
 	readonly storage?: PreferencesStoragePort;
-	readonly geoCountryService?: GeoCountryServicePort;
 	readonly themeResolver?: ThemeResolver;
 };
 
 const defaultStorage = new LocalPreferencesStorage();
-const defaultGeoCountryService = new CountryIsGeoCountryService();
 const defaultThemeResolver = new ThemeResolver();
 
 export const PreferencesProvider = ({
 	children,
 	storage = defaultStorage,
-	geoCountryService = defaultGeoCountryService,
 	themeResolver = defaultThemeResolver,
 }: PreferencesProviderProps) => {
-	const languageResolver = useMemo(
-		() => new LanguageResolver(storage, geoCountryService),
-		[geoCountryService, storage],
-	);
-
-	const [language, setLanguageState] = useState<LanguageCode>(() => {
-		return (
-			languageResolver.resolveStoredLanguage() ??
-			languageResolver.resolveBrowserLanguage() ??
-			DEFAULT_LANGUAGE_CODE
-		);
-	});
+	const navigate = useNavigate();
+	const location = useLocation();
 
 	const [themeMode, setThemeModeState] = useState<ThemeMode>(() =>
 		storage.readThemeMode(),
@@ -56,11 +39,6 @@ export const PreferencesProvider = ({
 	const [resolvedTheme, setResolvedTheme] = useState<ResolvedTheme>(() =>
 		themeResolver.resolve(themeMode),
 	);
-
-	useEffect(() => {
-		if (typeof document === 'undefined') return;
-		document.documentElement.lang = language;
-	}, [language]);
 
 	useEffect(() => {
 		const applyResolvedTheme = () => {
@@ -78,9 +56,10 @@ export const PreferencesProvider = ({
 	const setLanguage = useCallback(
 		(nextLanguage: LanguageCode) => {
 			storage.writeLanguage(nextLanguage);
-			setLanguageState(nextLanguage);
+			const nextPath = withLanguagePrefix(location.pathname, nextLanguage);
+			navigate(`${nextPath}${location.search}${location.hash}`);
 		},
-		[storage],
+		[storage, navigate, location.pathname, location.search, location.hash],
 	);
 
 	const setThemeMode = useCallback(
@@ -93,13 +72,12 @@ export const PreferencesProvider = ({
 
 	const value = useMemo(
 		() => ({
-			language,
 			setLanguage,
 			themeMode,
 			setThemeMode,
 			resolvedTheme,
 		}),
-		[language, resolvedTheme, setLanguage, setThemeMode, themeMode],
+		[resolvedTheme, setLanguage, setThemeMode, themeMode],
 	);
 
 	return (

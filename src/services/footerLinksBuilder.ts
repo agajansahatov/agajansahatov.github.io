@@ -53,7 +53,7 @@ export class FooterLinksBuilder {
 				isHidden: false,
 			},
 			{
-				header: footer.liveProjects,
+				header: footer.projects,
 				links: [
 					{
 						link: LIVE_PROJECT_URLS.gameHub,

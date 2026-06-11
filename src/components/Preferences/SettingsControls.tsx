@@ -17,8 +17,8 @@ const SettingsControls = ({
 	isCompact = false,
 	variant = 'all',
 }: SettingsControlsProps) => {
-	const { language, setLanguage, themeMode, setThemeMode } = usePreferences();
-	const { t } = useTranslation();
+	const { setLanguage, themeMode, setThemeMode } = usePreferences();
+	const { language, t } = useTranslation();
 	const showLanguage = variant === 'all' || variant === 'language';
 	const showTheme = variant === 'all' || variant === 'theme';
 

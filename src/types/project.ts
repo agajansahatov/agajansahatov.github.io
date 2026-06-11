@@ -11,5 +11,4 @@ export type ProjectContent = {
 export type ResolvedHomeProject = ProjectContent & {
 	readonly image: string;
 	readonly projectUrl: string;
-	readonly codeUrl: string;
 };

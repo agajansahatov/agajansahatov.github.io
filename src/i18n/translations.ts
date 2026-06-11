@@ -51,6 +51,7 @@ export const translations = {
 				experience: 'Tejribe',
 				projects: 'Taslamalar',
 				resumeCv: 'Rezume/CV',
+				github: 'GitHub',
 				expertise: 'Hünär',
 				about: 'Barada',
 				contact: 'Habarlaşmak',
@@ -72,7 +73,7 @@ export const translations = {
 		},
 		footer: {
 			services: 'HYZMATLAR',
-			liveProjects: 'IŞLEÝÄN TASLAMALAR',
+			projects: 'TASLAMALAR',
 			about: 'MEN BARADA',
 			serviceLinks: {
 				frontEnd: 'Öň panel programmalary',
@@ -201,7 +202,6 @@ export const translations = {
 			topProjectsTagline:
 				'Öndürijilige taýýar, tiz we ulanmaga amatly sanly önümleriň saýlanan görnüşleri.',
 			viewProject: 'Taslamany gör',
-			viewCode: 'Kody gör',
 			viewMore: 'Has köp gör →',
 			topProjects: [
 				{
@@ -264,6 +264,7 @@ export const translations = {
 			title: 'Taslamalar',
 			tagline:
 				'Öndürijilige taýýar işlerden saýlanan taslamalar. Has giňişleýin maglumat ýakynda goşular.',
+			viewGitHubProfile: 'GitHub profilimi gör',
 		},
 		experience: {
 			title: 'Tejribe',
@@ -601,6 +602,7 @@ export const translations = {
 				experience: 'Experience',
 				projects: 'Projects',
 				resumeCv: 'Resume/CV',
+				github: 'GitHub',
 				expertise: 'Expertise',
 				about: 'About',
 				contact: 'Contact',
@@ -622,7 +624,7 @@ export const translations = {
 		},
 		footer: {
 			services: 'SERVICES',
-			liveProjects: 'LIVE PROJECTS',
+			projects: 'PROJECTS',
 			about: 'ABOUT',
 			serviceLinks: {
 				frontEnd: 'Front-End Apps',
@@ -752,7 +754,6 @@ export const translations = {
 			topProjectsTagline:
 				'A curated selection of production-ready digital products that are fast, polished, and user-focused.',
 			viewProject: 'View project',
-			viewCode: 'View code',
 			viewMore: 'View more →',
 			topProjects: [
 				{
@@ -815,6 +816,7 @@ export const translations = {
 			title: 'Projects',
 			tagline:
 				'Selected work across web and mobile. More case studies and details will be added soon.',
+			viewGitHubProfile: 'View GitHub Profile',
 		},
 		experience: {
 			title: 'Experience',
@@ -1150,6 +1152,7 @@ export const translations = {
 				experience: '经验',
 				projects: '项目',
 				resumeCv: '简历/CV',
+				github: 'GitHub',
 				expertise: '专长',
 				about: '关于',
 				contact: '联系',
@@ -1169,7 +1172,7 @@ export const translations = {
 		},
 		footer: {
 			services: '服务',
-			liveProjects: '在线项目',
+			projects: '项目',
 			about: '关于',
 			serviceLinks: {
 				frontEnd: '前端应用',
@@ -1297,7 +1300,6 @@ export const translations = {
 			topProjectsTagline:
 				'精选可投入生产的数字产品，注重速度、体验与工程质量。',
 			viewProject: '查看项目',
-			viewCode: '查看代码',
 			viewMore: '查看更多 →',
 			topProjects: [
 				{
@@ -1359,6 +1361,7 @@ export const translations = {
 		projects: {
 			title: '项目',
 			tagline: '精选的 Web 与移动项目作品，更多案例详情即将补充。',
+			viewGitHubProfile: '查看 GitHub 主页',
 		},
 		experience: {
 			title: '经验',
@@ -1673,6 +1676,7 @@ export const translations = {
 				experience: 'Deneyim',
 				projects: 'Projeler',
 				resumeCv: 'Özgeçmiş/CV',
+				github: 'GitHub',
 				expertise: 'Uzmanlık',
 				about: 'Hakkında',
 				contact: 'İletişim',
@@ -1695,7 +1699,7 @@ export const translations = {
 		},
 		footer: {
 			services: 'HİZMETLER',
-			liveProjects: 'CANLI PROJELER',
+			projects: 'PROJELER',
 			about: 'HAKKIMDA',
 			serviceLinks: {
 				frontEnd: 'Ön Yüz Uygulamaları',
@@ -1824,7 +1828,6 @@ export const translations = {
 			topProjectsTagline:
 				'Hızlı, özenli ve kullanıcı odaklı, üretime hazır dijital ürünlerden seçilmiş örnekler.',
 			viewProject: 'Projeyi gör',
-			viewCode: 'Kodu gör',
 			viewMore: 'Daha fazla gör →',
 			topProjects: [
 				{
@@ -1887,6 +1890,7 @@ export const translations = {
 			title: 'Projeler',
 			tagline:
 				'Web ve mobil alanlardan seçilmiş işler. Daha fazla vaka çalışması yakında eklenecek.',
+			viewGitHubProfile: 'GitHub Profilini Gör',
 		},
 		experience: {
 			title: 'Deneyim',
@@ -2222,6 +2226,7 @@ export const translations = {
 				experience: 'Опыт',
 				projects: 'Проекты',
 				resumeCv: 'Резюме/CV',
+				github: 'GitHub',
 				expertise: 'Экспертиза',
 				about: 'Обо мне',
 				contact: 'Контакты',
@@ -2244,7 +2249,7 @@ export const translations = {
 		},
 		footer: {
 			services: 'СЕРВИСЫ',
-			liveProjects: 'ЖИВЫЕ ПРОЕКТЫ',
+			projects: 'ПРОЕКТЫ',
 			about: 'ОБО МНЕ',
 			serviceLinks: {
 				frontEnd: 'Фронтенд-приложения',
@@ -2373,7 +2378,6 @@ export const translations = {
 			topProjectsTagline:
 				'Подборка готовых к продакшену цифровых продуктов: быстрые, аккуратные и ориентированные на пользователя.',
 			viewProject: 'Смотреть проект',
-			viewCode: 'Смотреть код',
 			viewMore: 'Смотреть ещё →',
 			topProjects: [
 				{
@@ -2436,6 +2440,7 @@ export const translations = {
 			title: 'Проекты',
 			tagline:
 				'Избранные работы в web и mobile. Подробные кейсы будут добавлены позже.',
+			viewGitHubProfile: 'Смотреть профиль GitHub',
 		},
 		experience: {
 			title: 'Опыт',

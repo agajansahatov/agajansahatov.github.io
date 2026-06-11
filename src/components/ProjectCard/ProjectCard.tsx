@@ -8,16 +8,9 @@ import styles from './ProjectCard.module.css';
 
 type ProjectCardProps = Pick<
 	ResolvedHomeProject,
-	| 'name'
-	| 'description'
-	| 'tools'
-	| 'image'
-	| 'imageAlt'
-	| 'projectUrl'
-	| 'codeUrl'
+	'name' | 'description' | 'tools' | 'image' | 'imageAlt' | 'projectUrl'
 > & {
 	readonly viewProjectLabel: string;
-	readonly viewCodeLabel: string;
 };
 
 const ProjectCard = ({
@@ -27,9 +20,7 @@ const ProjectCard = ({
 	image,
 	imageAlt,
 	projectUrl,
-	codeUrl,
 	viewProjectLabel,
-	viewCodeLabel,
 }: ProjectCardProps) => {
 	return (
 		<Card
@@ -69,15 +60,6 @@ const ProjectCard = ({
 						className={styles.action}
 					>
 						{viewProjectLabel}
-					</ButtonLink>
-					<ButtonLink
-						href={codeUrl}
-						layout='block'
-						variant='outline'
-						target='_blank'
-						className={styles.action}
-					>
-						{viewCodeLabel}
 					</ButtonLink>
 				</footer>
 			</main>

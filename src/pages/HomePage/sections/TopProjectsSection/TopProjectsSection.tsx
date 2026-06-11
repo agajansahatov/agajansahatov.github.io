@@ -35,9 +35,7 @@ function TopProjectsSectionComponent() {
 							image={project.image}
 							imageAlt={project.imageAlt}
 							projectUrl={project.projectUrl}
-							codeUrl={project.codeUrl}
 							viewProjectLabel={t.explore.viewProject}
-							viewCodeLabel={t.explore.viewCode}
 						/>
 					</li>
 				))}
@@ -61,7 +59,6 @@ type ProjectAsset = {
 	readonly id: HomeProjectId;
 	readonly image: string;
 	readonly projectUrl: string;
-	readonly codeUrl: string;
 };
 
 const projectAssets: readonly ProjectAsset[] = [
@@ -69,19 +66,16 @@ const projectAssets: readonly ProjectAsset[] = [
 		id: 'xcargo',
 		image: '/images/projects/Xcargo.jpg',
 		projectUrl: 'http://xcargo.com.tm/',
-		codeUrl: 'https://github.com/agajansahatov/xcargo-web',
 	},
 	{
 		id: 'game-hub',
 		image: '/images/projects/GameHub.jpg',
 		projectUrl: 'https://game-hub-three-kohl.vercel.app/',
-		codeUrl: 'https://github.com/agajansahatov/game-hub',
 	},
 	{
 		id: 'sada',
 		image: '/images/projects/SADA.jpg',
 		projectUrl: 'https://agajansahatov.github.io/sada/',
-		codeUrl: 'https://github.com/agajansahatov/sada',
 	},
 ] as const;
 
@@ -103,7 +97,6 @@ function resolveAllProjects(
 				imageAlt: content.imageAlt,
 				image: asset.image,
 				projectUrl: asset.projectUrl,
-				codeUrl: asset.codeUrl,
 			},
 		];
 	});

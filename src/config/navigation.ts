@@ -1,8 +1,11 @@
+import { GITHUB_PROFILE } from './github';
+
 export type NavItemId =
 	| 'home'
 	| 'experience'
 	| 'projects'
 	| 'resumeCv'
+	| 'github'
 	| 'expertise'
 	| 'about'
 	| 'contact'
@@ -46,6 +49,13 @@ export const NAV_ITEMS: readonly NavItem[] = [
 		target: '_self',
 		navbarFrom: 'sm',
 		sidebarBelow: 'sm',
+	},
+	{
+		id: 'github',
+		href: `https://github.com/${GITHUB_PROFILE.username}/`,
+		target: '_blank',
+		navbarFrom: 'md',
+		sidebarBelow: 'md',
 	},
 	{
 		id: 'expertise',

@@ -1,8 +1,11 @@
 import { Outlet } from 'react-router-dom';
 import ScrollToTopButton from './components/Button/ScrollToTopButton';
+import { useSeo } from './components/Seo/useSeo';
 import Navbar from './sections/Navbar';
 
 const Layout = () => {
+	useSeo();
+
 	return (
 		<>
 			<Navbar />
@@ -15,4 +18,3 @@ const Layout = () => {
 };
 
 export default Layout;
-
