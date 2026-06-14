@@ -1,4 +1,8 @@
-import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import { useCallback, useLayoutEffect, useRef, useState } from 'react';
+import {
+	FaArrowUpRightFromSquare,
+	FaChevronDown,
+} from 'react-icons/fa6';
 import Badge from '../Badge';
 import Icon from '../Icon';
 import Link from '../Link';
@@ -20,6 +24,8 @@ type ExperienceCardProps = Pick<
 	readonly period: string;
 	readonly periodDateTime: string;
 	readonly viewCompanyLabel: string;
+	readonly readMoreLabel: string;
+	readonly readLessLabel: string;
 };
 
 const ExperienceCard = ({
@@ -34,7 +40,49 @@ const ExperienceCard = ({
 	period,
 	periodDateTime,
 	viewCompanyLabel,
+	readMoreLabel,
+	readLessLabel,
 }: ExperienceCardProps) => {
+	const descriptionRef = useRef<HTMLParagraphElement>(null);
+	const [isExpanded, setIsExpanded] = useState(false);
+	const [isTruncated, setIsTruncated] = useState(false);
+
+	const measureTruncation = useCallback(() => {
+		const descriptionElement = descriptionRef.current;
+		if (!descriptionElement || isExpanded) {
+			return;
+		}
+
+		setIsTruncated(
+			descriptionElement.scrollHeight > descriptionElement.clientHeight + 1,
+		);
+	}, [isExpanded]);
+
+	useLayoutEffect(() => {
+		measureTruncation();
+
+		const descriptionElement = descriptionRef.current;
+		if (!descriptionElement) {
+			return;
+		}
+
+		const resizeObserver = new ResizeObserver(measureTruncation);
+		resizeObserver.observe(descriptionElement);
+
+		return () => {
+			resizeObserver.disconnect();
+		};
+	}, [description, measureTruncation]);
+
+	useLayoutEffect(() => {
+		if (!isExpanded) {
+			measureTruncation();
+		}
+	}, [isExpanded, measureTruncation]);
+
+	const showReadMoreButton = isTruncated || isExpanded;
+	const toggleLabel = isExpanded ? readLessLabel : readMoreLabel;
+
 	return (
 		<article className={styles.card}>
 			<header className={styles.header}>
@@ -52,7 +100,40 @@ const ExperienceCard = ({
 				<span className={styles.location}>{location}</span>
 			</div>
 
-			<p className={styles.description}>{description}</p>
+			<div className={styles['description-block']}>
+				<p
+					ref={descriptionRef}
+					className={[
+						styles.description,
+						!isExpanded ? styles['description--clamped'] : '',
+					]
+						.filter(Boolean)
+						.join(' ')}
+				>
+					{description}
+				</p>
+				{showReadMoreButton ? (
+					<button
+						type='button'
+						className={[
+							styles['read-more-button'],
+							isExpanded ? styles['read-more-button--expanded'] : '',
+						]
+							.filter(Boolean)
+							.join(' ')}
+						onClick={() => {
+							setIsExpanded((expanded) => !expanded);
+						}}
+						aria-expanded={isExpanded}
+						aria-label={toggleLabel}
+					>
+						<span className={styles['read-more-icon']} aria-hidden='true'>
+							<FaChevronDown />
+						</span>
+						<span className={styles['read-more-label']}>{readMoreLabel}</span>
+					</button>
+				) : null}
+			</div>
 
 			<footer className={styles.footer}>
 				<ul className={styles.tech}>

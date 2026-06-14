@@ -37,6 +37,8 @@ function LastExperiencesSectionComponent() {
 				language={language}
 				presentLabel={t.experience.present}
 				viewCompanyLabel={t.experience.viewCompany}
+				readMoreLabel={t.experience.readMore}
+				readLessLabel={t.experience.readLess}
 			/>
 
 			<footer className={styles.footer}>

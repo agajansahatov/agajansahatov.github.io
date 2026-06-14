@@ -272,6 +272,8 @@ export const translations = {
 				'Web, yza fon we ykjam programmalary öndürip, öndürijilige taýýar sanly önümleri gurýan hünärmen ýolum.',
 			present: 'häzirki wagt',
 			viewCompany: 'Kompaniýany gör',
+			readMore: 'Has köp oka',
+			readLess: 'Azalt',
 			entries: [
 				{
 					id: 'xcargo',
@@ -824,6 +826,8 @@ export const translations = {
 				'My professional journey building production-ready digital products across web, backend, and mobile.',
 			present: 'Present',
 			viewCompany: 'View company',
+			readMore: 'Read more',
+			readLess: 'Read less',
 			entries: [
 				{
 					id: 'xcargo',
@@ -1368,6 +1372,8 @@ export const translations = {
 			tagline: '我在 Web、后端与移动端构建可投入生产数字产品的职业历程。',
 			present: '至今',
 			viewCompany: '查看公司',
+			readMore: '阅读更多',
+			readLess: '收起',
 			entries: [
 				{
 					id: 'xcargo',
@@ -1898,6 +1904,8 @@ export const translations = {
 				'Web, backend ve mobil alanlarda üretime hazır dijital ürünler geliştirdiğim profesyonel yolculuğum.',
 			present: 'Devam ediyor',
 			viewCompany: 'Şirketi gör',
+			readMore: 'Daha fazla oku',
+			readLess: 'Daha az göster',
 			entries: [
 				{
 					id: 'xcargo',
@@ -2448,6 +2456,8 @@ export const translations = {
 				'Мой профессиональный путь в создании готовых к продакшену цифровых продуктов для web, backend и mobile.',
 			present: 'настоящее время',
 			viewCompany: 'Смотреть компанию',
+			readMore: 'Читать далее',
+			readLess: 'Свернуть',
 			entries: [
 				{
 					id: 'xcargo',

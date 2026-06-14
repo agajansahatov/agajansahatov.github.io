@@ -8,6 +8,8 @@ type ExperienceTimelineProps = {
 	readonly language: LanguageCode;
 	readonly presentLabel: string;
 	readonly viewCompanyLabel: string;
+	readonly readMoreLabel: string;
+	readonly readLessLabel: string;
 };
 
 const ExperienceTimeline = ({
@@ -15,6 +17,8 @@ const ExperienceTimeline = ({
 	language,
 	presentLabel,
 	viewCompanyLabel,
+	readMoreLabel,
+	readLessLabel,
 }: ExperienceTimelineProps) => {
 	return (
 		<ol className={styles.timeline}>
@@ -48,6 +52,8 @@ const ExperienceTimeline = ({
 							period={period}
 							periodDateTime={periodDateTime}
 							viewCompanyLabel={viewCompanyLabel}
+							readMoreLabel={readMoreLabel}
+							readLessLabel={readLessLabel}
 						/>
 					</li>
 				);
