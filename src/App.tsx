@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { PreferencesProvider } from './components/Preferences/PreferencesProvider';
 import { useAOS } from './hooks/useAOS';
@@ -10,6 +10,7 @@ const App = () => {
 
 	return (
 		<PreferencesProvider>
+			<ScrollRestoration />
 			<Outlet />
 			<Toaster position='top-center' />
 		</PreferencesProvider>

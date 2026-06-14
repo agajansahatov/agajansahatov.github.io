@@ -12,12 +12,6 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 	({ href, activeClassName, className, target = '_self', ...rest }, ref) => {
 		const language = useLanguage();
 
-		const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-			window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-
-			if (rest.onClick) rest.onClick(e);
-		};
-
 		// External or same-page hash anchor → normal <a>
 		if (isExternal(href) || href.startsWith('#')) {
 			return (
@@ -47,7 +41,6 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 							? `${className ?? ''} ${activeClassName}`.trim()
 							: (className ?? '')
 					}
-					onClick={handleClick}
 					{...rest}
 				/>
 			);
@@ -60,7 +53,6 @@ const Link = forwardRef<HTMLAnchorElement, Props>(
 				to={localizedHref}
 				target={target}
 				className={className}
-				onClick={handleClick}
 				{...rest}
 			/>
 		);
