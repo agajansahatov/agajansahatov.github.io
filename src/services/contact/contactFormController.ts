@@ -1,4 +1,4 @@
-import { COMPANY } from '../../config/company';
+import { getPortfolioLegalName, PORTFOLIO } from '../../config/portfolio';
 
 export type ContactTopic =
 	| 'technicalSupport'
@@ -77,7 +77,7 @@ export class ContactFormController {
 		form: ContactFormState,
 		contact: ContactMailtoContent,
 	): string {
-		const subject = `${COMPANY.name} - ${contact.mailSubject} - ${
+		const subject = `${getPortfolioLegalName()} - ${contact.mailSubject} - ${
 			contact.topics[form.topic]
 		}`;
 		const lines = [
@@ -90,7 +90,7 @@ export class ContactFormController {
 			form.message,
 		];
 
-		return `mailto:${COMPANY.email}?subject=${encodeURIComponent(
+		return `mailto:${PORTFOLIO.email}?subject=${encodeURIComponent(
 			subject,
 		)}&body=${encodeURIComponent(lines.join('\n'))}`;
 	}

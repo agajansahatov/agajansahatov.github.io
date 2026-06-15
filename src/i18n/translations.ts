@@ -1,7 +1,7 @@
 export const translations = {
 	tk: {
 		common: {
-			brandName: 'Agajan Sahatow',
+
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Ähli hukuklar goralan.',
 			builtWithNote: 'Kod we ❤️ bilen gurlan.',
@@ -9,6 +9,9 @@ export const translations = {
 			email: 'Email',
 			phone: 'Telefon',
 			address: 'Salgymyz',
+			socialTitle: 'Sosial torlar',
+			socialNote:
+				'Näme gurýandygym barada täzelikler üçin meni sosial torlarda yzarlap bilersiňiz.',
 		},
 		documentTitle: {
 			tagline: 'Hünärmen programmist',
@@ -94,10 +97,10 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Salam! Men Agajan Sahatow',
+			heroTitle: 'Salam! Men {portfolioName}',
 			heroTagline:
 				'Men pikirleri, çyzgylary we tehniki talapnamalary çalt, giňeldip we ulaldyp bolýan, owadan we ulanmaga taýýar programmalara öwürýärin.',
-			heroImageAlt: 'Hünärmen programmist Agajan Sahatowyň suraty',
+			heroImageAlt: 'Hünärmen programmist {portfolioName}yň suraty',
 			heroCta: 'Meniň bilen tanyş',
 			calloutCta: 'Meň b/n habarlaş',
 			servicesTitle: 'Men näme hödürleýärin',
@@ -189,7 +192,7 @@ export const translations = {
 				{
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
-					company: 'Telekeçi',
+					organization: 'Telekeçi',
 					photoAlt: 'Bagtly we gülýän müşderiniň suraty',
 					comment:
 						'Agajan Sahatowy maslahat bermekden örän şat. Ol örän owadan, duýgur we tizligi çalt web sahypasyny taýýarlap berdi. Ol örän hünärmen, işlemek aňsat we gowy netijeler berýär...',
@@ -271,7 +274,7 @@ export const translations = {
 			tagline:
 				'Meniň hünärmen we bilim ýolum — web, bäkend we mobil ugurlarynda öndürijilige taýýar sanly önümleri gurmak.',
 			present: 'häzirki wagt',
-			viewCompany: 'Kompaniýany gör',
+			viewOrganization: 'Guramany gör',
 			viewInstitution: 'Uniwersiteti gör',
 			readMore: 'Has köp oka',
 			readLess: 'Azalt',
@@ -281,7 +284,7 @@ export const translations = {
 					{
 						id: 'xcargo',
 						role: 'Full-Stack programmist',
-						company: 'Xcargo',
+						organization: 'Xcargo',
 						location: 'Ýiwu, Çžeszýan, Hytaý · Garyşyk',
 						description:
 							'Hytaýdaky Ýiwu şäherinde ýerleşýän Xcargo halkara logistika kompaniýasynda garyşyk (ofisde we uzakdan) Full-Stack programmist hökmünde işledim. Xcargo bäkend ulgamy, öň panel we mobil programmalaryny gurdum.',
@@ -289,7 +292,7 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: 'Frontend tejribeçisi',
-						company: 'Smart Walnut Technology',
+						organization: 'Smart Walnut Technology',
 						location: 'Nançaň, Szýansi, Hytaý',
 						description:
 							'Nançaň şäherinde ofisde frontend tejribeçisi hökmünde işledim. TypeScript, React, Ant Design we Git ulanyp web interfeýslerini gurdum.',
@@ -297,7 +300,7 @@ export const translations = {
 					{
 						id: 'zhilin',
 						role: 'Tejribeçi türgen',
-						company: 'Zhilin Information Technology Co., Ltd.',
+						organization: 'Zhilin Information Technology Co., Ltd.',
 						location: 'Taýýüwän, Şansi, Hytaý',
 						description:
 							'Taýýüwän şäherinde ofisde programma öndüriş tejribeçiligi türgeni hökmünde işledim. «IoT Smart Home» we «Udacity Driverless System» atly iki taslama gurdum.',
@@ -305,7 +308,7 @@ export const translations = {
 					{
 						id: 'tut-web-dev',
 						role: 'Web tejribeçisi',
-						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						organization: 'Taýýüwän Tehnologiýa Uniwersiteti',
 						location: 'Taýýüwän, Şansi, Hytaý',
 						description:
 							'Taýýüwän Tehnologiýa Uniwersitetinde ofisde web tejribeçisi hökmünde işledim. «Circle» atly minimal sosial ulgam we «Utopia» atly mini onlaýn dükan gurdum.',
@@ -313,7 +316,7 @@ export const translations = {
 					{
 						id: 'tut-cpp',
 						role: 'C++ programmist şägirdi',
-						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						organization: 'Taýýüwän Tehnologiýa Uniwersiteti',
 						location: 'Taýýüwän, Şansi, Hytaý',
 						description:
 							'Taýýüwän Tehnologiýa Uniwersitetinde ofisde C++ programmist şägirdi hökmünde işledim. C++ we Embarcadero RAD Studio ulanyp ABMS (Salgylar kitaby dolandyryş ulgamy) stolüstü programmasyny gurdum.',
@@ -321,7 +324,7 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: 'Meýletinçi',
-						company: 'Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşigi',
+						organization: 'Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşigi',
 						location: 'Jinjoň, Şansi, Hytaý',
 						description:
 							'Bilim ministrligi tarapyndan goldanylýan Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşiginiň Wirtual hakykylyk (VR) dizaýn we önümçilik bäsleşiginde Jinjoň hünär we tehniki kollejinde ofisde topar agzasy hökmünde meýletinçi boldum. C++, Unity we beýleki VR tehnologiýalary ulanyp şäher ulag ulgamy gurdum.',
@@ -334,7 +337,7 @@ export const translations = {
 					{
 						id: 'ncu-masters',
 						role: 'Magistr',
-						company: 'Nançaň uniwersiteti',
+						organization: 'Nançaň uniwersiteti',
 						location: 'Nançaň, Szýansi, Hytaý',
 						description:
 							'Nançaň şäherinde Programma injenerligi boýunça magistr derejesini alýaryn.',
@@ -342,7 +345,7 @@ export const translations = {
 					{
 						id: 'tut-bachelors',
 						role: 'Bakalawr',
-						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						organization: 'Taýýüwän Tehnologiýa Uniwersiteti',
 						location: 'Taýýüwän, Şansi, Hytaý',
 						description:
 							'Taýýüwän şäherinde Kompýuter ylymlary we tehnologiýasy boýunça bakalawr derejesini tamamladym.',
@@ -350,7 +353,7 @@ export const translations = {
 					{
 						id: 'xisu-chinese',
 						role: 'Hytaý dili',
-						company: 'Siýan Halkara Dünýä Diller Uniwersiteti',
+						organization: 'Siýan Halkara Dünýä Diller Uniwersiteti',
 						location: 'Siýan, Şeýnsi, Hytaý',
 						description:
 							'Siýan şäherinde Siýan Halkara Dünýä Diller Uniwersitetinde hytaý dilini öwrendim.',
@@ -381,7 +384,7 @@ export const translations = {
 		pricing: {
 			title: 'Nyrhnamalar',
 			tagline:
-				'Özüňize laýyk nyrhnamany saýlaň we Agajan Sahatow bilen derrew başlaň.',
+				'Özüňize laýyk nyrhnamany saýlaň we {portfolioName} bilen derrew başlaň.',
 			badgeSuffix: 'arzanlaşyk',
 			subscribe: 'Ýazyl',
 			plans: [
@@ -428,7 +431,7 @@ export const translations = {
 		},
 		contact: {
 			title: 'Habarlaşmak',
-			mapTitle: 'Agajan Sahatow ýerleşýän ýeri',
+			mapTitle: '{portfolioName} ýerleşýän ýeri',
 			mapPreview: 'Kartanyň görnüşi',
 			mapUnavailable:
 				'Eger karta görünmese, sebäbi käbir ýerlerde Google hyzmatlary çäklendirilen bolup biler.',
@@ -441,12 +444,12 @@ export const translations = {
 			tmPhoneDataLabel: 'TM belgisi',
 			cnPhoneDataLabel: 'CN belgisi',
 			phonesBody:
-				'Agajan Sahatow boýunça soraglar, hyzmatdaşlyk teklipleri we tehniki meseleler üçin jaň edip bilersiňiz.',
+				'{portfolioName} boýunça soraglar, hyzmatdaşlyk teklipleri we tehniki meseleler üçin jaň edip bilersiňiz.',
 			callTm: 'TM jaň et',
 			callCn: 'CN jaň et',
 			emailTitle: 'Email adresimiz',
 			emailBody:
-				'Agajan Sahatow bilen bagly sorag, teklip ýa-da hyzmatdaşlyk boýunça bize email iberip bilersiňiz.',
+				'{portfolioName} bilen bagly sorag, teklip ýa-da hyzmatdaşlyk boýunça bize email iberip bilersiňiz.',
 			copyEmail: 'Email göçür',
 			writeEmail: 'Email ýaz',
 			copySuccess: 'Üstünlikli göçürildi!',
@@ -521,8 +524,8 @@ export const translations = {
 			badge: 'Men barada',
 			title: 'Doly çarçuwaly web we mobil programmalary gurýan injener',
 			tagline:
-				'Men Agajan Sahatow, doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Men hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýärin.',
-			imageAlt: 'Hünärmen programmist Agajan Sahatowyň suraty',
+				'Men {portfolioName}, doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Men hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýärin.',
+			imageAlt: 'Hünärmen programmist {portfolioName}yň suraty',
 			missionTitle: 'Maksadym',
 			missionBody:
 				'Hakyky meseleleri çözýän, ony ulanýan adamlara we kärhanalara hakyky bähbit getirýän ygtybarly we amaly programma üpjünçiligini gurmak.',
@@ -548,13 +551,13 @@ export const translations = {
 					body: 'Hakyky meseleleri çözýän, kärhanalar üçin peýdaly programma.',
 				},
 			],
-			companyTitle: 'Şahsy maglumatlar',
-			companySubtitle:
-				'Agajan Sahatow barada maglumat we aragatnaşyk maglumatlary.',
+			portfolioTitle: 'Şahsy maglumatlar',
+			portfolioSubtitle:
+				'{portfolioName} barada maglumat we aragatnaşyk maglumatlary.',
 			detailsTitle: 'Esasy maglumatlar',
 			detailsHint:
 				'Hyzmatdaşlyk, erkin iş ýa-da diňe salam üçin email bilen habarlaşmak iň gowy ýoldur.',
-			ownerLabel: 'Ady',
+			nameLabel: 'Ady',
 			addressLabel: 'Ýerleşýän ýeri',
 			focusLabel: 'Esasy ugruny',
 			focusValue:
@@ -565,8 +568,6 @@ export const translations = {
 			contactSubtitle:
 				'Erkin iş, hyzmatdaşlyk ýa-da diňe tanyşmak üçin habarlaşyň.',
 			phoneLabel: 'Telefon (TM, CN)',
-			socialNote:
-				'Näme gurýandygym barada täzelikler üçin meni sosial torlarda yzarlap bilersiňiz.',
 		},
 		errors: {
 			genericTitle: 'Näsazlyk boldy',
@@ -579,7 +580,7 @@ export const translations = {
 	},
 	en: {
 		common: {
-			brandName: 'Agajan Sahatov',
+
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'All rights reserved.',
 			builtWithNote: 'Built with ❤️ and code.',
@@ -587,6 +588,9 @@ export const translations = {
 			email: 'Email',
 			phone: 'Phone',
 			address: 'Address',
+			socialTitle: 'Social media',
+			socialNote:
+				'Follow me on social media for updates on what I am building.',
 		},
 		documentTitle: {
 			tagline: 'Professional Software Engineer',
@@ -672,11 +676,11 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: "Hey there! I'm Agajan Sahatov",
+			heroTitle: "Hey there! I'm {portfolioName}",
 			heroTagline:
 				'I turn ideas, wireframes, and technical specifications into fast, scalable, beautiful and production-ready applications.',
 			heroImageAlt:
-				'Photo of Agajan Sahatov who is a professional software engineer',
+				'Photo of {portfolioName} who is a professional software engineer',
 			heroCta: 'Get to know me',
 			calloutCta: 'Contact me',
 			servicesTitle: 'What I Offer',
@@ -768,7 +772,7 @@ export const translations = {
 				{
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
-					company: 'Entrepreneur',
+					organization: 'Entrepreneur',
 					photoAlt: 'A happy, smiling customer',
 					comment:
 						'I am so happy to recommend Agajan Sahatov. He delivered an excellent website that is very beautiful, responsive and blazingly fast. He is very professional, easy to work with and has good results...',
@@ -850,7 +854,7 @@ export const translations = {
 			tagline:
 				'My professional and academic journey building production-ready digital products across web, backend, and mobile.',
 			present: 'Present',
-			viewCompany: 'View company',
+			viewOrganization: 'View organization',
 			viewInstitution: 'View university',
 			readMore: 'Read more',
 			readLess: 'Read less',
@@ -860,7 +864,7 @@ export const translations = {
 					{
 						id: 'xcargo',
 						role: 'Full-Stack Developer',
-						company: 'Xcargo',
+						organization: 'Xcargo',
 						location: 'Yiwu, Zhejiang, China · Hybrid',
 						description:
 							'Worked as a hybrid full-stack software engineer at Xcargo international logistics in Yiwu, China. Built the Xcargo backend system, frontend, and mobile apps.',
@@ -868,7 +872,7 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: 'Front-end Intern',
-						company: 'Smart Walnut Technology',
+						organization: 'Smart Walnut Technology',
 						location: 'Nanchang, Jiangxi, China',
 						description:
 							'Worked on-site as a front-end intern at Smart Walnut Technology in Nanchang, Jiangxi, China. Built user interfaces with TypeScript, React, Ant Design, and Git.',
@@ -876,7 +880,7 @@ export const translations = {
 					{
 						id: 'zhilin',
 						role: 'Internship Trainee',
-						company: 'Zhilin Information Technology Co., Ltd.',
+						organization: 'Zhilin Information Technology Co., Ltd.',
 						location: 'Taiyuan, Shanxi, China',
 						description:
 							'Worked on-site as a software development internship trainee at Zhilin Information Technology Co., Ltd. in Taiyuan. Built two projects: IoT Smart Home and Udacity Driverless System.',
@@ -884,7 +888,7 @@ export const translations = {
 					{
 						id: 'tut-web-dev',
 						role: 'Web Intern',
-						company: 'Taiyuan University of Technology',
+						organization: 'Taiyuan University of Technology',
 						location: 'Taiyuan, Shanxi, China',
 						description:
 							'Worked on-site as a Web Development Intern at TYUT. Developed a minimal social network called Circle and a mini online store called Utopia.',
@@ -892,7 +896,7 @@ export const translations = {
 					{
 						id: 'tut-cpp',
 						role: 'C++ Developer Apprentice',
-						company: 'Taiyuan University of Technology',
+						organization: 'Taiyuan University of Technology',
 						location: 'Taiyuan, Shanxi, China',
 						description:
 							'Worked on-site as a C++ Developer Apprentice at TYUT. Developed ABMS (Address Book Management System), a desktop app using C++ and Embarcadero RAD Studio.',
@@ -900,7 +904,7 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: 'Volunteer',
-						company: 'First World Vocational College Skills Competition',
+						organization: 'First World Vocational College Skills Competition',
 						location: 'Jinzhong, Shanxi, China',
 						description:
 							'Volunteered on-site as a team member in the Virtual Reality (VR) Design and Production Competition at Jinzhong Vocational and Technical College, part of the First World Vocational College Skills Competition sponsored by the Ministry of Education. Built a VR urban transportation system using C++, Unity, and other VR technologies.',
@@ -913,7 +917,7 @@ export const translations = {
 					{
 						id: 'ncu-masters',
 						role: "Master's Degree",
-						company: 'Nanchang University',
+						organization: 'Nanchang University',
 						location: 'Nanchang, Jiangxi, China',
 						description:
 							"Pursuing a Master's degree in Software Engineering at Nanchang University in Nanchang city.",
@@ -921,7 +925,7 @@ export const translations = {
 					{
 						id: 'tut-bachelors',
 						role: "Bachelor's Degree",
-						company: 'Taiyuan University of Technology',
+						organization: 'Taiyuan University of Technology',
 						location: 'Taiyuan, Shanxi, China',
 						description:
 							"Completed a Bachelor's degree in Computer Science and Technology at TYUT in Taiyuan city.",
@@ -929,7 +933,7 @@ export const translations = {
 					{
 						id: 'xisu-chinese',
 						role: 'Chinese Language',
-						company: "Xi'an International Studies University",
+						organization: "Xi'an International Studies University",
 						location: "Xi'an, Shaanxi, China",
 						description:
 							"Studied Chinese at Xi'an International Studies University in Xi'an city.",
@@ -959,7 +963,7 @@ export const translations = {
 		},
 		pricing: {
 			title: 'Pricing',
-			tagline: 'Choose the plan that fits you and start with Agajan Sahatov.',
+			tagline: 'Choose the plan that fits you and start with {portfolioName}.',
 			badgeSuffix: 'discount',
 			subscribe: 'Subscribe',
 			plans: [
@@ -1006,7 +1010,7 @@ export const translations = {
 		},
 		contact: {
 			title: 'Contact',
-			mapTitle: 'Agajan Sahatov location',
+			mapTitle: '{portfolioName} location',
 			mapPreview: 'Map preview',
 			mapUnavailable:
 				'If the map does not appear, Google services may be restricted in some regions.',
@@ -1019,12 +1023,12 @@ export const translations = {
 			tmPhoneDataLabel: 'TM number',
 			cnPhoneDataLabel: 'CN number',
 			phonesBody:
-				'Call us for Agajan Sahatov questions, partnership ideas, and technical issues.',
+				'Call us for {portfolioName} questions, partnership ideas, and technical issues.',
 			callTm: 'Call TM',
 			callCn: 'Call CN',
 			emailTitle: 'Our email address',
 			emailBody:
-				'Email us about Agajan Sahatov questions, suggestions, or partnership opportunities.',
+				'Email us about {portfolioName} questions, suggestions, or partnership opportunities.',
 			copyEmail: 'Copy email',
 			writeEmail: 'Write email',
 			copySuccess: 'Copied successfully!',
@@ -1098,9 +1102,9 @@ export const translations = {
 			badge: 'About me',
 			title: 'Software engineer building full-stack web & mobile apps',
 			tagline:
-				'I am Agajan Sahatov, a software engineer specializing in full-stack web and mobile development. I focus on building practical, reliable systems that solve real-world problems.',
+				'I am {portfolioName}, a software engineer specializing in full-stack web and mobile development. I focus on building practical, reliable systems that solve real-world problems.',
 			imageAlt:
-				'Photo of Agajan Sahatov who is a professional software engineer',
+				'Photo of {portfolioName} who is a professional software engineer',
 			missionTitle: 'My mission',
 			missionBody:
 				'Build reliable, practical software that solves real-world problems and creates real value for the people and businesses who use it.',
@@ -1126,12 +1130,12 @@ export const translations = {
 					body: 'Software that solves real problems for real businesses.',
 				},
 			],
-			companyTitle: 'Personal information',
-			companySubtitle: 'Background and contact details for Agajan Sahatov.',
+			portfolioTitle: 'Personal information',
+			portfolioSubtitle: 'Background and contact details for {portfolioName}.',
 			detailsTitle: 'Key details',
 			detailsHint:
 				'For collaboration, freelance work, or just to say hi, email is the best way to reach me.',
-			ownerLabel: 'Name',
+			nameLabel: 'Name',
 			addressLabel: 'Location',
 			focusLabel: 'Main focus',
 			focusValue:
@@ -1142,8 +1146,6 @@ export const translations = {
 			contactSubtitle:
 				'Reach out about freelance work, collaboration, or just to connect.',
 			phoneLabel: 'Phone (TM, CN)',
-			socialNote:
-				'Follow me on social media for updates on what I am building.',
 		},
 		errors: {
 			genericTitle: 'Something went wrong',
@@ -1156,7 +1158,7 @@ export const translations = {
 	},
 	zh: {
 		common: {
-			brandName: '阿哥战',
+
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: '保留所有权利。',
 			builtWithNote: '用 ❤️ 和代码构建。',
@@ -1164,6 +1166,8 @@ export const translations = {
 			email: '邮箱',
 			phone: '电话',
 			address: '地址',
+			socialTitle: '社交媒体',
+			socialNote: '关注我的社交账号，了解我正在构建的内容。',
 		},
 		documentTitle: {
 			tagline: '专业软件工程师',
@@ -1247,10 +1251,10 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: '你好！我是 阿哥战',
+			heroTitle: '你好！我是 {portfolioName}',
 			heroTagline:
 				'我将想法、线框图和技术规格转化为快速、可扩展、美观且可投入生产的应用程序。',
-			heroImageAlt: '专业软件工程师 阿哥战 的照片',
+			heroImageAlt: '专业软件工程师 {portfolioName} 的照片',
 			heroCta: '了解我',
 			calloutCta: '联系我',
 			servicesTitle: '我提供的服务',
@@ -1341,7 +1345,7 @@ export const translations = {
 				{
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
-					company: '创业者',
+					organization: '创业者',
 					photoAlt: '一位开心微笑的客户照片',
 					comment:
 						'我非常乐意推荐 Agajan Sahatov。他交付了一个非常精美、响应式且速度极快的优秀网站。他非常专业，沟通顺畅，成果也很好……',
@@ -1422,7 +1426,7 @@ export const translations = {
 			tagline:
 				'我在工作与学业中构建可投入生产的 Web、后端与移动端数字产品的历程。',
 			present: '至今',
-			viewCompany: '查看公司',
+			viewOrganization: '查看机构',
 			viewInstitution: '查看院校',
 			readMore: '阅读更多',
 			readLess: '收起',
@@ -1432,7 +1436,7 @@ export const translations = {
 					{
 						id: 'xcargo',
 						role: '全栈开发工程师',
-						company: 'Xcargo',
+						organization: 'Xcargo',
 						location: '中国浙江义乌 · 混合办公',
 						description:
 							'在中国义乌的 Xcargo 国际物流公司担任混合办公全栈软件工程师。构建了 Xcargo 后端系统、前端与移动应用。',
@@ -1440,7 +1444,7 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: '前端实习生',
-						company: '智慧核桃科技',
+						organization: '智慧核桃科技',
 						location: '中国江西南昌',
 						description:
 							'在江西南昌的智慧核桃科技公司现场担任前端实习生。使用 TypeScript、React、Ant Design 和 Git 等技术开发用户界面。',
@@ -1448,7 +1452,7 @@ export const translations = {
 					{
 						id: 'zhilin',
 						role: '实习学员',
-						company: '智林信息技术有限公司',
+						organization: '智林信息技术有限公司',
 						location: '中国山西太原',
 						description:
 							'在太原的智林信息技术有限公司现场担任软件开发实习学员。完成了 IoT 智能家居和 Udacity 无人驾驶系统两个项目。',
@@ -1456,7 +1460,7 @@ export const translations = {
 					{
 						id: 'tut-web-dev',
 						role: 'Web 实习生',
-						company: '太原理工大学',
+						organization: '太原理工大学',
 						location: '中国山西太原',
 						description:
 							'在太原理工大学现场担任 Web 开发实习生。开发了名为 Circle 的极简社交网络和名为 Utopia 的迷你在线商店。',
@@ -1464,7 +1468,7 @@ export const translations = {
 					{
 						id: 'tut-cpp',
 						role: 'C++ 学徒',
-						company: '太原理工大学',
+						organization: '太原理工大学',
 						location: '中国山西太原',
 						description:
 							'在太原理工大学现场担任 C++ 开发学徒。使用 C++ 和 Embarcadero RAD Studio 开发了 ABMS（通讯录管理系统）桌面应用。',
@@ -1472,7 +1476,7 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: '志愿者',
-						company: '首届世界职业院校技能大赛',
+						organization: '首届世界职业院校技能大赛',
 						location: '中国山西晋中',
 						description:
 							'在教育部主办的首届世界职业院校技能大赛之虚拟现实（VR）设计与制作赛项中，于晋中职业技术学院现场担任团队志愿者。使用 C++、Unity 及其他 VR 技术构建了 VR 城市交通系统。',
@@ -1485,21 +1489,21 @@ export const translations = {
 					{
 						id: 'ncu-masters',
 						role: '硕士学位',
-						company: '南昌大学',
+						organization: '南昌大学',
 						location: '中国江西南昌',
 						description: '在南昌市南昌大学攻读软件工程硕士学位。',
 					},
 					{
 						id: 'tut-bachelors',
 						role: '学士学位',
-						company: '太原理工大学',
+						organization: '太原理工大学',
 						location: '中国山西太原',
 						description: '在太原市太原理工大学完成计算机科学与技术学士学位。',
 					},
 					{
 						id: 'xisu-chinese',
 						role: '汉语学习',
-						company: '西安外国语大学',
+						organization: '西安外国语大学',
 						location: '中国陕西西安',
 						description: '在西安市西安外国语大学学习汉语。',
 					},
@@ -1525,7 +1529,7 @@ export const translations = {
 		},
 		pricing: {
 			title: '价格',
-			tagline: '选择适合你的方案，立即开始使用 阿哥战。',
+			tagline: '选择适合你的方案，立即开始使用 {portfolioName}。',
 			badgeSuffix: '优惠',
 			subscribe: '订阅',
 			plans: [
@@ -1567,7 +1571,7 @@ export const translations = {
 		},
 		contact: {
 			title: '联系',
-			mapTitle: '阿哥战 位置',
+			mapTitle: '{portfolioName} 位置',
 			mapPreview: '地图预览',
 			mapUnavailable: '如果地图无法显示，可能是部分地区限制 Google 服务。',
 			openMap: '打开地图',
@@ -1578,11 +1582,11 @@ export const translations = {
 			copyCnPhone: '复制 CN 号码',
 			tmPhoneDataLabel: 'TM 号码',
 			cnPhoneDataLabel: 'CN 号码',
-			phonesBody: '如有 阿哥战 问题、合作想法或技术问题，可以致电我们。',
+			phonesBody: '如有 {portfolioName} 问题、合作想法或技术问题，可以致电我们。',
 			callTm: '拨打 TM',
 			callCn: '拨打 CN',
 			emailTitle: '我们的邮箱',
-			emailBody: '你可以通过邮箱咨询 阿哥战、提交建议或洽谈合作。',
+			emailBody: '你可以通过邮箱咨询 {portfolioName}、提交建议或洽谈合作。',
 			copyEmail: '复制邮箱',
 			writeEmail: '发送邮件',
 			copySuccess: '复制成功！',
@@ -1652,8 +1656,8 @@ export const translations = {
 			badge: '关于我',
 			title: '构建全栈 Web 与移动应用的软件工程师',
 			tagline:
-				'我是 Agajan Sahatov，一名专注于全栈 Web 与移动开发的软件工程师。我致力于构建解决真实问题的实用、可靠的系统。',
-			imageAlt: '专业软件工程师 阿哥战 的照片',
+				'我是 {portfolioName}，一名专注于全栈 Web 与移动开发的软件工程师。我致力于构建解决真实问题的实用、可靠的系统。',
+			imageAlt: '专业软件工程师 {portfolioName} 的照片',
 			missionTitle: '我的使命',
 			missionBody:
 				'构建可靠、实用的软件，解决真实问题，为使用它的人和企业创造真正的价值。',
@@ -1679,12 +1683,12 @@ export const translations = {
 					body: '构建解决真实业务问题的软件。',
 				},
 			],
-			companyTitle: '个人信息',
-			companySubtitle: 'Agajan Sahatov 的背景与联系方式。',
+			portfolioTitle: '个人信息',
+			portfolioSubtitle: '{portfolioName} 的背景与联系方式。',
 			detailsTitle: '关键信息',
 			detailsHint:
 				'关于合作、自由职业，或只是打个招呼，邮箱是联系我的最佳方式。',
-			ownerLabel: '姓名',
+			nameLabel: '姓名',
 			addressLabel: '所在地',
 			focusLabel: '主要方向',
 			focusValue: '全栈 Web 与移动开发、后端 API、数据库设计与系统架构。',
@@ -1693,7 +1697,6 @@ export const translations = {
 			contactTitle: '联系我',
 			contactSubtitle: '关于自由职业、合作，或只是想认识，欢迎与我联系。',
 			phoneLabel: '电话（TM、CN）',
-			socialNote: '关注我的社交账号，了解我正在构建的内容。',
 		},
 		errors: {
 			genericTitle: '出现问题',
@@ -1706,7 +1709,7 @@ export const translations = {
 	},
 	tr: {
 		common: {
-			brandName: 'Ağacan Sahatov',
+
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Tüm hakları saklıdır.',
 			builtWithNote: '❤️ ve kod ile yapıldı.',
@@ -1714,6 +1717,9 @@ export const translations = {
 			email: 'E-posta',
 			phone: 'Telefon',
 			address: 'Adres',
+			socialTitle: 'Sosyal medya',
+			socialNote:
+				'Neler geliştirdiğimi takip etmek için beni sosyal medyada izleyebilirsiniz.',
 		},
 		documentTitle: {
 			tagline: 'Profesyonel yazılım mühendisi',
@@ -1800,10 +1806,10 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Merhaba! Ben Ağacan Sahatov',
+			heroTitle: 'Merhaba! Ben {portfolioName}',
 			heroTagline:
 				'Fikirleri, wireframe’leri ve teknik şartnameleri hızlı, ölçeklenebilir, güzel ve üretime hazır uygulamalara dönüştürüyorum.',
-			heroImageAlt: 'Profesyonel yazılım mühendisi Ağacan Sahatov’un fotoğrafı',
+			heroImageAlt: 'Profesyonel yazılım mühendisi {portfolioName}’un fotoğrafı',
 			heroCta: 'Benimle tanış',
 			calloutCta: 'Benimle iletişime geç',
 			servicesTitle: 'Neler Sunuyorum',
@@ -1895,7 +1901,7 @@ export const translations = {
 				{
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
-					company: 'Girişimci',
+					organization: 'Girişimci',
 					photoAlt: 'Mutlu ve gülümseyen bir müşterinin fotoğrafı',
 					comment:
 						'Agajan Sahatov’u tavsiye etmekten çok mutluyum. Çok güzel, duyarlı ve son derece hızlı mükemmel bir web sitesi teslim etti. Çok profesyonel, birlikte çalışması kolay ve iyi sonuçlar veriyor...',
@@ -1977,7 +1983,7 @@ export const translations = {
 			tagline:
 				'Web, backend ve mobil alanlarda üretime hazır dijital ürünler geliştirdiğim profesyonel ve akademik yolculuğum.',
 			present: 'Devam ediyor',
-			viewCompany: 'Şirketi gör',
+			viewOrganization: 'Kurumu gör',
 			viewInstitution: 'Üniversiteyi gör',
 			readMore: 'Daha fazla oku',
 			readLess: 'Daha az göster',
@@ -1987,7 +1993,7 @@ export const translations = {
 					{
 						id: 'xcargo',
 						role: 'Full-Stack Geliştirici',
-						company: 'Xcargo',
+						organization: 'Xcargo',
 						location: 'Yiwu, Zhejiang, Çin · Hibrit',
 						description:
 							"Çin'in Yiwu şehrindeki Xcargo uluslararası lojistik şirketinde hibrit full-stack yazılım mühendisi olarak çalıştım. Xcargo backend sistemi, frontend ve mobil uygulamalarını geliştirdim.",
@@ -1995,7 +2001,7 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: 'Frontend Stajyeri',
-						company: 'Smart Walnut Technology',
+						organization: 'Smart Walnut Technology',
 						location: 'Nanchang, Jiangxi, Çin',
 						description:
 							"Jiangxi, Nanchang'daki Smart Walnut Technology şirketinde yerinde frontend stajyeri olarak çalıştım. TypeScript, React, Ant Design ve Git kullanarak kullanıcı arayüzleri geliştirdim.",
@@ -2003,7 +2009,7 @@ export const translations = {
 					{
 						id: 'zhilin',
 						role: 'Staj Öğrencisi',
-						company: 'Zhilin Information Technology Co., Ltd.',
+						organization: 'Zhilin Information Technology Co., Ltd.',
 						location: 'Taiyuan, Shanxi, Çin',
 						description:
 							"Taiyuan'daki Zhilin Information Technology Co., Ltd. şirketinde yerinde yazılım geliştirme staj öğrencisi olarak çalıştım. IoT Smart Home ve Udacity Driverless System adlı iki proje geliştirdim.",
@@ -2011,7 +2017,7 @@ export const translations = {
 					{
 						id: 'tut-web-dev',
 						role: 'Web Stajyeri',
-						company: 'Taiyuan Teknoloji Üniversitesi',
+						organization: 'Taiyuan Teknoloji Üniversitesi',
 						location: 'Taiyuan, Shanxi, Çin',
 						description:
 							"TYUT'da yerinde Web Geliştirme Stajyeri olarak çalıştım. Circle adlı minimal sosyal ağ ve Utopia adlı mini çevrimiçi mağaza geliştirdim.",
@@ -2019,7 +2025,7 @@ export const translations = {
 					{
 						id: 'tut-cpp',
 						role: 'C++ Geliştirici Çırağı',
-						company: 'Taiyuan Teknoloji Üniversitesi',
+						organization: 'Taiyuan Teknoloji Üniversitesi',
 						location: 'Taiyuan, Shanxi, Çin',
 						description:
 							"TYUT'da yerinde C++ Geliştirici Çırağı olarak çalıştım. C++ ve Embarcadero RAD Studio kullanarak ABMS (Adres Defteri Yönetim Sistemi) masaüstü uygulamasını geliştirdim.",
@@ -2027,7 +2033,7 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: 'Gönüllü',
-						company: 'Birinci Dünya Meslek Okulları Beceri Yarışması',
+						organization: 'Birinci Dünya Meslek Okulları Beceri Yarışması',
 						location: 'Jinzhong, Shanxi, Çin',
 						description:
 							"Eğitim Bakanlığı tarafından desteklenen Birinci Dünya Meslek Okulları Beceri Yarışması kapsamında, Jinzhong Meslek ve Teknik Koleji'nde düzenlenen Sanal Gerçeklik (VR) Tasarım ve Üretim Yarışması'nda yerinde ekip üyesi gönüllü olarak görev aldım. C++, Unity ve diğer VR teknolojileri kullanarak bir VR kentsel ulaşım sistemi geliştirdim.",
@@ -2040,7 +2046,7 @@ export const translations = {
 					{
 						id: 'ncu-masters',
 						role: 'Yüksek Lisans',
-						company: 'Nanchang Üniversitesi',
+						organization: 'Nanchang Üniversitesi',
 						location: 'Nanchang, Jiangxi, Çin',
 						description:
 							"Nanchang şehrindeki Nanchang Üniversitesi'nde Yazılım Mühendisliği yüksek lisansı yapıyorum.",
@@ -2048,7 +2054,7 @@ export const translations = {
 					{
 						id: 'tut-bachelors',
 						role: 'Lisans',
-						company: 'Taiyuan Teknoloji Üniversitesi',
+						organization: 'Taiyuan Teknoloji Üniversitesi',
 						location: 'Taiyuan, Shanxi, Çin',
 						description:
 							"Taiyuan şehrindeki TYUT'da Bilgisayar Bilimi ve Teknolojisi lisansını tamamladım.",
@@ -2056,7 +2062,7 @@ export const translations = {
 					{
 						id: 'xisu-chinese',
 						role: 'Çince Dili',
-						company: "Xi'an Uluslararası Çalışmalar Üniversitesi",
+						organization: "Xi'an Uluslararası Çalışmalar Üniversitesi",
 						location: "Xi'an, Shaanxi, Çin",
 						description:
 							"Xi'an şehrinde Xi'an Uluslararası Çalışmalar Üniversitesi'nde (XISU) Çince öğrendim.",
@@ -2087,7 +2093,7 @@ export const translations = {
 		},
 		pricing: {
 			title: 'Fiyatlandırma',
-			tagline: 'Size uygun planı seçin ve Ağacan Sahatov ile hemen başlayın.',
+			tagline: 'Size uygun planı seçin ve {portfolioName} ile hemen başlayın.',
 			badgeSuffix: 'indirim',
 			subscribe: 'Abone ol',
 			plans: [
@@ -2134,7 +2140,7 @@ export const translations = {
 		},
 		contact: {
 			title: 'İletişim',
-			mapTitle: 'Ağacan Sahatov konumu',
+			mapTitle: '{portfolioName} konumu',
 			mapPreview: 'Harita önizlemesi',
 			mapUnavailable:
 				'Harita görünmüyorsa bazı bölgelerde Google hizmetleri kısıtlı olabilir.',
@@ -2147,12 +2153,12 @@ export const translations = {
 			tmPhoneDataLabel: 'TM numarası',
 			cnPhoneDataLabel: 'CN numarası',
 			phonesBody:
-				'Ağacan Sahatov soruları, iş birliği önerileri ve teknik konular için bizi arayabilirsiniz.',
+				'{portfolioName} soruları, iş birliği önerileri ve teknik konular için bizi arayabilirsiniz.',
 			callTm: 'TM ara',
 			callCn: 'CN ara',
 			emailTitle: 'E-posta adresimiz',
 			emailBody:
-				'Ağacan Sahatov ile ilgili soru, öneri veya iş birliği için bize e-posta gönderebilirsiniz.',
+				'{portfolioName} ile ilgili soru, öneri veya iş birliği için bize e-posta gönderebilirsiniz.',
 			copyEmail: 'E-postayı kopyala',
 			writeEmail: 'E-posta yaz',
 			copySuccess: 'Başarıyla kopyalandı!',
@@ -2226,8 +2232,8 @@ export const translations = {
 			badge: 'Hakkımda',
 			title: 'Tam yığın web ve mobil uygulamalar geliştiren yazılım mühendisi',
 			tagline:
-				'Ben Ağacan Sahatov, tam yığın web ve mobil geliştirmede uzmanlaşmış bir yazılım mühendisiyim. Gerçek dünyadaki sorunları çözen pratik ve güvenilir sistemler kurmaya odaklanıyorum.',
-			imageAlt: 'Profesyonel yazılım mühendisi Ağacan Sahatov’un fotoğrafı',
+				'Ben {portfolioName}, tam yığın web ve mobil geliştirmede uzmanlaşmış bir yazılım mühendisiyim. Gerçek dünyadaki sorunları çözen pratik ve güvenilir sistemler kurmaya odaklanıyorum.',
+			imageAlt: 'Profesyonel yazılım mühendisi {portfolioName}’un fotoğrafı',
 			missionTitle: 'Misyonum',
 			missionBody:
 				'Gerçek dünyadaki sorunları çözen, onu kullanan insanlara ve işletmelere gerçek değer katan güvenilir ve pratik yazılımlar geliştirmek.',
@@ -2253,12 +2259,12 @@ export const translations = {
 					body: 'Gerçek işletmeler için pratik yazılımlar geliştiririm.',
 				},
 			],
-			companyTitle: 'Kişisel bilgiler',
-			companySubtitle: 'Ağacan Sahatov hakkında geçmiş ve iletişim bilgileri.',
+			portfolioTitle: 'Kişisel bilgiler',
+			portfolioSubtitle: '{portfolioName} hakkında geçmiş ve iletişim bilgileri.',
 			detailsTitle: 'Temel bilgiler',
 			detailsHint:
 				'İş birliği, serbest çalışma ya da sadece merhaba demek için en iyi iletişim yolu e-postadır.',
-			ownerLabel: 'Ad',
+			nameLabel: 'Ad',
 			addressLabel: 'Konum',
 			focusLabel: 'Ana odak',
 			focusValue:
@@ -2269,8 +2275,6 @@ export const translations = {
 			contactSubtitle:
 				'Serbest çalışma, iş birliği ya da sadece tanışmak için bana yazın.',
 			phoneLabel: 'Telefon (TM, CN)',
-			socialNote:
-				'Neler geliştirdiğimi takip etmek için beni sosyal medyada izleyebilirsiniz.',
 		},
 		errors: {
 			genericTitle: 'Bir şeyler ters gitti',
@@ -2283,7 +2287,7 @@ export const translations = {
 	},
 	ru: {
 		common: {
-			brandName: 'Агаджан Сахатов',
+
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Все права защищены.',
 			builtWithNote: 'Создано с ❤️ и кодом.',
@@ -2291,6 +2295,9 @@ export const translations = {
 			email: 'Email',
 			phone: 'Телефон',
 			address: 'Адрес',
+			socialTitle: 'Соцсети',
+			socialNote:
+				'Подписывайтесь на меня в соцсетях, чтобы следить за тем, что я создаю.',
 		},
 		documentTitle: {
 			tagline: 'Профессиональный инженер-программист',
@@ -2377,11 +2384,11 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Привет! Я Агаджан Сахатов',
+			heroTitle: 'Привет! Я {portfolioName}',
 			heroTagline:
 				'Я превращаю идеи, вайрфреймы и технические спецификации в быстрые, масштабируемые, красивые и готовые к продакшену приложения.',
 			heroImageAlt:
-				'Фотография Агаджан Сахатов, профессионального инженера-программиста',
+				'Фотография {portfolioName}, профессионального инженера-программиста',
 			heroCta: 'Познакомиться со мной',
 			calloutCta: 'Свяжитесь со мной',
 			servicesTitle: 'Что я предлагаю',
@@ -2472,7 +2479,7 @@ export const translations = {
 				{
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
-					company: 'Предприниматель',
+					organization: 'Предприниматель',
 					photoAlt: 'Фото довольного, улыбающегося клиента',
 					comment:
 						'Я с удовольствием рекомендую Агаджана Сахатова. Он сделал отличный сайт — красивый, адаптивный и очень быстрый. Он профессионален, с ним легко работать, и результаты хорошие...',
@@ -2554,7 +2561,7 @@ export const translations = {
 			tagline:
 				'Мой профессиональный и академический путь в создании готовых к продакшену цифровых продуктов для web, backend и mobile.',
 			present: 'настоящее время',
-			viewCompany: 'Смотреть компанию',
+			viewOrganization: 'Смотреть организацию',
 			viewInstitution: 'Открыть вуз',
 			readMore: 'Читать далее',
 			readLess: 'Свернуть',
@@ -2564,7 +2571,7 @@ export const translations = {
 					{
 						id: 'xcargo',
 						role: 'Full-Stack разработчик',
-						company: 'Xcargo',
+						organization: 'Xcargo',
 						location: 'Иу, Чжэцзян, Китай · Гибрид',
 						description:
 							'Работал гибридным full-stack инженером в международной логистической компании Xcargo в Иу, Китай. Разработал backend-систему Xcargo, frontend и мобильные приложения.',
@@ -2572,7 +2579,7 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: 'Стажёр-фронтенд',
-						company: 'Smart Walnut Technology',
+						organization: 'Smart Walnut Technology',
 						location: 'Наньчан, Цзянси, Китай',
 						description:
 							'Работал на месте стажёром-фронтенд-разработчиком в компании Smart Walnut Technology в Наньчане, Цзянси, Китай. Использовал TypeScript, React, Ant Design и Git.',
@@ -2580,7 +2587,7 @@ export const translations = {
 					{
 						id: 'zhilin',
 						role: 'Стажёр-практикант',
-						company: 'Zhilin Information Technology Co., Ltd.',
+						organization: 'Zhilin Information Technology Co., Ltd.',
 						location: 'Тайюань, Шаньси, Китай',
 						description:
 							'Работал на месте стажёром-практикантом по разработке ПО в компании Zhilin Information Technology Co., Ltd. в Тайюане. Создал два проекта: IoT Smart Home и Udacity Driverless System.',
@@ -2588,7 +2595,7 @@ export const translations = {
 					{
 						id: 'tut-web-dev',
 						role: 'Web-стажёр',
-						company: 'Тайюаньский технологический университет',
+						organization: 'Тайюаньский технологический университет',
 						location: 'Тайюань, Шаньси, Китай',
 						description:
 							'Работал на месте Web-стажёром в TYUT. Разработал минимальную социальную сеть Circle и мини интернет-магазин Utopia.',
@@ -2596,7 +2603,7 @@ export const translations = {
 					{
 						id: 'tut-cpp',
 						role: 'Ученик C++-разработчика',
-						company: 'Тайюаньский технологический университет',
+						organization: 'Тайюаньский технологический университет',
 						location: 'Тайюань, Шаньси, Китай',
 						description:
 							'Работал на месте учеником C++-разработчика в TYUT. Разработал настольное приложение ABMS (система управления адресной книгой) на C++ и Embarcadero RAD Studio.',
@@ -2604,7 +2611,7 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: 'Волонтёр',
-						company:
+						organization:
 							'Первый мировой конкурс профессиональных навыков колледжей',
 						location: 'Цзиньчжун, Шаньси, Китай',
 						description:
@@ -2618,7 +2625,7 @@ export const translations = {
 					{
 						id: 'ncu-masters',
 						role: 'Магистратура',
-						company: 'Университет Наньчана',
+						organization: 'Университет Наньчана',
 						location: 'Наньчан, Цзянси, Китай',
 						description:
 							'Получаю степень магистра по программной инженерии в Университете Наньчана.',
@@ -2626,7 +2633,7 @@ export const translations = {
 					{
 						id: 'tut-bachelors',
 						role: 'Бакалавриат',
-						company: 'Тайюаньский технологический университет',
+						organization: 'Тайюаньский технологический университет',
 						location: 'Тайюань, Шаньси, Китай',
 						description:
 							'Окончил бакалавриат по специальности «Компьютерные науки и технологии» в TYUT в Тайюане.',
@@ -2634,7 +2641,7 @@ export const translations = {
 					{
 						id: 'xisu-chinese',
 						role: 'Китайский язык',
-						company: 'Сианьский университет международных исследований',
+						organization: 'Сианьский университет международных исследований',
 						location: 'Сиань, Шэньси, Китай',
 						description:
 							'Изучал китайский язык в Сианьском университете международных исследований (XISU) в Сиане.',
@@ -2665,7 +2672,7 @@ export const translations = {
 		},
 		pricing: {
 			title: 'Цены',
-			tagline: 'Выберите подходящий план и начните с Агаджан Сахатов.',
+			tagline: 'Выберите подходящий план и начните с {portfolioName}.',
 			badgeSuffix: 'скидка',
 			subscribe: 'Подписаться',
 			plans: [
@@ -2712,7 +2719,7 @@ export const translations = {
 		},
 		contact: {
 			title: 'Контакты',
-			mapTitle: 'Местоположение Агаджан Сахатов',
+			mapTitle: 'Местоположение {portfolioName}',
 			mapPreview: 'Предпросмотр карты',
 			mapUnavailable:
 				'Если карта не отображается, возможно, сервисы Google ограничены в некоторых регионах.',
@@ -2725,12 +2732,12 @@ export const translations = {
 			tmPhoneDataLabel: 'Номер TM',
 			cnPhoneDataLabel: 'Номер CN',
 			phonesBody:
-				'Звоните по вопросам Агаджан Сахатов, предложениям о сотрудничестве и техническим вопросам.',
+				'Звоните по вопросам {portfolioName}, предложениям о сотрудничестве и техническим вопросам.',
 			callTm: 'Позвонить TM',
 			callCn: 'Позвонить CN',
 			emailTitle: 'Наш email',
 			emailBody:
-				'Напишите нам по вопросам Агаджан Сахатов, предложениям или сотрудничеству.',
+				'Напишите нам по вопросам {portfolioName}, предложениям или сотрудничеству.',
 			copyEmail: 'Скопировать email',
 			writeEmail: 'Написать email',
 			copySuccess: 'Успешно скопировано!',
@@ -2805,9 +2812,9 @@ export const translations = {
 			title:
 				'Инженер-программист, создающий full-stack web- и мобильные приложения',
 			tagline:
-				'Я Агаджан Сахатов, инженер-программист, специализирующийся на full-stack web- и мобильной разработке. Я сосредоточен на создании практичных и надёжных систем, которые решают реальные задачи.',
+				'Я {portfolioName}, инженер-программист, специализирующийся на full-stack web- и мобильной разработке. Я сосредоточен на создании практичных и надёжных систем, которые решают реальные задачи.',
 			imageAlt:
-				'Фотография Агаджан Сахатов, профессионального инженера-программиста',
+				'Фотография {portfolioName}, профессионального инженера-программиста',
 			missionTitle: 'Моя миссия',
 			missionBody:
 				'Создавать надёжное и практичное программное обеспечение, которое решает реальные задачи и приносит реальную пользу людям и компаниям, которые им пользуются.',
@@ -2833,12 +2840,12 @@ export const translations = {
 					body: 'ПО, которое решает реальные задачи бизнеса.',
 				},
 			],
-			companyTitle: 'Личная информация',
-			companySubtitle: 'Сведения и контактная информация об Агаджан Сахатов.',
+			portfolioTitle: 'Личная информация',
+			portfolioSubtitle: 'Сведения и контактная информация об {portfolioName}.',
 			detailsTitle: 'Ключевая информация',
 			detailsHint:
 				'По вопросам сотрудничества, фриланса или просто чтобы поздороваться, лучший способ связи - email.',
-			ownerLabel: 'Имя',
+			nameLabel: 'Имя',
 			addressLabel: 'Местоположение',
 			focusLabel: 'Основное направление',
 			focusValue:
@@ -2849,8 +2856,6 @@ export const translations = {
 			contactSubtitle:
 				'Напишите мне по вопросам фриланса, сотрудничества или просто чтобы познакомиться.',
 			phoneLabel: 'Телефон (TM, CN)',
-			socialNote:
-				'Подписывайтесь на меня в соцсетях, чтобы следить за тем, что я создаю.',
 		},
 		errors: {
 			genericTitle: 'Что-то пошло не так',

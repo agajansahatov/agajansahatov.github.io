@@ -5,7 +5,7 @@ import { useTranslation } from '../../../../i18n';
 import styles from './BannerSection.module.css';
 
 const BannerSection = () => {
-	const { t } = useTranslation();
+	const { t, interpolate } = useTranslation();
 
 	return (
 		<Block
@@ -16,7 +16,7 @@ const BannerSection = () => {
 			<BlockHeader
 				className={`${styles.banner__header} ${styles.banner__content}`}
 			>
-				<h1 className='word-break'>{t.explore.heroTitle}</h1>
+				<h1 className='word-break'>{interpolate(t.explore.heroTitle)}</h1>
 
 				<p className={`${styles.banner__tagline} word-break`}>
 					{t.explore.heroTagline}
@@ -34,7 +34,7 @@ const BannerSection = () => {
 			<img
 				className={styles.banner__image}
 				src='/images/banner.svg'
-				alt={t.explore.heroImageAlt}
+				alt={interpolate(t.explore.heroImageAlt)}
 			/>
 		</Block>
 	);

@@ -14,6 +14,7 @@ export const DEFAULT_LANGUAGE_CODE: LanguageCode = 'en';
 export const DEFAULT_THEME_MODE: ThemeMode = 'system';
 
 export const GEOLOCATION_API_URL = 'https://api.country.is/' as const;
+export const TURKMENISTAN_COUNTRY_CODE = 'TM' as const;
 
 export const LANGUAGE_OPTIONS: readonly LanguagePreferenceOption[] = [
 	{ value: 'tk', labelKey: 'turkmen', nativeLabel: 'Türkmen' },

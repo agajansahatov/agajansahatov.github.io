@@ -30,7 +30,7 @@ const ExperiencePage = () => {
 						experiences={workExperiences}
 						language={language}
 						presentLabel={t.experience.present}
-						viewCompanyLabel={t.experience.viewCompany}
+						viewOrganizationLabel={t.experience.viewOrganization}
 						readMoreLabel={t.experience.readMore}
 						readLessLabel={t.experience.readLess}
 					/>
@@ -44,7 +44,7 @@ const ExperiencePage = () => {
 						experiences={educationEntries}
 						language={language}
 						presentLabel={t.experience.present}
-						viewCompanyLabel={t.experience.viewInstitution}
+						viewOrganizationLabel={t.experience.viewInstitution}
 						readMoreLabel={t.experience.readMore}
 						readLessLabel={t.experience.readLess}
 					/>

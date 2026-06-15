@@ -3,7 +3,7 @@ export type HomeTestimonialId = 'meylis-sahetmammedov';
 export type TestimonialContent = {
 	readonly id: HomeTestimonialId;
 	readonly name: string;
-	readonly company: string;
+	readonly organization: string;
 	readonly comment: string;
 	readonly photoAlt: string;
 };

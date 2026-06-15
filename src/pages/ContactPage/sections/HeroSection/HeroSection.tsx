@@ -1,17 +1,18 @@
 import { useEffect, useMemo } from 'react';
-import { LuCopy, LuMail, LuMapPin, LuPhoneCall } from 'react-icons/lu';
+import { LuMail, LuMapPin, LuPhoneCall, LuShare2 } from 'react-icons/lu';
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
-import IconButton from '../../../../components/Button/IconButton';
 import ContactMethodCard from '../../../../components/ContactMethodCard';
+import PortfolioContactChannels from '../../../../components/PortfolioContactChannels';
+import SocialLinks from '../../../../components/SocialLinks';
+import { PORTFOLIO } from '../../../../config/portfolio';
 import { useTranslation } from '../../../../i18n';
-import { COMPANY } from '../../../../config/company';
 import { ContactClipboardBinder } from '../../../../services/contact/contactClipboardBinder';
 import { ToastNotificationService } from '../../../../services/notifications/toastNotificationService';
 import styles from './HeroSection.module.css';
 
 const HeroSection = () => {
-	const { t } = useTranslation();
+	const { t, interpolate } = useTranslation();
 	const clipboardBinder = useMemo(
 		() => new ContactClipboardBinder(ToastNotificationService.instance),
 		[],
@@ -25,6 +26,15 @@ const HeroSection = () => {
 		);
 	}, [clipboardBinder, t.contact.copyFailure, t.contact.copySuccess]);
 
+	const copyLabels = {
+		copyTmPhone: t.contact.copyTmPhone,
+		copyCnPhone: t.contact.copyCnPhone,
+		copyEmail: t.contact.copyEmail,
+		tmPhoneDataLabel: t.contact.tmPhoneDataLabel,
+		cnPhoneDataLabel: t.contact.cnPhoneDataLabel,
+		emailDataLabel: t.common.email,
+	};
+
 	return (
 		<Block className={styles.block}>
 			<div className={styles.section}>
@@ -37,23 +47,23 @@ const HeroSection = () => {
 					style={{ gap: '2rem 3rem', justifyItems: 'center' }}
 				>
 					<ContactMethodCard
-						title={t.contact.mapTitle}
+						title={interpolate(t.contact.mapTitle)}
 						icon={LuMapPin}
 						variant='primary'
 						description={
 							<>
-								<div className={styles.addressCn}>{COMPANY.address}</div>
+								<div className={styles.addressCn}>{PORTFOLIO.address}</div>
 								<div
 									className={styles.mapWrap}
 									aria-label={t.contact.mapPreview}
 								>
 									<iframe
 										className={styles.map}
-										title={t.contact.mapTitle}
+										title={interpolate(t.contact.mapTitle)}
 										loading='lazy'
 										referrerPolicy='no-referrer-when-downgrade'
 										src={`https://www.google.com/maps?q=${encodeURIComponent(
-											COMPANY.address,
+											PORTFOLIO.address,
 										)}&output=embed`}
 									/>
 								</div>
@@ -65,7 +75,7 @@ const HeroSection = () => {
 								type: 'button',
 								label: t.contact.openMap,
 								href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-									COMPANY.address,
+									PORTFOLIO.address,
 								)}`,
 								target: '_blank',
 							},
@@ -81,71 +91,32 @@ const HeroSection = () => {
 							variant='success'
 							description={
 								<div className={styles.contactBody}>
-									<div className={styles.kvList}>
-										<div className={styles.kvRow}>
-											<span className={styles.kvKey}>
-												{t.contact.tmPhoneLabel}
-											</span>
+									<PortfolioContactChannels
+										variant='default'
+										layout='detailed'
+										channel='phones'
+										tmPhoneLabel={t.contact.tmPhoneLabel}
+										cnPhoneLabel={t.contact.cnPhoneLabel}
+										showCopyButtons
+										copyLabels={copyLabels}
+										copyButtonClassName={styles.copyBtn}
+									/>
 
-											<span className={styles.kvValueWrap}>
-												<a
-													className={`${styles.kvValue} link-underline`}
-													href={`tel:${COMPANY.phone_tm}`}
-												>
-													{COMPANY.phone_tm}
-												</a>
-
-												<IconButton
-													aria-label={t.contact.copyTmPhone}
-													title={t.contact.copyTmPhone}
-													className={`copy-btn ${styles.copyBtn}`}
-													data-clipboard-text={COMPANY.phone_tm}
-													data-label={t.contact.tmPhoneDataLabel}
-												>
-													<LuCopy />
-												</IconButton>
-											</span>
-										</div>
-
-										<div className={styles.kvRow}>
-											<span className={styles.kvKey}>
-												{t.contact.cnPhoneLabel}
-											</span>
-
-											<span className={styles.kvValueWrap}>
-												<a
-													className={`${styles.kvValue} link-underline`}
-													href={`tel:${COMPANY.phone_cn}`}
-												>
-													{COMPANY.phone_cn}
-												</a>
-
-												<IconButton
-													aria-label={t.contact.copyCnPhone}
-													title={t.contact.copyCnPhone}
-													className={`copy-btn ${styles.copyBtn}`}
-													data-clipboard-text={COMPANY.phone_cn}
-													data-label={t.contact.cnPhoneDataLabel}
-												>
-													<LuCopy />
-												</IconButton>
-											</span>
-										</div>
-									</div>
-
-									<p className={styles.meta}>{t.contact.phonesBody}</p>
+									<p className={styles.meta}>
+										{interpolate(t.contact.phonesBody)}
+									</p>
 								</div>
 							}
 							actions={[
 								{
 									type: 'button',
 									label: t.contact.callTm,
-									href: `tel:${COMPANY.phone_tm}`,
+									href: `tel:${PORTFOLIO.phones.turkmenistan}`,
 								},
 								{
 									type: 'button',
 									label: t.contact.callCn,
-									href: `tel:${COMPANY.phone_cn}`,
+									href: `tel:${PORTFOLIO.phones.china}`,
 								},
 							]}
 							isScalableOnHover={false}
@@ -158,41 +129,42 @@ const HeroSection = () => {
 							variant='secondary'
 							description={
 								<div className={styles.contactBody}>
-									<p className={styles.lead}>{t.contact.emailBody}</p>
+									<p className={styles.lead}>
+										{interpolate(t.contact.emailBody)}
+									</p>
 
-									<div className={styles.kvList}>
-										<div className={styles.kvRow}>
-											<span className={styles.kvKey}>{t.common.email}:</span>
-
-											<span className={styles.kvValueWrap}>
-												<a
-													className={`${styles.kvValue} link-underline`}
-													href={`mailto:${COMPANY.email}`}
-												>
-													{COMPANY.email}
-												</a>
-
-												<IconButton
-													aria-label={t.contact.copyEmail}
-													title={t.contact.copyEmail}
-													className={`copy-btn ${styles.copyBtn}`}
-													data-clipboard-text={COMPANY.email}
-													data-label={t.common.email}
-												>
-													<LuCopy />
-												</IconButton>
-											</span>
-										</div>
-									</div>
+									<PortfolioContactChannels
+										variant='default'
+										layout='detailed'
+										channel='email'
+										emailLabel={`${t.common.email}:`}
+										showCopyButtons
+										copyLabels={copyLabels}
+										copyButtonClassName={styles.copyBtn}
+									/>
 								</div>
 							}
 							actions={[
 								{
 									type: 'button',
 									label: t.contact.writeEmail,
-									href: `mailto:${COMPANY.email}`,
+									href: `mailto:${PORTFOLIO.email}`,
 								},
 							]}
+							isScalableOnHover={false}
+							dataAos='fade-up-left'
+						/>
+
+						<ContactMethodCard
+							title={t.common.socialTitle}
+							icon={LuShare2}
+							variant='primary'
+							description={
+								<SocialLinks
+									variant='default'
+									note={t.common.socialNote}
+								/>
+							}
 							isScalableOnHover={false}
 							dataAos='fade-up-left'
 						/>

@@ -1,3 +1,5 @@
+import { getPortfolioLegalNameSlug } from './portfolio';
+
 export type DocumentDefinition = {
 	readonly id: string;
 	readonly publicPath: string;
@@ -5,17 +7,19 @@ export type DocumentDefinition = {
 	readonly isAvailable: boolean;
 };
 
+const portfolioNameSlug = getPortfolioLegalNameSlug();
+
 export const DOCUMENTS = {
 	resume: {
 		id: 'resume',
 		publicPath: '/Resume.pdf',
-		downloadFileName: 'Agajan-Sahatov-Resume.pdf',
+		downloadFileName: `${portfolioNameSlug}-Resume.pdf`,
 		isAvailable: true,
 	},
 	cv: {
 		id: 'cv',
 		publicPath: '/CV.pdf',
-		downloadFileName: 'Agajan-Sahatov-CV.pdf',
+		downloadFileName: `${portfolioNameSlug}-CV.pdf`,
 		isAvailable: false,
 	},
 } as const satisfies Record<string, DocumentDefinition>;

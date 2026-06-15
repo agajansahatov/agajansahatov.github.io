@@ -13,33 +13,33 @@ import styles from './ExperienceCard.module.css';
 type ExperienceCardProps = Pick<
 	ResolvedExperience,
 	| 'role'
-	| 'company'
+	| 'organization'
 	| 'location'
 	| 'description'
 	| 'logoIcon'
 	| 'iconVariant'
-	| 'companyUrl'
+	| 'organizationUrl'
 	| 'tech'
 > & {
 	readonly period: string;
 	readonly periodDateTime: string;
-	readonly viewCompanyLabel: string;
+	readonly viewOrganizationLabel: string;
 	readonly readMoreLabel: string;
 	readonly readLessLabel: string;
 };
 
 const ExperienceCard = ({
 	role,
-	company,
+	organization,
 	location,
 	description,
 	logoIcon,
 	iconVariant,
-	companyUrl,
+	organizationUrl,
 	tech,
 	period,
 	periodDateTime,
-	viewCompanyLabel,
+	viewOrganizationLabel,
 	readMoreLabel,
 	readLessLabel,
 }: ExperienceCardProps) => {
@@ -89,7 +89,7 @@ const ExperienceCard = ({
 				<Icon icon={logoIcon} variant={iconVariant} isSmall />
 				<div className={styles['header-text']}>
 					<h3 className={styles.role}>{role}</h3>
-					<p className={styles.company}>{company}</p>
+					<p className={styles.organization}>{organization}</p>
 				</div>
 			</header>
 
@@ -151,13 +151,13 @@ const ExperienceCard = ({
 						</li>
 					))}
 				</ul>
-				{companyUrl ? (
+				{organizationUrl ? (
 					<Link
-						href={companyUrl}
+						href={organizationUrl}
 						target='_blank'
-						className={styles['company-link']}
+						className={styles['organization-link']}
 					>
-						{viewCompanyLabel}
+						{viewOrganizationLabel}
 						<FaArrowUpRightFromSquare aria-hidden='true' />
 					</Link>
 				) : null}

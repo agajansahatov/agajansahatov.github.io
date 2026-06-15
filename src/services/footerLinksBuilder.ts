@@ -1,4 +1,4 @@
-import { COMPANY } from '../config/company';
+import { PORTFOLIO } from '../config/portfolio';
 import { GITHUB_PROFILE } from '../config/github';
 import type { TranslationDictionary } from '../i18n/translations';
 
@@ -93,8 +93,8 @@ export class FooterLinksBuilder {
 						target: '_blank',
 					},
 					{
-						link: `mailto:${COMPANY.email}`,
-						label: COMPANY.email,
+						link: `mailto:${PORTFOLIO.email}`,
+						label: PORTFOLIO.email,
 						target: '_self',
 					},
 				],

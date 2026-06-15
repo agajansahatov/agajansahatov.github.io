@@ -8,13 +8,13 @@ import styles from './PricingSection.module.css';
 const planVariants: readonly SkinVariant[] = ['info', 'primary', 'info'];
 
 const PricingSection = () => {
-	const { t } = useTranslation();
+	const { t, interpolate } = useTranslation();
 
 	return (
 		<Block id='pricing-section' className={styles['section__pricing']}>
 			<BlockHeader>
 				<h2 className={styles['section__heading']}>{t.pricing.title}</h2>
-				<p className={styles['section__tagline']}>{t.pricing.tagline}</p>
+				<p className={styles['section__tagline']}>{interpolate(t.pricing.tagline)}</p>
 			</BlockHeader>
 
 			<ul

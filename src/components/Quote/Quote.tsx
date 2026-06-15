@@ -4,10 +4,10 @@ import styles from './Quote.module.css';
 interface Props {
 	author: string;
 	children: string;
-	company: string;
+	organization: string;
 }
 
-const Quote = ({ author, children, company }: Props) => {
+const Quote = ({ author, children, organization }: Props) => {
 	const mediaImage = <span className={styles['quote__line']} aria-hidden />;
 
 	return (
@@ -19,7 +19,7 @@ const Quote = ({ author, children, company }: Props) => {
 					title={author}
 					titleStyles={styles['quote__author']}
 				>
-					<p className={styles['quote__company']}>{company}</p>
+					<p className={styles['quote__organization']}>{organization}</p>
 				</Media>
 			</div>
 		</blockquote>

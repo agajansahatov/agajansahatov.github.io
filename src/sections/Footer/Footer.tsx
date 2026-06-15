@@ -11,7 +11,7 @@ interface Props {
 }
 
 const Footer = ({ hasTopBorder = true }: Props) => {
-	const { t } = useTranslation();
+	const { t, portfolioName } = useTranslation();
 	const currentYear = new Date().getFullYear();
 	const footerGroups = FooterLinksBuilder.build(t);
 
@@ -66,7 +66,7 @@ const Footer = ({ hasTopBorder = true }: Props) => {
 						className={styles['footer__logo']}
 					/>
 					<p className={styles['footer__copyright']}>
-						&copy; {currentYear} {t.common.brandName}.
+						&copy; {currentYear} {portfolioName}.
 					</p>
 					<p className={styles['footer__copyright']}>
 						{t.common.allRightsReserved}

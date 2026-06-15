@@ -31,7 +31,7 @@ function LastExperiencesSectionComponent() {
 				experiences={experiences}
 				language={language}
 				presentLabel={t.experience.present}
-				viewCompanyLabel={t.experience.viewCompany}
+				viewOrganizationLabel={t.experience.viewOrganization}
 				readMoreLabel={t.experience.readMore}
 				readLessLabel={t.experience.readLess}
 			/>

@@ -16,7 +16,7 @@ export type ExperienceId = WorkExperienceId | EducationId;
 export type ExperienceContent<TId extends ExperienceId = ExperienceId> = {
 	readonly id: TId;
 	readonly role: string;
-	readonly company: string;
+	readonly organization: string;
 	readonly location: string;
 	readonly description: string;
 };
@@ -25,7 +25,7 @@ export type ExperienceAsset<TId extends ExperienceId = ExperienceId> = {
 	readonly id: TId;
 	readonly logoIcon: ComponentType;
 	readonly iconVariant: SkinVariant;
-	readonly companyUrl?: string;
+	readonly organizationUrl?: string;
 	readonly tech: readonly string[];
 	readonly startDate: string;
 	readonly endDate: string | null;
@@ -37,7 +37,7 @@ export type ResolvedExperience<TId extends ExperienceId = ExperienceId> =
 			ExperienceAsset<TId>,
 			| 'logoIcon'
 			| 'iconVariant'
-			| 'companyUrl'
+			| 'organizationUrl'
 			| 'tech'
 			| 'startDate'
 			| 'endDate'

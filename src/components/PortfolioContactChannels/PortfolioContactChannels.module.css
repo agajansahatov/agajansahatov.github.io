@@ -1,0 +1,58 @@
+.compactItem {
+	grid-template-columns: 1fr;
+	gap: 1.2rem;
+	align-items: start;
+	padding: 1.2rem 0;
+	border-bottom: 1px solid var(--color-background-strong-inverted);
+}
+
+.compactBody {
+	display: grid;
+	gap: 0.6rem;
+}
+
+.compactLabel {
+	letter-spacing: 0.3px;
+	opacity: 0.9;
+}
+
+.compactValues {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem 1.2rem;
+	align-items: center;
+}
+
+.value--inverted {
+	color: var(--color-foreground-strong-inverted);
+}
+
+.detailed {
+	display: grid;
+	gap: 1rem;
+}
+
+.kvList {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.kvRow {
+	display: grid;
+	gap: 0.35rem;
+}
+
+.kvKey {
+	opacity: 0.85;
+}
+
+.kvValueWrap {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.kvValue {
+	word-break: break-word;
+}

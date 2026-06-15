@@ -26,7 +26,7 @@ const TestimonialsSection = () => {
 					<li key={testimonial.id} className={styles['testimonial-item']}>
 						<TestimonialCard
 							name={testimonial.name}
-							company={testimonial.company}
+							organization={testimonial.organization}
 							comment={testimonial.comment}
 							photo={testimonial.photo}
 							photoAlt={testimonial.photoAlt}
@@ -62,7 +62,7 @@ function resolveTestimonials(
 			{
 				id: asset.id,
 				name: content.name,
-				company: content.company,
+				organization: content.organization,
 				comment: content.comment,
 				photoAlt: content.photoAlt,
 				photo: asset.photo,

@@ -19,11 +19,11 @@ const Logo = ({
 	titleClassName,
 	iconClassName,
 }: Props) => {
-	const { t } = useTranslation();
+	const { portfolioName, t } = useTranslation();
 
 	return (
 		<Link
-			aria-label={t.common.brandName}
+			aria-label={portfolioName}
 			className={`${styles.logo} ${className || ''}`}
 			href={href}
 			onClick={onClick}
@@ -38,7 +38,7 @@ const Logo = ({
 					shouldHideTitleOnSmallScreens ? styles['logo__title--hideable'] : ''
 				} ${titleClassName || ''}`}
 			>
-				{t.common.brandName}
+				{portfolioName}
 			</span>
 		</Link>
 	);

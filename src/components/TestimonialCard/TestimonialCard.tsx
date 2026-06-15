@@ -7,14 +7,14 @@ import styles from './TestimonialCard.module.css';
 
 type Props = Pick<
 	ResolvedHomeTestimonial,
-	'name' | 'company' | 'comment' | 'photo' | 'photoAlt'
+	'name' | 'organization' | 'comment' | 'photo' | 'photoAlt'
 > & {
 	dataAos?: string;
 };
 
 const TestimonialCard = ({
 	name,
-	company,
+	organization,
 	comment,
 	photo,
 	photoAlt,
@@ -36,7 +36,7 @@ const TestimonialCard = ({
 						<Icon icon={FaQuoteLeft} variant='accent' isSmall />
 					</span>
 				</div>
-				<Quote author={name} company={company}>
+				<Quote author={name} organization={organization}>
 					{comment}
 				</Quote>
 			</div>

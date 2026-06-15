@@ -1,22 +1,23 @@
-import { FaInstagram, FaLocationDot, FaPhone, FaTiktok } from 'react-icons/fa6';
+import { FaLocationDot, FaPhone } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { PiHandshakeFill } from 'react-icons/pi';
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
 import Icon from '../../../../components/Icon';
-import Link from '../../../../components/Link';
+import PortfolioContactChannels from '../../../../components/PortfolioContactChannels';
+import SocialLinks from '../../../../components/SocialLinks';
+import { PORTFOLIO } from '../../../../config/portfolio';
 import { useTranslation } from '../../../../i18n';
-import { COMPANY } from '../../../../config/company';
-import styles from './CompanyInfoSection.module.css';
+import styles from './PortfolioInfoSection.module.css';
 
-const CompanyInfoSection = () => {
-	const { t } = useTranslation();
+const PortfolioInfoSection = () => {
+	const { t, portfolioName, interpolate } = useTranslation();
 
 	return (
 		<Block className={styles.section} variant='inverted'>
 			<BlockHeader>
-				<h2>{t.about.companyTitle}</h2>
-				<p>{t.about.companySubtitle}</p>
+				<h2>{t.about.portfolioTitle}</h2>
+				<p>{interpolate(t.about.portfolioSubtitle)}</p>
 			</BlockHeader>
 
 			<div className={`grid grid--cols-1 lg:grid--cols-2 ${styles.layout}`}>
@@ -31,16 +32,16 @@ const CompanyInfoSection = () => {
 
 					<div className={styles.kv}>
 						<div className={styles.kv__row}>
-							<span className={styles.kv__key}>{t.about.ownerLabel}</span>
+							<span className={styles.kv__key}>{t.about.nameLabel}</span>
 							<span className={`word-break ${styles.kv__value}`}>
-								{COMPANY.owner}
+								{portfolioName}
 							</span>
 						</div>
 
 						<div className={styles.kv__row}>
 							<span className={styles.kv__key}>{t.about.addressLabel}</span>
 							<span className={`word-break ${styles.kv__value}`}>
-								{COMPANY.address}
+								{PORTFOLIO.address}
 							</span>
 						</div>
 
@@ -68,27 +69,12 @@ const CompanyInfoSection = () => {
 								<Icon icon={FaPhone} variant='success' />
 							</span>
 
-							<div className={styles.action__body}>
-								<span className={styles.action__label}>
-									{t.about.phoneLabel}
-								</span>
-
-								<div className={styles.action__values}>
-									<Link
-										className={`link-underline word-break ${styles.action__value}`}
-										href={`tel:${COMPANY.phone_tm}`}
-									>
-										{COMPANY.phone_tm},
-									</Link>
-
-									<Link
-										className={`link-underline word-break ${styles.action__value}`}
-										href={`tel:${COMPANY.phone_cn}`}
-									>
-										{COMPANY.phone_cn}
-									</Link>
-								</div>
-							</div>
+							<PortfolioContactChannels
+								variant='inverted'
+								layout='compact'
+								channel='phones'
+								phoneLabel={t.about.phoneLabel}
+							/>
 						</li>
 
 						<li className={`grid ${styles.action}`}>
@@ -96,44 +82,19 @@ const CompanyInfoSection = () => {
 								<Icon icon={MdEmail} variant='accent' />
 							</span>
 
-							<div className={styles.action__body}>
-								<span className={styles.action__label}>{t.common.email}</span>
-
-								<div className={styles.action__values}>
-									<Link
-										className={`link-underline word-break ${styles.action__value}`}
-										href={`mailto:${COMPANY.email}`}
-									>
-										{COMPANY.email}
-									</Link>
-								</div>
-							</div>
+							<PortfolioContactChannels
+								variant='inverted'
+								layout='compact'
+								channel='email'
+								emailLabel={t.common.email}
+							/>
 						</li>
 
 						<li className={styles.actionRow}>
-							<div className={styles.social}>
-								<Link
-									href='https://www.instagram.com/agajansahatovofficial/'
-									target='_blank'
-									className={styles.social__btn}
-									aria-label='Instagram'
-									title='Instagram'
-								>
-									<FaInstagram size={28} />
-								</Link>
-
-								<Link
-									href='https://www.tiktok.com/@agajansahatov.official'
-									target='_blank'
-									className={styles.social__btn}
-									aria-label='TikTok'
-									title='TikTok'
-								>
-									<FaTiktok size={25} />
-								</Link>
-							</div>
-
-							<p className={styles.socialNote}>{t.about.socialNote}</p>
+							<SocialLinks
+								variant='inverted'
+								note={t.common.socialNote}
+							/>
 						</li>
 					</ul>
 				</aside>
@@ -142,4 +103,4 @@ const CompanyInfoSection = () => {
 	);
 };
 
-export default CompanyInfoSection;
+export default PortfolioInfoSection;

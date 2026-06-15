@@ -7,7 +7,7 @@ type ExperienceTimelineProps = {
 	readonly experiences: readonly ResolvedExperience[];
 	readonly language: LanguageCode;
 	readonly presentLabel: string;
-	readonly viewCompanyLabel: string;
+	readonly viewOrganizationLabel: string;
 	readonly readMoreLabel: string;
 	readonly readLessLabel: string;
 };
@@ -16,7 +16,7 @@ const ExperienceTimeline = ({
 	experiences,
 	language,
 	presentLabel,
-	viewCompanyLabel,
+	viewOrganizationLabel,
 	readMoreLabel,
 	readLessLabel,
 }: ExperienceTimelineProps) => {
@@ -42,16 +42,16 @@ const ExperienceTimeline = ({
 						<span className={styles.marker} aria-hidden='true' />
 						<ExperienceCard
 							role={experience.role}
-							company={experience.company}
+							organization={experience.organization}
 							location={experience.location}
 							description={experience.description}
 							logoIcon={experience.logoIcon}
 							iconVariant={experience.iconVariant}
-							companyUrl={experience.companyUrl}
+							organizationUrl={experience.organizationUrl}
 							tech={experience.tech}
 							period={period}
 							periodDateTime={periodDateTime}
-							viewCompanyLabel={viewCompanyLabel}
+							viewOrganizationLabel={viewOrganizationLabel}
 							readMoreLabel={readMoreLabel}
 							readLessLabel={readLessLabel}
 						/>

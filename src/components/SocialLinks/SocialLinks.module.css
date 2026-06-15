@@ -1,0 +1,50 @@
+.links {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.link {
+	width: 54px;
+	height: 54px;
+	border-radius: 14px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition:
+		transform 0.2s ease,
+		background 0.2s ease;
+}
+
+.link:hover {
+	transform: translateY(-2px);
+}
+
+.links[data-variant='inverted'] .link {
+	background: var(--color-background-medium-inverted);
+	border: 1px solid var(--color-background-strong-inverted);
+	color: var(--color-foreground-strong-inverted);
+}
+
+.links[data-variant='inverted'] .link:hover {
+	background: var(--color-background-medium-inverted);
+}
+
+.links[data-variant='default'] .link {
+	background: var(--color-background-medium);
+	border: 1px solid var(--color-background-strong);
+	color: var(--color-foreground-strong);
+}
+
+.links[data-variant='default'] .link:hover {
+	background: var(--color-background-strong);
+}
+
+.note {
+	margin: 1rem 0 0;
+	opacity: 0.95;
+}
+
+.links[data-variant='inverted'] + .note {
+	color: inherit;
+}

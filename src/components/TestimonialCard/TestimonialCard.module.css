@@ -45,7 +45,7 @@
 		font-size: 2.1rem;
 	}
 
-	.card :global(.quote__company) {
+	.card :global(.quote__organization) {
 		font-size: 1.8rem;
 	}
 

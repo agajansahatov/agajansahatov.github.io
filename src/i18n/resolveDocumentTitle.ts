@@ -22,18 +22,18 @@ const PAGE_TITLE_BY_PATH: Record<
 export const resolveDocumentTitle = (
 	pathname: string,
 	translations: TranslationDictionary,
+	portfolioName: string,
 ): string => {
-	const brandName = translations.common.brandName;
 	const normalizedPath = normalizePathname(pathname);
 
 	if (normalizedPath === '/') {
-		return `${brandName} – ${translations.documentTitle.tagline}`;
+		return `${portfolioName} – ${translations.documentTitle.tagline}`;
 	}
 
 	const resolvePageTitle = PAGE_TITLE_BY_PATH[normalizedPath];
 	if (resolvePageTitle) {
-		return `${resolvePageTitle(translations)} – ${brandName}`;
+		return `${resolvePageTitle(translations)} – ${portfolioName}`;
 	}
 
-	return `${translations.errors.notFoundTitle} – ${brandName}`;
+	return `${translations.errors.notFoundTitle} – ${portfolioName}`;
 };

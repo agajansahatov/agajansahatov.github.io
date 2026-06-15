@@ -31,14 +31,14 @@ const upsertMetaDescription = (head: HTMLHeadElement, content: string) => {
  */
 export const useSeo = () => {
 	const { pathname } = useLocation();
-	const { language, t } = useTranslation();
+	const { language, t, portfolioName } = useTranslation();
 
 	useEffect(() => {
 		const head = document.head;
 		const routePath = stripLanguagePrefix(pathname);
 		const suffix = routePath === '/' ? '' : routePath;
 
-		document.title = resolveDocumentTitle(routePath, t);
+		document.title = resolveDocumentTitle(routePath, t, portfolioName);
 		upsertMetaDescription(head, resolveMetaDescription(routePath, t));
 
 		head.querySelectorAll(`[${MANAGED_ATTRIBUTE}]`).forEach((element) =>
@@ -70,5 +70,5 @@ export const useSeo = () => {
 
 		// Signal the build-time prerenderer that head + content are ready.
 		document.dispatchEvent(new Event('prerender-ready'));
-	}, [language, pathname, t]);
+	}, [language, pathname, portfolioName, t]);
 };
