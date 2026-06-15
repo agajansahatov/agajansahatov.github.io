@@ -56,7 +56,7 @@ const ScrollToTopBtn = () => {
 			type='button'
 			aria-label={t.components.scrollToTop}
 		>
-			<Icon icon={FaArrowUp} />
+			<Icon icon={FaArrowUp} className={styles['scroll-to-top__icon']} />
 		</button>
 	);
 };

@@ -19,3 +19,8 @@
 .scroll-to-top:hover {
 	opacity: 1;
 }
+
+.scroll-to-top .scroll-to-top__icon {
+	--size: 52px;
+	font-size: calc(var(--size) - 30px);
+}
