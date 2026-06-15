@@ -111,7 +111,7 @@ export const translations = {
 				},
 				{
 					id: 'services2',
-					heading: 'Serwer (Backend we API) programmalaryny düzmek',
+					heading: 'Serwer (bäkend we API) programmalaryny düzmek',
 					body: 'Men hakyky durmuşda ulanylýan programmalaryň işleýşini üpjün edýän howpsuz we kämilleşdirip bolýan serwer ulgamlaryny dizaýn edip düzýärin. Muňa API-lar, hasaply şahsyýetnama barlag ulgamlary, maglumatlar ammarynyň dizaýny we uzak möhletleýin ösüş üçin gurlan biznes logikalary girýär. Ajaýyp ulanyjy tejribesini döretmek üçin, iş maksatlaryňyza laýyk gelýän kämil serwer programma çözgüdini hödürleýärin.',
 				},
 				{
@@ -150,7 +150,7 @@ export const translations = {
 				{
 					id: 'nodejs',
 					title: 'Node.js',
-					body: 'Açyk çeşmeli JS runtime; serwer skriptleri we API. Çalt, ölçeglanýan backend üçin.',
+					body: 'Açyk çeşmeli JS runtime; serwer skriptleri we API. Çalt, ölçeglanýan bäkend üçin.',
 				},
 				{
 					id: 'mysql',
@@ -168,7 +168,7 @@ export const translations = {
 					id: 'experience',
 					value: 5,
 					exactDisplay: true,
-					body: 'Web, backend we mobil ugurlarynda programma düzmek boýunça ýyllyk tejribe.',
+					body: 'web, bäkend we mobil ugurlarynda programma düzmek boýunça ýyllyk tejribe.',
 				},
 				{
 					id: 'languages',
@@ -195,9 +195,9 @@ export const translations = {
 						'Agajan Sahatowy maslahat bermekden örän şat. Ol örän owadan, duýgur we tizligi çalt web sahypasyny taýýarlap berdi. Ol örän hünärmen, işlemek aňsat we gowy netijeler berýär...',
 				},
 			],
-			experiencesTitle: 'Soňky tejribelerim',
+			experiencesTitle: 'Soňky iş tejribelerim',
 			experiencesTagline:
-				'Web, yza fon we ykjam programmalary öndürip, öndürijilige taýýar sanly önümleri gurýan hünärmen ýolumdan soňky ýerler.',
+				'web, bäkend we mobil programmalary öndürip, öndürijilige taýýar sanly önümleri gurýan hünärmen ýolumdan soňky iş ýerlerim.',
 			topProjectsTitle: 'Esasy taslamalarym',
 			topProjectsTagline:
 				'Öndürijilige taýýar, tiz we ulanmaga amatly sanly önümleriň saýlanan görnüşleri.',
@@ -269,69 +269,94 @@ export const translations = {
 		experience: {
 			title: 'Tejribe',
 			tagline:
-				'Web, yza fon we ykjam programmalary öndürip, öndürijilige taýýar sanly önümleri gurýan hünärmen ýolum.',
+				'Meniň hünärmen we bilim ýolum — web, bäkend we mobil ugurlarynda öndürijilige taýýar sanly önümleri gurmak.',
 			present: 'häzirki wagt',
 			viewCompany: 'Kompaniýany gör',
+			viewInstitution: 'Uniwersiteti gör',
 			readMore: 'Has köp oka',
 			readLess: 'Azalt',
-			entries: [
-				{
-					id: 'xcargo',
-					role: 'Programma injeneri',
-					company: 'Xcargo',
-					location: 'Ýiwu, Çžeszýan, Hytaý',
-					description:
-						'Hytaý bilen Türkmenistanyň arasyndaky halkara logistika işlerini üpjün edýän programma ulgamlaryny taslaýaryn we gurýaryn; şol sanda müşderiler üçin ýük bahalaryny görmek we ugratmalary yzarlamak üçin web platformasyny we ykjam programmany. Yza fon hyzmatlaryny, API-leri we maglumat binýatlaryny ösdürýärin, arhitektura, ýerleşdiriş we öndürijilik üçin jogapkär.',
-				},
-				{
-					id: 'ncu-masters',
-					role: 'Magistr, Programma injenerligi',
-					company: 'Nançan uniwersiteti',
-					location: 'Nançan, Szýansi, Hytaý',
-					description:
-						'Programma injenerligi boýunça magistr derejesini alýaryn, programma ulgamlary we arhitektura boýunça bilimimi çuňlaşdyrýaryn.',
-				},
-				{
-					id: 'smart-walnut',
-					role: 'Frontend praktikanty',
-					company: 'Smart Walnut Technology',
-					location: 'Nançan, Szýansi, Hytaý',
-					description:
-						'Frontend taýýarlaýjy praktikanty hökmünde React.js web taslamasy üçin ulanyjy interfeýslerini gurdum.',
-				},
-				{
-					id: 'tut-bachelors',
-					role: 'Bakalawr, Kompýuter ylymlary we tehnologiýasy',
-					company: 'Taýýuan tehnologiýa uniwersiteti',
-					location: 'Taýýuan, Şansi, Hytaý',
-					description:
-						'Kompýuter ylymlary we tehnologiýasy boýunça bakalawr derejesini tamamladym; programmirleme, algoritmler we programma üpjünçiligi boýunça berk binýat gurdum.',
-				},
-				{
-					id: 'zhilin',
-					role: 'Programma injeneri praktikanty',
-					company: 'Zhilin Information Technology',
-					location: 'Taýýuan, Şansi, Hytaý',
-					description:
-						'Taýýuan tehnologiýa uniwersiteti bilen bilelikde guralan praktikada iki taslama gurdum: Python we Arduino ulanyp IoT akylly öý ulgamy we Udacity-den ylham alan çuň öwreniş esasly sürüjisiz ulgam.',
-				},
-				{
-					id: 'tut-web-dev',
-					role: 'Web taýýarlaýjy praktikanty',
-					company: 'Taýýuan tehnologiýa uniwersiteti',
-					location: 'Taýýuan, Şansi, Hytaý',
-					description:
-						'Önümçilik praktikasynda iki doly çarçuwaly taslama gurdum: Circle - sosial ulgam (PHP, MySQL) we Utopia - onlaýn dükan (Java Spring Boot, React, MySQL).',
-				},
-				{
-					id: 'tut-cpp',
-					role: 'C++ taýýarlaýjy şägirdi',
-					company: 'Taýýuan tehnologiýa uniwersiteti',
-					location: 'Taýýuan, Şansi, Hytaý',
-					description:
-						'RAD Studio bilen C++ dilinde Salgylar kitaby dolandyryş ulgamyny döretdim; OOP we GUI dizaýny ulanyp doly CRUD, faýl saklaýyş, açar söz gözlegi we maglumat barlagyny amala aşyrdym.',
-				},
-			],
+			workExperience: {
+				title: 'Iş',
+				entries: [
+					{
+						id: 'xcargo',
+						role: 'Full-Stack programmist',
+						company: 'Xcargo',
+						location: 'Ýiwu, Çžeszýan, Hytaý · Garyşyk',
+						description:
+							'Hytaýdaky Ýiwu şäherinde ýerleşýän Xcargo halkara logistika kompaniýasynda garyşyk (ofisde we uzakdan) Full-Stack programmist hökmünde işledim. Xcargo bäkend ulgamy, öň panel we mobil programmalaryny gurdum.',
+					},
+					{
+						id: 'smart-walnut',
+						role: 'Frontend tejribeçisi',
+						company: 'Smart Walnut Technology',
+						location: 'Nançaň, Szýansi, Hytaý',
+						description:
+							'Nançaň şäherinde ofisde frontend tejribeçisi hökmünde işledim. TypeScript, React, Ant Design we Git ulanyp web interfeýslerini gurdum.',
+					},
+					{
+						id: 'zhilin',
+						role: 'Tejribeçi türgen',
+						company: 'Zhilin Information Technology Co., Ltd.',
+						location: 'Taýýüwän, Şansi, Hytaý',
+						description:
+							'Taýýüwän şäherinde ofisde programma öndüriş tejribeçiligi türgeni hökmünde işledim. «IoT Smart Home» we «Udacity Driverless System» atly iki taslama gurdum.',
+					},
+					{
+						id: 'tut-web-dev',
+						role: 'Web tejribeçisi',
+						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						location: 'Taýýüwän, Şansi, Hytaý',
+						description:
+							'Taýýüwän Tehnologiýa Uniwersitetinde ofisde web tejribeçisi hökmünde işledim. «Circle» atly minimal sosial ulgam we «Utopia» atly mini onlaýn dükan gurdum.',
+					},
+					{
+						id: 'tut-cpp',
+						role: 'C++ programmist şägirdi',
+						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						location: 'Taýýüwän, Şansi, Hytaý',
+						description:
+							'Taýýüwän Tehnologiýa Uniwersitetinde ofisde C++ programmist şägirdi hökmünde işledim. C++ we Embarcadero RAD Studio ulanyp ABMS (Salgylar kitaby dolandyryş ulgamy) stolüstü programmasyny gurdum.',
+					},
+					{
+						id: 'jinzhong-vr-volunteer',
+						role: 'Meýletinçi',
+						company: 'Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşigi',
+						location: 'Jinjoň, Şansi, Hytaý',
+						description:
+							'Bilim ministrligi tarapyndan goldanylýan Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşiginiň Wirtual hakykylyk (VR) dizaýn we önümçilik bäsleşiginde Jinjoň hünär we tehniki kollejinde ofisde topar agzasy hökmünde meýletinçi boldum. C++, Unity we beýleki VR tehnologiýalary ulanyp şäher ulag ulgamy gurdum.',
+					},
+				],
+			},
+			education: {
+				title: 'Bilim',
+				entries: [
+					{
+						id: 'ncu-masters',
+						role: 'Magistr',
+						company: 'Nançaň uniwersiteti',
+						location: 'Nançaň, Szýansi, Hytaý',
+						description:
+							'Nançaň şäherinde Programma injenerligi boýunça magistr derejesini alýaryn.',
+					},
+					{
+						id: 'tut-bachelors',
+						role: 'Bakalawr',
+						company: 'Taýýüwän Tehnologiýa Uniwersiteti',
+						location: 'Taýýüwän, Şansi, Hytaý',
+						description:
+							'Taýýüwän şäherinde Kompýuter ylymlary we tehnologiýasy boýunça bakalawr derejesini tamamladym.',
+					},
+					{
+						id: 'xisu-chinese',
+						role: 'Hytaý dili',
+						company: 'Siýan Halkara Dünýä Diller Uniwersiteti',
+						location: 'Siýan, Şeýnsi, Hytaý',
+						description:
+							'Siýan şäherinde Siýan Halkara Dünýä Diller Uniwersitetinde hytaý dilini öwrendim.',
+					},
+				],
+			},
 		},
 		expertise: {
 			title: 'Hünär',
@@ -473,7 +498,7 @@ export const translations = {
 				{
 					question: 'Sen näme bilen meşgullanýarsyň?',
 					answer:
-						'Men doly çarçuwaly programma injeneri — frontend interfeýslerden başlap, yza fon API-lere we maglumat binýatlaryna çenli web we ykjam programmalary gurýaryn.',
+						'Men doly çarçuwaly programma injeneri — frontend interfeýslerden başlap, bäkend API-lere we maglumat binýatlaryna çenli web we mobil programmalary gurýaryn.',
 				},
 				{
 					question: 'Haýsy tehnologiýalar bilen işleýärsiň?',
@@ -494,16 +519,16 @@ export const translations = {
 		},
 		about: {
 			badge: 'Men barada',
-			title: 'Doly çarçuwaly web we ykjam programmalary gurýan injener',
+			title: 'Doly çarçuwaly web we mobil programmalary gurýan injener',
 			tagline:
-				'Men Agajan Sahatow, doly çarçuwaly web we ykjam programma öndürmäge ýöriteleşen programma injeneri. Men hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýärin.',
+				'Men Agajan Sahatow, doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Men hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýärin.',
 			imageAlt: 'Hünärmen programmist Agajan Sahatowyň suraty',
 			missionTitle: 'Maksadym',
 			missionBody:
 				'Hakyky meseleleri çözýän, ony ulanýan adamlara we kärhanalara hakyky bähbit getirýän ygtybarly we amaly programma üpjünçiligini gurmak.',
 			visionTitle: 'Ünsüm',
 			visionBody:
-				'Web, ykjam we yza fon ugurlarynda doly çarçuwaly injener hökmünde ösmegi dowam etdirip, arassa arhitektura we ajaýyp ulanyjy tejribesi bilen öndürijilige taýýar ulgamlary hödürlemek.',
+				'web, mobil we bäkend ugurlarynda doly çarçuwaly injener hökmünde ösmegi dowam etdirip, arassa arhitektura we ajaýyp ulanyjy tejribesi bilen öndürijilige taýýar ulgamlary hödürlemek.',
 			principlesTitle: 'Nähili işleýärin',
 			principles: [
 				{
@@ -533,9 +558,9 @@ export const translations = {
 			addressLabel: 'Ýerleşýän ýeri',
 			focusLabel: 'Esasy ugruny',
 			focusValue:
-				'Doly çarçuwaly web we ykjam programma öndürmek, yza fon API-ler, maglumat binýady dizaýny we ulgam arhitekturasy.',
+				'Doly çarçuwaly web we mobil programma öndürmek, bäkend API-ler, maglumat binýady dizaýny we ulgam arhitekturasy.',
 			footerNote:
-				'Häzirki wagtda Nançan uniwersitetinde programma injenerligi boýunça magistr derejesini alýaryn we şol bir wagtda öndürijilige taýýar programma üpjünçiligini gurýaryn.',
+				'Häzirki wagtda Nançaň uniwersitetinde programma injenerligi boýunça magistr derejesini alýaryn we şol bir wagtda öndürijilige taýýar programma üpjünçiligini gurýaryn.',
 			contactTitle: 'Habarlaşmak',
 			contactSubtitle:
 				'Erkin iş, hyzmatdaşlyk ýa-da diňe tanyşmak üçin habarlaşyň.',
@@ -749,7 +774,7 @@ export const translations = {
 						'I am so happy to recommend Agajan Sahatov. He delivered an excellent website that is very beautiful, responsive and blazingly fast. He is very professional, easy to work with and has good results...',
 				},
 			],
-			experiencesTitle: 'Recent Experience',
+			experiencesTitle: 'Recent Work Experience',
 			experiencesTagline:
 				'Highlights from my professional journey building production-ready digital products across web, backend, and mobile.',
 			topProjectsTitle: 'Top Projects',
@@ -823,69 +848,94 @@ export const translations = {
 		experience: {
 			title: 'Experience',
 			tagline:
-				'My professional journey building production-ready digital products across web, backend, and mobile.',
+				'My professional and academic journey building production-ready digital products across web, backend, and mobile.',
 			present: 'Present',
 			viewCompany: 'View company',
+			viewInstitution: 'View university',
 			readMore: 'Read more',
 			readLess: 'Read less',
-			entries: [
-				{
-					id: 'xcargo',
-					role: 'Software Engineer',
-					company: 'Xcargo',
-					location: 'Yiwu, Zhejiang, China',
-					description:
-						"Design and build the software systems behind Xcargo's international logistics operations between China and Turkmenistan, including the customer web platform and mobile app for viewing shipping prices and tracking shipments. Develop backend services, APIs, and databases, and own architecture, deployment, and performance.",
-				},
-				{
-					id: 'ncu-masters',
-					role: "Master's degree, Software Engineering",
-					company: 'Nanchang University',
-					location: 'Nanchang, Jiangxi, China',
-					description:
-						"Pursuing a Master's degree in Software Engineering, deepening my expertise in software systems and architecture.",
-				},
-				{
-					id: 'smart-walnut',
-					role: 'Front-End Intern',
-					company: 'Smart Walnut Technology',
-					location: 'Nanchang, Jiangxi, China',
-					description:
-						'Worked as a front-end development intern, building user interfaces for a React.js web project.',
-				},
-				{
-					id: 'tut-bachelors',
-					role: "Bachelor's degree, Computer Science and Technology",
-					company: 'Taiyuan University of Technology',
-					location: 'Taiyuan, Shanxi, China',
-					description:
-						"Completed a Bachelor's degree in Computer Science and Technology, building strong foundations in programming, algorithms, and software development.",
-				},
-				{
-					id: 'zhilin',
-					role: 'Software Engineer Intern',
-					company: 'Zhilin Information Technology',
-					location: 'Taiyuan, Shanxi, China',
-					description:
-						'Built two projects during an internship organized with Taiyuan University of Technology: an IoT smart-home system using Python and Arduino, and a deep-learning driverless system inspired by Udacity.',
-				},
-				{
-					id: 'tut-web-dev',
-					role: 'Web Development Intern',
-					company: 'Taiyuan University of Technology',
-					location: 'Taiyuan, Shanxi, China',
-					description:
-						'Built two full-stack projects in a practical production internship: Circle, a social network (PHP, MySQL), and Utopia, an online store (Java Spring Boot, React, MySQL).',
-				},
-				{
-					id: 'tut-cpp',
-					role: 'C++ Developer Apprentice',
-					company: 'Taiyuan University of Technology',
-					location: 'Taiyuan, Shanxi, China',
-					description:
-						'Developed an Address Book Management System in C++ with RAD Studio, applying OOP and GUI design with full CRUD, file storage, keyword search, and input validation.',
-				},
-			],
+			workExperience: {
+				title: 'Work',
+				entries: [
+					{
+						id: 'xcargo',
+						role: 'Full-Stack Developer',
+						company: 'Xcargo',
+						location: 'Yiwu, Zhejiang, China · Hybrid',
+						description:
+							'Worked as a hybrid full-stack software engineer at Xcargo international logistics in Yiwu, China. Built the Xcargo backend system, frontend, and mobile apps.',
+					},
+					{
+						id: 'smart-walnut',
+						role: 'Front-end Intern',
+						company: 'Smart Walnut Technology',
+						location: 'Nanchang, Jiangxi, China',
+						description:
+							'Worked on-site as a front-end intern at Smart Walnut Technology in Nanchang, Jiangxi, China. Built user interfaces with TypeScript, React, Ant Design, and Git.',
+					},
+					{
+						id: 'zhilin',
+						role: 'Internship Trainee',
+						company: 'Zhilin Information Technology Co., Ltd.',
+						location: 'Taiyuan, Shanxi, China',
+						description:
+							'Worked on-site as a software development internship trainee at Zhilin Information Technology Co., Ltd. in Taiyuan. Built two projects: IoT Smart Home and Udacity Driverless System.',
+					},
+					{
+						id: 'tut-web-dev',
+						role: 'Web Intern',
+						company: 'Taiyuan University of Technology',
+						location: 'Taiyuan, Shanxi, China',
+						description:
+							'Worked on-site as a Web Development Intern at TYUT. Developed a minimal social network called Circle and a mini online store called Utopia.',
+					},
+					{
+						id: 'tut-cpp',
+						role: 'C++ Developer Apprentice',
+						company: 'Taiyuan University of Technology',
+						location: 'Taiyuan, Shanxi, China',
+						description:
+							'Worked on-site as a C++ Developer Apprentice at TYUT. Developed ABMS (Address Book Management System), a desktop app using C++ and Embarcadero RAD Studio.',
+					},
+					{
+						id: 'jinzhong-vr-volunteer',
+						role: 'Volunteer',
+						company: 'First World Vocational College Skills Competition',
+						location: 'Jinzhong, Shanxi, China',
+						description:
+							'Volunteered on-site as a team member in the Virtual Reality (VR) Design and Production Competition at Jinzhong Vocational and Technical College, part of the First World Vocational College Skills Competition sponsored by the Ministry of Education. Built a VR urban transportation system using C++, Unity, and other VR technologies.',
+					},
+				],
+			},
+			education: {
+				title: 'Education',
+				entries: [
+					{
+						id: 'ncu-masters',
+						role: "Master's Degree",
+						company: 'Nanchang University',
+						location: 'Nanchang, Jiangxi, China',
+						description:
+							"Pursuing a Master's degree in Software Engineering at Nanchang University in Nanchang city.",
+					},
+					{
+						id: 'tut-bachelors',
+						role: "Bachelor's Degree",
+						company: 'Taiyuan University of Technology',
+						location: 'Taiyuan, Shanxi, China',
+						description:
+							"Completed a Bachelor's degree in Computer Science and Technology at TYUT in Taiyuan city.",
+					},
+					{
+						id: 'xisu-chinese',
+						role: 'Chinese Language',
+						company: "Xi'an International Studies University",
+						location: "Xi'an, Shaanxi, China",
+						description:
+							"Studied Chinese at Xi'an International Studies University in Xi'an city.",
+					},
+				],
+			},
 		},
 		expertise: {
 			title: 'Expertise',
@@ -1297,7 +1347,7 @@ export const translations = {
 						'我非常乐意推荐 Agajan Sahatov。他交付了一个非常精美、响应式且速度极快的优秀网站。他非常专业，沟通顺畅，成果也很好……',
 				},
 			],
-			experiencesTitle: '近期经历',
+			experiencesTitle: '近期工作经历',
 			experiencesTagline:
 				'我在 Web、后端与移动端构建可投入生产数字产品的职业历程精选。',
 			topProjectsTitle: '精选项目',
@@ -1369,68 +1419,92 @@ export const translations = {
 		},
 		experience: {
 			title: '经验',
-			tagline: '我在 Web、后端与移动端构建可投入生产数字产品的职业历程。',
+			tagline:
+				'我在工作与学业中构建可投入生产的 Web、后端与移动端数字产品的历程。',
 			present: '至今',
 			viewCompany: '查看公司',
+			viewInstitution: '查看院校',
 			readMore: '阅读更多',
 			readLess: '收起',
-			entries: [
-				{
-					id: 'xcargo',
-					role: '软件工程师',
-					company: 'Xcargo',
-					location: '中国浙江义乌',
-					description:
-						'设计并构建支撑 Xcargo 中国与土库曼斯坦之间国际物流业务的软件系统，包括供客户查看运价和追踪货件的 Web 平台与移动应用。负责开发后端服务、API 与数据库，并负责系统架构、部署与性能优化。',
-				},
-				{
-					id: 'ncu-masters',
-					role: '硕士，软件工程',
-					company: '南昌大学',
-					location: '中国江西南昌',
-					description: '攻读软件工程硕士学位，深入钻研软件系统与架构。',
-				},
-				{
-					id: 'smart-walnut',
-					role: '前端实习生',
-					company: '智慧核桃科技',
-					location: '中国江西南昌',
-					description:
-						'作为前端开发实习生，为一个 React.js Web 项目构建用户界面。',
-				},
-				{
-					id: 'tut-bachelors',
-					role: '学士，计算机科学与技术',
-					company: '太原理工大学',
-					location: '中国山西太原',
-					description:
-						'完成计算机科学与技术学士学位，在编程、算法与软件开发方面打下坚实基础。',
-				},
-				{
-					id: 'zhilin',
-					role: '软件工程师实习生',
-					company: '智林信息技术',
-					location: '中国山西太原',
-					description:
-						'在与太原理工大学联合举办的实习中完成两个项目：使用 Python 与 Arduino 的物联网智能家居系统，以及受 Udacity 启发的深度学习无人驾驶系统。',
-				},
-				{
-					id: 'tut-web-dev',
-					role: 'Web 开发实习生',
-					company: '太原理工大学',
-					location: '中国山西太原',
-					description:
-						'在生产实习中构建两个全栈项目：社交网络 Circle（PHP、MySQL）与在线商店 Utopia（Java Spring Boot、React、MySQL）。',
-				},
-				{
-					id: 'tut-cpp',
-					role: 'C++ 开发学徒',
-					company: '太原理工大学',
-					location: '中国山西太原',
-					description:
-						'使用 RAD Studio 以 C++ 开发通讯录管理系统，运用面向对象与 GUI 设计，实现完整的增删改查、文件存储、关键字搜索与输入校验。',
-				},
-			],
+			workExperience: {
+				title: '工作',
+				entries: [
+					{
+						id: 'xcargo',
+						role: '全栈开发工程师',
+						company: 'Xcargo',
+						location: '中国浙江义乌 · 混合办公',
+						description:
+							'在中国义乌的 Xcargo 国际物流公司担任混合办公全栈软件工程师。构建了 Xcargo 后端系统、前端与移动应用。',
+					},
+					{
+						id: 'smart-walnut',
+						role: '前端实习生',
+						company: '智慧核桃科技',
+						location: '中国江西南昌',
+						description:
+							'在江西南昌的智慧核桃科技公司现场担任前端实习生。使用 TypeScript、React、Ant Design 和 Git 等技术开发用户界面。',
+					},
+					{
+						id: 'zhilin',
+						role: '实习学员',
+						company: '智林信息技术有限公司',
+						location: '中国山西太原',
+						description:
+							'在太原的智林信息技术有限公司现场担任软件开发实习学员。完成了 IoT 智能家居和 Udacity 无人驾驶系统两个项目。',
+					},
+					{
+						id: 'tut-web-dev',
+						role: 'Web 实习生',
+						company: '太原理工大学',
+						location: '中国山西太原',
+						description:
+							'在太原理工大学现场担任 Web 开发实习生。开发了名为 Circle 的极简社交网络和名为 Utopia 的迷你在线商店。',
+					},
+					{
+						id: 'tut-cpp',
+						role: 'C++ 学徒',
+						company: '太原理工大学',
+						location: '中国山西太原',
+						description:
+							'在太原理工大学现场担任 C++ 开发学徒。使用 C++ 和 Embarcadero RAD Studio 开发了 ABMS（通讯录管理系统）桌面应用。',
+					},
+					{
+						id: 'jinzhong-vr-volunteer',
+						role: '志愿者',
+						company: '首届世界职业院校技能大赛',
+						location: '中国山西晋中',
+						description:
+							'在教育部主办的首届世界职业院校技能大赛之虚拟现实（VR）设计与制作赛项中，于晋中职业技术学院现场担任团队志愿者。使用 C++、Unity 及其他 VR 技术构建了 VR 城市交通系统。',
+					},
+				],
+			},
+			education: {
+				title: '教育',
+				entries: [
+					{
+						id: 'ncu-masters',
+						role: '硕士学位',
+						company: '南昌大学',
+						location: '中国江西南昌',
+						description: '在南昌市南昌大学攻读软件工程硕士学位。',
+					},
+					{
+						id: 'tut-bachelors',
+						role: '学士学位',
+						company: '太原理工大学',
+						location: '中国山西太原',
+						description: '在太原市太原理工大学完成计算机科学与技术学士学位。',
+					},
+					{
+						id: 'xisu-chinese',
+						role: '汉语学习',
+						company: '西安外国语大学',
+						location: '中国陕西西安',
+						description: '在西安市西安外国语大学学习汉语。',
+					},
+				],
+			},
 		},
 		expertise: {
 			title: '专长',
@@ -1827,7 +1901,7 @@ export const translations = {
 						'Agajan Sahatov’u tavsiye etmekten çok mutluyum. Çok güzel, duyarlı ve son derece hızlı mükemmel bir web sitesi teslim etti. Çok profesyonel, birlikte çalışması kolay ve iyi sonuçlar veriyor...',
 				},
 			],
-			experiencesTitle: 'Son Deneyimlerim',
+			experiencesTitle: 'Son İş Deneyimlerim',
 			experiencesTagline:
 				'Web, backend ve mobil alanlarda üretime hazır dijital ürünler geliştirdiğim profesyonel yolculuğumdan öne çıkanlar.',
 			topProjectsTitle: 'Öne Çıkan Projeler',
@@ -1901,69 +1975,94 @@ export const translations = {
 		experience: {
 			title: 'Deneyim',
 			tagline:
-				'Web, backend ve mobil alanlarda üretime hazır dijital ürünler geliştirdiğim profesyonel yolculuğum.',
+				'Web, backend ve mobil alanlarda üretime hazır dijital ürünler geliştirdiğim profesyonel ve akademik yolculuğum.',
 			present: 'Devam ediyor',
 			viewCompany: 'Şirketi gör',
+			viewInstitution: 'Üniversiteyi gör',
 			readMore: 'Daha fazla oku',
 			readLess: 'Daha az göster',
-			entries: [
-				{
-					id: 'xcargo',
-					role: 'Yazılım Mühendisi',
-					company: 'Xcargo',
-					location: 'Yiwu, Zhejiang, Çin',
-					description:
-						"Xcargo'nun Çin ile Türkmenistan arasındaki uluslararası lojistik operasyonlarını destekleyen yazılım sistemlerini tasarlıyor ve geliştiriyorum; bunlara müşterilerin nakliye fiyatlarını görüntülediği ve gönderileri takip ettiği web platformu ile mobil uygulama dahildir. Backend servisleri, API'ler ve veritabanları geliştiriyor; mimari, dağıtım ve performanstan sorumluyum.",
-				},
-				{
-					id: 'ncu-masters',
-					role: 'Yüksek Lisans, Yazılım Mühendisliği',
-					company: 'Nanchang Üniversitesi',
-					location: 'Nanchang, Jiangxi, Çin',
-					description:
-						'Yazılım Mühendisliği yüksek lisansı yapıyorum; yazılım sistemleri ve mimari konusundaki uzmanlığımı derinleştiriyorum.',
-				},
-				{
-					id: 'smart-walnut',
-					role: 'Frontend Stajyeri',
-					company: 'Smart Walnut Technology',
-					location: 'Nanchang, Jiangxi, Çin',
-					description:
-						'Frontend geliştirme stajyeri olarak bir React.js web projesi için kullanıcı arayüzleri geliştirdim.',
-				},
-				{
-					id: 'tut-bachelors',
-					role: 'Lisans, Bilgisayar Bilimi ve Teknolojisi',
-					company: 'Taiyuan Teknoloji Üniversitesi',
-					location: 'Taiyuan, Shanxi, Çin',
-					description:
-						'Bilgisayar Bilimi ve Teknolojisi lisansını tamamladım; programlama, algoritmalar ve yazılım geliştirme alanlarında sağlam bir temel kurdum.',
-				},
-				{
-					id: 'zhilin',
-					role: 'Yazılım Mühendisi Stajyeri',
-					company: 'Zhilin Information Technology',
-					location: 'Taiyuan, Shanxi, Çin',
-					description:
-						'Taiyuan Teknoloji Üniversitesi ile birlikte düzenlenen bir stajda iki proje geliştirdim: Python ve Arduino ile IoT akıllı ev sistemi ve Udacity’den esinlenen derin öğrenme tabanlı sürücüsüz sistem.',
-				},
-				{
-					id: 'tut-web-dev',
-					role: 'Web Geliştirme Stajyeri',
-					company: 'Taiyuan Teknoloji Üniversitesi',
-					location: 'Taiyuan, Shanxi, Çin',
-					description:
-						'Bir üretim stajında iki tam yığın proje geliştirdim: Circle adlı sosyal ağ (PHP, MySQL) ve Utopia adlı çevrimiçi mağaza (Java Spring Boot, React, MySQL).',
-				},
-				{
-					id: 'tut-cpp',
-					role: 'C++ Geliştirici Çırağı',
-					company: 'Taiyuan Teknoloji Üniversitesi',
-					location: 'Taiyuan, Shanxi, Çin',
-					description:
-						'RAD Studio ile C++ dilinde bir Adres Defteri Yönetim Sistemi geliştirdim; OOP ve GUI tasarımı uygulayarak tam CRUD, dosya depolama, anahtar kelime arama ve giriş doğrulaması ekledim.',
-				},
-			],
+			workExperience: {
+				title: 'İş',
+				entries: [
+					{
+						id: 'xcargo',
+						role: 'Full-Stack Geliştirici',
+						company: 'Xcargo',
+						location: 'Yiwu, Zhejiang, Çin · Hibrit',
+						description:
+							"Çin'in Yiwu şehrindeki Xcargo uluslararası lojistik şirketinde hibrit full-stack yazılım mühendisi olarak çalıştım. Xcargo backend sistemi, frontend ve mobil uygulamalarını geliştirdim.",
+					},
+					{
+						id: 'smart-walnut',
+						role: 'Frontend Stajyeri',
+						company: 'Smart Walnut Technology',
+						location: 'Nanchang, Jiangxi, Çin',
+						description:
+							"Jiangxi, Nanchang'daki Smart Walnut Technology şirketinde yerinde frontend stajyeri olarak çalıştım. TypeScript, React, Ant Design ve Git kullanarak kullanıcı arayüzleri geliştirdim.",
+					},
+					{
+						id: 'zhilin',
+						role: 'Staj Öğrencisi',
+						company: 'Zhilin Information Technology Co., Ltd.',
+						location: 'Taiyuan, Shanxi, Çin',
+						description:
+							"Taiyuan'daki Zhilin Information Technology Co., Ltd. şirketinde yerinde yazılım geliştirme staj öğrencisi olarak çalıştım. IoT Smart Home ve Udacity Driverless System adlı iki proje geliştirdim.",
+					},
+					{
+						id: 'tut-web-dev',
+						role: 'Web Stajyeri',
+						company: 'Taiyuan Teknoloji Üniversitesi',
+						location: 'Taiyuan, Shanxi, Çin',
+						description:
+							"TYUT'da yerinde Web Geliştirme Stajyeri olarak çalıştım. Circle adlı minimal sosyal ağ ve Utopia adlı mini çevrimiçi mağaza geliştirdim.",
+					},
+					{
+						id: 'tut-cpp',
+						role: 'C++ Geliştirici Çırağı',
+						company: 'Taiyuan Teknoloji Üniversitesi',
+						location: 'Taiyuan, Shanxi, Çin',
+						description:
+							"TYUT'da yerinde C++ Geliştirici Çırağı olarak çalıştım. C++ ve Embarcadero RAD Studio kullanarak ABMS (Adres Defteri Yönetim Sistemi) masaüstü uygulamasını geliştirdim.",
+					},
+					{
+						id: 'jinzhong-vr-volunteer',
+						role: 'Gönüllü',
+						company: 'Birinci Dünya Meslek Okulları Beceri Yarışması',
+						location: 'Jinzhong, Shanxi, Çin',
+						description:
+							"Eğitim Bakanlığı tarafından desteklenen Birinci Dünya Meslek Okulları Beceri Yarışması kapsamında, Jinzhong Meslek ve Teknik Koleji'nde düzenlenen Sanal Gerçeklik (VR) Tasarım ve Üretim Yarışması'nda yerinde ekip üyesi gönüllü olarak görev aldım. C++, Unity ve diğer VR teknolojileri kullanarak bir VR kentsel ulaşım sistemi geliştirdim.",
+					},
+				],
+			},
+			education: {
+				title: 'Eğitim',
+				entries: [
+					{
+						id: 'ncu-masters',
+						role: 'Yüksek Lisans',
+						company: 'Nanchang Üniversitesi',
+						location: 'Nanchang, Jiangxi, Çin',
+						description:
+							"Nanchang şehrindeki Nanchang Üniversitesi'nde Yazılım Mühendisliği yüksek lisansı yapıyorum.",
+					},
+					{
+						id: 'tut-bachelors',
+						role: 'Lisans',
+						company: 'Taiyuan Teknoloji Üniversitesi',
+						location: 'Taiyuan, Shanxi, Çin',
+						description:
+							"Taiyuan şehrindeki TYUT'da Bilgisayar Bilimi ve Teknolojisi lisansını tamamladım.",
+					},
+					{
+						id: 'xisu-chinese',
+						role: 'Çince Dili',
+						company: "Xi'an Uluslararası Çalışmalar Üniversitesi",
+						location: "Xi'an, Shaanxi, Çin",
+						description:
+							"Xi'an şehrinde Xi'an Uluslararası Çalışmalar Üniversitesi'nde (XISU) Çince öğrendim.",
+					},
+				],
+			},
 		},
 		expertise: {
 			title: 'Uzmanlık',
@@ -1982,7 +2081,7 @@ export const translations = {
 			cv: {
 				title: 'CV',
 				description:
-					'Akademik ve profesyonel ayrıntıları içeren CV\'mi açın ve indirin.',
+					"Akademik ve profesyonel ayrıntıları içeren CV'mi açın ve indirin.",
 				unavailable: 'Şu anda kullanılamıyor.',
 			},
 		},
@@ -2379,7 +2478,7 @@ export const translations = {
 						'Я с удовольствием рекомендую Агаджана Сахатова. Он сделал отличный сайт — красивый, адаптивный и очень быстрый. Он профессионален, с ним легко работать, и результаты хорошие...',
 				},
 			],
-			experiencesTitle: 'Последний опыт',
+			experiencesTitle: 'Последний опыт работы',
 			experiencesTagline:
 				'Ключевые этапы моего профессионального пути в создании готовых к продакшену цифровых продуктов для web, backend и mobile.',
 			topProjectsTitle: 'Избранные проекты',
@@ -2453,69 +2552,95 @@ export const translations = {
 		experience: {
 			title: 'Опыт',
 			tagline:
-				'Мой профессиональный путь в создании готовых к продакшену цифровых продуктов для web, backend и mobile.',
+				'Мой профессиональный и академический путь в создании готовых к продакшену цифровых продуктов для web, backend и mobile.',
 			present: 'настоящее время',
 			viewCompany: 'Смотреть компанию',
+			viewInstitution: 'Открыть вуз',
 			readMore: 'Читать далее',
 			readLess: 'Свернуть',
-			entries: [
-				{
-					id: 'xcargo',
-					role: 'Инженер-программист',
-					company: 'Xcargo',
-					location: 'Иу, Чжэцзян, Китай',
-					description:
-						'Проектирую и создаю программные системы, обеспечивающие международные логистические операции Xcargo между Китаем и Туркменистаном, включая клиентскую web-платформу и мобильное приложение для просмотра цен на доставку и отслеживания грузов. Разрабатываю backend-сервисы, API и базы данных, отвечаю за архитектуру, развёртывание и производительность.',
-				},
-				{
-					id: 'ncu-masters',
-					role: 'Магистратура, Программная инженерия',
-					company: 'Университет Наньчана',
-					location: 'Наньчан, Цзянси, Китай',
-					description:
-						'Получаю степень магистра по программной инженерии, углубляю знания в области программных систем и архитектуры.',
-				},
-				{
-					id: 'smart-walnut',
-					role: 'Стажёр-фронтенд',
-					company: 'Smart Walnut Technology',
-					location: 'Наньчан, Цзянси, Китай',
-					description:
-						'В качестве стажёра по фронтенд-разработке создавал пользовательские интерфейсы для web-проекта на React.js.',
-				},
-				{
-					id: 'tut-bachelors',
-					role: 'Бакалавриат, Компьютерные науки и технологии',
-					company: 'Тайюаньский технологический университет',
-					location: 'Тайюань, Шаньси, Китай',
-					description:
-						'Окончил бакалавриат по специальности «Компьютерные науки и технологии», заложив прочную основу в программировании, алгоритмах и разработке ПО.',
-				},
-				{
-					id: 'zhilin',
-					role: 'Стажёр-инженер-программист',
-					company: 'Zhilin Information Technology',
-					location: 'Тайюань, Шаньси, Китай',
-					description:
-						'На стажировке, организованной совместно с Тайюаньским технологическим университетом, создал два проекта: IoT-систему умного дома на Python и Arduino и систему беспилотного вождения на основе глубокого обучения, вдохновлённую Udacity.',
-				},
-				{
-					id: 'tut-web-dev',
-					role: 'Стажёр Web-разработки',
-					company: 'Тайюаньский технологический университет',
-					location: 'Тайюань, Шаньси, Китай',
-					description:
-						'На производственной стажировке создал два full-stack проекта: социальную сеть Circle (PHP, MySQL) и интернет-магазин Utopia (Java Spring Boot, React, MySQL).',
-				},
-				{
-					id: 'tut-cpp',
-					role: 'Ученик C++ разработчика',
-					company: 'Тайюаньский технологический университет',
-					location: 'Тайюань, Шаньси, Китай',
-					description:
-						'Разработал систему управления адресной книгой на C++ в RAD Studio, применив ООП и проектирование GUI с полным CRUD, файловым хранением, поиском по ключевым словам и проверкой ввода.',
-				},
-			],
+			workExperience: {
+				title: 'Работа',
+				entries: [
+					{
+						id: 'xcargo',
+						role: 'Full-Stack разработчик',
+						company: 'Xcargo',
+						location: 'Иу, Чжэцзян, Китай · Гибрид',
+						description:
+							'Работал гибридным full-stack инженером в международной логистической компании Xcargo в Иу, Китай. Разработал backend-систему Xcargo, frontend и мобильные приложения.',
+					},
+					{
+						id: 'smart-walnut',
+						role: 'Стажёр-фронтенд',
+						company: 'Smart Walnut Technology',
+						location: 'Наньчан, Цзянси, Китай',
+						description:
+							'Работал на месте стажёром-фронтенд-разработчиком в компании Smart Walnut Technology в Наньчане, Цзянси, Китай. Использовал TypeScript, React, Ant Design и Git.',
+					},
+					{
+						id: 'zhilin',
+						role: 'Стажёр-практикант',
+						company: 'Zhilin Information Technology Co., Ltd.',
+						location: 'Тайюань, Шаньси, Китай',
+						description:
+							'Работал на месте стажёром-практикантом по разработке ПО в компании Zhilin Information Technology Co., Ltd. в Тайюане. Создал два проекта: IoT Smart Home и Udacity Driverless System.',
+					},
+					{
+						id: 'tut-web-dev',
+						role: 'Web-стажёр',
+						company: 'Тайюаньский технологический университет',
+						location: 'Тайюань, Шаньси, Китай',
+						description:
+							'Работал на месте Web-стажёром в TYUT. Разработал минимальную социальную сеть Circle и мини интернет-магазин Utopia.',
+					},
+					{
+						id: 'tut-cpp',
+						role: 'Ученик C++-разработчика',
+						company: 'Тайюаньский технологический университет',
+						location: 'Тайюань, Шаньси, Китай',
+						description:
+							'Работал на месте учеником C++-разработчика в TYUT. Разработал настольное приложение ABMS (система управления адресной книгой) на C++ и Embarcadero RAD Studio.',
+					},
+					{
+						id: 'jinzhong-vr-volunteer',
+						role: 'Волонтёр',
+						company:
+							'Первый мировой конкурс профессиональных навыков колледжей',
+						location: 'Цзиньчжун, Шаньси, Китай',
+						description:
+							'Работал на месте волонтёром в составе команды на конкурсе по дизайну и производству в виртуальной реальности (VR) в Цзиньчжунском профессионально-техническом колледже — в рамках Первого мирового конкурса профессиональных навыков колледжей при поддержке Министерства образования. Создал VR-систему городского транспорта с использованием C++, Unity и других VR-технологий.',
+					},
+				],
+			},
+			education: {
+				title: 'Образование',
+				entries: [
+					{
+						id: 'ncu-masters',
+						role: 'Магистратура',
+						company: 'Университет Наньчана',
+						location: 'Наньчан, Цзянси, Китай',
+						description:
+							'Получаю степень магистра по программной инженерии в Университете Наньчана.',
+					},
+					{
+						id: 'tut-bachelors',
+						role: 'Бакалавриат',
+						company: 'Тайюаньский технологический университет',
+						location: 'Тайюань, Шаньси, Китай',
+						description:
+							'Окончил бакалавриат по специальности «Компьютерные науки и технологии» в TYUT в Тайюане.',
+					},
+					{
+						id: 'xisu-chinese',
+						role: 'Китайский язык',
+						company: 'Сианьский университет международных исследований',
+						location: 'Сиань, Шэньси, Китай',
+						description:
+							'Изучал китайский язык в Сианьском университете международных исследований (XISU) в Сиане.',
+					},
+				],
+			},
 		},
 		expertise: {
 			title: 'Экспертиза',

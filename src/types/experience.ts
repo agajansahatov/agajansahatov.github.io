@@ -1,25 +1,28 @@
 import type { ComponentType } from 'react';
 import type { SkinVariant } from '../components/types';
 
-export type ExperienceId =
+export type WorkExperienceId =
 	| 'xcargo'
-	| 'ncu-masters'
 	| 'smart-walnut'
-	| 'tut-bachelors'
 	| 'zhilin'
 	| 'tut-web-dev'
-	| 'tut-cpp';
+	| 'tut-cpp'
+	| 'jinzhong-vr-volunteer';
 
-export type ExperienceContent = {
-	readonly id: ExperienceId;
+export type EducationId = 'xisu-chinese' | 'tut-bachelors' | 'ncu-masters';
+
+export type ExperienceId = WorkExperienceId | EducationId;
+
+export type ExperienceContent<TId extends ExperienceId = ExperienceId> = {
+	readonly id: TId;
 	readonly role: string;
 	readonly company: string;
 	readonly location: string;
 	readonly description: string;
 };
 
-export type ExperienceAsset = {
-	readonly id: ExperienceId;
+export type ExperienceAsset<TId extends ExperienceId = ExperienceId> = {
+	readonly id: TId;
 	readonly logoIcon: ComponentType;
 	readonly iconVariant: SkinVariant;
 	readonly companyUrl?: string;
@@ -28,8 +31,14 @@ export type ExperienceAsset = {
 	readonly endDate: string | null;
 };
 
-export type ResolvedExperience = ExperienceContent &
-	Pick<
-		ExperienceAsset,
-		'logoIcon' | 'iconVariant' | 'companyUrl' | 'tech' | 'startDate' | 'endDate'
-	>;
+export type ResolvedExperience<TId extends ExperienceId = ExperienceId> =
+	ExperienceContent<TId> &
+		Pick<
+			ExperienceAsset<TId>,
+			| 'logoIcon'
+			| 'iconVariant'
+			| 'companyUrl'
+			| 'tech'
+			| 'startDate'
+			| 'endDate'
+		>;

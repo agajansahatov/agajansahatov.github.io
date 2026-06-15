@@ -18,6 +18,27 @@
 	color: var(--color-foreground);
 }
 
+.subsection {
+	margin-bottom: 3rem;
+}
+
+.subsection:last-child {
+	margin-bottom: 0;
+}
+
+.subsection__heading {
+	text-align: center;
+	font-size: 2rem;
+	line-height: 1.3;
+	padding-bottom: 1.6rem;
+	color: var(--color-primary);
+}
+
+.subsection--education .subsection__heading {
+	padding-top: 3rem;
+	padding-bottom: 0.8rem;
+}
+
 @media screen and (min-width: 480px) {
 	.section {
 		padding-top: 5rem;
@@ -27,12 +48,39 @@
 	.section__tagline {
 		font-size: 1.7rem;
 		line-height: 1.7;
-		margin-bottom: 5rem;
+		margin-bottom: 4rem;
+	}
+
+	.subsection {
+		margin-bottom: 4rem;
+	}
+
+	.subsection__heading {
+		font-size: 2.4rem;
+		padding-bottom: 2rem;
+	}
+
+	.subsection--education .subsection__heading {
+		padding-top: 4rem;
+		padding-bottom: 1rem;
 	}
 }
 
 @media screen and (min-width: 768px) {
 	.section__tagline {
-		margin-bottom: 6rem;
+		margin-bottom: 5rem;
+	}
+
+	.subsection {
+		margin-bottom: 5rem;
+	}
+
+	.subsection__heading {
+		padding-bottom: 2.4rem;
+	}
+
+	.subsection--education .subsection__heading {
+		padding-top: 5rem;
+		padding-bottom: 1.2rem;
 	}
 }
