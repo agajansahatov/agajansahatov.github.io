@@ -94,10 +94,11 @@
 
 	.banner__image {
 		order: 2;
-	}
-	.banner__image {
 		margin-left: 0;
-		margin-top: 0;
+		margin-top: 10px;
 		justify-self: flex-end;
+		object-fit: contain;
+		width: 100%;
+		max-width: none;
 	}
 }

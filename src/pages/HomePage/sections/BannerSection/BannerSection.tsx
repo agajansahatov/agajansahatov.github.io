@@ -33,9 +33,7 @@ const BannerSection = () => {
 
 			<img
 				className={styles.banner__image}
-				sizes='(max-width: 1000px) 100vw, 1000px'
-				srcSet='/images/agajansahatov_sm.png 400w, /images/agajansahatov_md.png 800w, /images/agajansahatov.png 1000w'
-				src='/images/agajansahatov.png'
+				src='/images/banner.svg'
 				alt={t.explore.heroImageAlt}
 			/>
 		</Block>
