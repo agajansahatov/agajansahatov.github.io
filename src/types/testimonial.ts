@@ -1,4 +1,7 @@
-export type HomeTestimonialId = 'meylis-sahetmammedov';
+export type HomeTestimonialId =
+	| 'meylis-sahetmammedov'
+	| 'chary-babaniyazov'
+	| 'godwin-rapuluchukwu';
 
 export type TestimonialContent = {
 	readonly id: HomeTestimonialId;

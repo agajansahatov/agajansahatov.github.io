@@ -1,10 +1,18 @@
 .card {
-	border-radius: 7px;
+	border-radius: 20px;
 	box-shadow: 0 0 20px 10px var(--color-shadow);
+}
+
+.card__surface {
+	border-radius: 20px;
 	overflow: hidden;
 	background: var(--color-background);
 	padding: 2rem;
 	padding-bottom: 0;
+}
+
+.card__layout {
+	gap: 2rem;
 }
 
 .image-container {
@@ -15,29 +23,40 @@
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 15px;
 }
 
 .quote-badge {
 	position: absolute;
 	top: 3rem;
-	right: -20px;
+	right: 0;
+	transform: translateX(50%);
 	display: inline-flex;
 }
 
+.quote-badge__icon {
+	--size: 50px;
+	font-size: calc(var(--size) - 30px);
+}
+
 @media screen and (min-width: 400px) {
-	.card {
+	.card__surface {
 		padding: 3rem;
 		padding-bottom: 0;
 	}
 
-	.quote-badge {
-		right: -32px;
+	.quote-badge__icon {
+		--size: 60px;
 	}
 }
 
 @media screen and (min-width: 768px) {
-	.card {
+	.card__surface {
 		padding-bottom: 3rem;
+	}
+
+	.card__layout {
+		gap: 0;
 	}
 
 	.card :global(.quote),
@@ -51,5 +70,6 @@
 
 	.card :global(.quote) {
 		margin-left: 6rem;
+		margin-right: 0;
 	}
 }

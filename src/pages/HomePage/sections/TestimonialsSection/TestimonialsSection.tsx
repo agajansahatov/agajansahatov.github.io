@@ -1,6 +1,6 @@
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
-import TestimonialCard from '../../../../components/TestimonialCard';
+import TestimonialsCarousel from '../../../../components/TestimonialsCarousel';
 import type { TranslationDictionary } from '../../../../i18n/translations';
 import { useTranslation } from '../../../../i18n';
 import type {
@@ -14,27 +14,18 @@ const TestimonialsSection = () => {
 	const testimonials = resolveTestimonials(t.explore.testimonials);
 
 	return (
-		<Block id='section-testimonials' className={styles.section}>
+		<Block
+			id='section-testimonials'
+			className={styles.section}
+			containerClassName={styles['section__container']}
+		>
 			<BlockHeader dataAos='fade-up'>
 				<h2 className={styles['section__heading']}>
 					{t.explore.testimonialsTitle}
 				</h2>
 				<p className={styles['section__body']}>{t.explore.testimonialsBody}</p>
 			</BlockHeader>
-			<ul className={styles['testimonials-list']}>
-				{testimonials.map((testimonial) => (
-					<li key={testimonial.id} className={styles['testimonial-item']}>
-						<TestimonialCard
-							name={testimonial.name}
-							organization={testimonial.organization}
-							comment={testimonial.comment}
-							photo={testimonial.photo}
-							photoAlt={testimonial.photoAlt}
-							dataAos='fade-up'
-						/>
-					</li>
-				))}
-			</ul>
+			<TestimonialsCarousel testimonials={testimonials} />
 		</Block>
 	);
 };
@@ -47,7 +38,15 @@ type TestimonialAsset = {
 const testimonialAssets: readonly TestimonialAsset[] = [
 	{
 		id: 'meylis-sahetmammedov',
-		photo: '/images/meylis.png',
+		photo: '/images/testimonials/meylis.png',
+	},
+	{
+		id: 'chary-babaniyazov',
+		photo: '/images/testimonials/chary.png',
+	},
+	{
+		id: 'godwin-rapuluchukwu',
+		photo: '/images/testimonials/rapuluchukwu.png',
 	},
 ] as const;
 

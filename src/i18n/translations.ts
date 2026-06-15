@@ -1,7 +1,6 @@
 export const translations = {
 	tk: {
 		common: {
-
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Ähli hukuklar goralan.',
 			builtWithNote: 'Kod we ❤️ bilen gurlan.',
@@ -36,6 +35,10 @@ export const translations = {
 			mediaPrevious: 'Öňki surat',
 			mediaNext: 'Indiki surat',
 			mediaThumbnail: 'Kiçi surat',
+			testimonialPrevious: 'Öňki teswir',
+			testimonialNext: 'Indiki teswir',
+			testimonialGoTo: 'Teswir {index} geç',
+			testimonialStatus: '{current} / {total}',
 		},
 		nav: {
 			menu: 'Menýu',
@@ -193,9 +196,25 @@ export const translations = {
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
 					organization: 'Telekeçi',
-					photoAlt: 'Bagtly we gülýän müşderiniň suraty',
+					photoAlt: 'Meylis Sahetmammedowyň suraty',
 					comment:
 						'Agajan Sahatowy maslahat bermekden örän şat. Ol örän owadan, duýgur we tizligi çalt web sahypasyny taýýarlap berdi. Ol örän hünärmen, işlemek aňsat we gowy netijeler berýär...',
+				},
+				{
+					id: 'chary-babaniyazov',
+					name: 'Chary Babaniyazov',
+					organization: 'Xcargo',
+					photoAlt: 'Chary Babaniyazowyň suraty',
+					comment:
+						'Men Xcargo-da Agajan Sahatow bilen işledim. Ol biziň backend, web we ykjam platformalarymyzy ösdürdi we saklaýardy. Onuň işi iberilen ýükleri yzarlamagy, bahalaryň hyzmatyny we iş amallarynyň netijeliligini gowulandyrdy. Agajan güýçli tehniki ussatlygy, işe jogapkärçiligi, ygtybarlylygy we başlangyjy görkezýär. Men ony ussatly we borçludyr programmist hökmünde ynam bilen maslahat berýärin.',
+				},
+				{
+					id: 'godwin-rapuluchukwu',
+					name: 'Godwin Rapuluchukwu',
+					organization: 'Zhilin Information Technology Co., Ltd.',
+					photoAlt: 'Godwin Rapuluchukwu-nuň suraty',
+					comment:
+						'Sahatowyň Zhilin Information Technology Co., Ltd.-de programmist stazýorylygynda öwrenmäge we täzeçilige gaty borçludyr. Sahatowyň IoT we çuň öwreniş ýaly taslamalarymyza goşan goşantlary täsir ediji boldy. Onuň bilelikde işlemek ukyby we tehnologiýa bolan höwesi ony islendik programmist wezipesi üçin aýratyn namzat edýär. Sahatowy geljek mümkinçilikler üçin gyssanly maslahat berýärin.',
 				},
 			],
 			experiencesTitle: 'Soňky iş tejribelerim',
@@ -324,7 +343,8 @@ export const translations = {
 					{
 						id: 'jinzhong-vr-volunteer',
 						role: 'Meýletinçi',
-						organization: 'Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşigi',
+						organization:
+							'Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşigi',
 						location: 'Jinjoň, Şansi, Hytaý',
 						description:
 							'Bilim ministrligi tarapyndan goldanylýan Birinji dünýä hünär okuw mekdebi başarnyklar bäsleşiginiň Wirtual hakykylyk (VR) dizaýn we önümçilik bäsleşiginde Jinjoň hünär we tehniki kollejinde ofisde topar agzasy hökmünde meýletinçi boldum. C++, Unity we beýleki VR tehnologiýalary ulanyp şäher ulag ulgamy gurdum.',
@@ -580,7 +600,6 @@ export const translations = {
 	},
 	en: {
 		common: {
-
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'All rights reserved.',
 			builtWithNote: 'Built with ❤️ and code.',
@@ -615,6 +634,10 @@ export const translations = {
 			mediaPrevious: 'Previous media',
 			mediaNext: 'Next media',
 			mediaThumbnail: 'Thumbnail',
+			testimonialPrevious: 'Previous testimonial',
+			testimonialNext: 'Next testimonial',
+			testimonialGoTo: 'Go to testimonial {index}',
+			testimonialStatus: '{current} of {total}',
 		},
 		nav: {
 			menu: 'Menu',
@@ -773,9 +796,25 @@ export const translations = {
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
 					organization: 'Entrepreneur',
-					photoAlt: 'A happy, smiling customer',
+					photoAlt: 'A photo of Meylis Sahetmammedov',
 					comment:
-						'I am so happy to recommend Agajan Sahatov. He delivered an excellent website that is very beautiful, responsive and blazingly fast. He is very professional, easy to work with and has good results...',
+						"I'm so happy to recommend Agajan Sahatov. He delivered an excellent website that is extremely beautiful, responsive and blazingly fast. He is very professional, easy to work with and has good results.",
+				},
+				{
+					id: 'chary-babaniyazov',
+					name: 'Chary Babaniyazov',
+					organization: 'Xcargo',
+					photoAlt: 'A photo of Chary Babaniyazov',
+					comment:
+						'I worked with Agajan Sahatov at Xcargo, where he developed and maintained our backend, web, and mobile platforms. His work improved shipment tracking, pricing services, and operational efficiency. Agajan demonstrates strong technical expertise, ownership, reliability, and initiative. I confidently recommend him as a skilled and dedicated software engineer.',
+				},
+				{
+					id: 'godwin-rapuluchukwu',
+					name: 'Godwin Rapuluchukwu',
+					organization: 'Zhilin Information Technology Co., Ltd.',
+					photoAlt: 'A photo of Godwin Rapuluchukwu',
+					comment:
+						"During Sahatov's Software Engineer Internship at Zhilin Information Technology Co., Ltd., he showcased a remarkable dedication to learning and innovation. Sahatov's contributions to our projects, particularly in IoT and deep learning, were impressive. His collaborative nature and passion for technology make him a standout candidate for any software engineering role. I enthusiastically recommend Sahatov for future opportunities.",
 				},
 			],
 			experiencesTitle: 'Recent Work Experience',
@@ -1158,7 +1197,6 @@ export const translations = {
 	},
 	zh: {
 		common: {
-
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: '保留所有权利。',
 			builtWithNote: '用 ❤️ 和代码构建。',
@@ -1192,6 +1230,10 @@ export const translations = {
 			mediaPrevious: '上一个媒体',
 			mediaNext: '下一个媒体',
 			mediaThumbnail: '缩略图',
+			testimonialPrevious: '上一条评价',
+			testimonialNext: '下一条评价',
+			testimonialGoTo: '转到第 {index} 条评价',
+			testimonialStatus: '第 {current} 条，共 {total} 条',
 		},
 		nav: {
 			menu: '菜单',
@@ -1346,9 +1388,25 @@ export const translations = {
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
 					organization: '创业者',
-					photoAlt: '一位开心微笑的客户照片',
+					photoAlt: 'Meylis Sahetmammedov 的照片',
 					comment:
 						'我非常乐意推荐 Agajan Sahatov。他交付了一个非常精美、响应式且速度极快的优秀网站。他非常专业，沟通顺畅，成果也很好……',
+				},
+				{
+					id: 'chary-babaniyazov',
+					name: 'Chary Babaniyazov',
+					organization: 'Xcargo',
+					photoAlt: 'Chary Babaniyazov 的照片',
+					comment:
+						'我在 Xcargo 与 Agajan Sahatov 共事，他开发并维护了我们的后端、Web 和移动平台。他的工作改进了货物跟踪、定价服务和运营效率。Agajan 展现出很强的技术能力、主人翁精神、可靠性和主动性。我自信地推荐他成为一名技能娴熟且敬业的软件工程师。',
+				},
+				{
+					id: 'godwin-rapuluchukwu',
+					name: 'Godwin Rapuluchukwu',
+					organization: 'Zhilin Information Technology Co., Ltd.',
+					photoAlt: 'Godwin Rapuluchukwu 的照片',
+					comment:
+						'在 Sahatov 于志凌信息技术有限公司担任软件工程师实习生期间，他展现出对学习和创新的非凡投入。Sahatov 对我们项目的贡献令人印象深刻，尤其是在物联网和深度学习方面。他善于协作，并对技术充满热情，这使他成为任何软件工程岗位上的杰出候选人。我热情推荐 Sahatov 把握未来的机会。',
 				},
 			],
 			experiencesTitle: '近期工作经历',
@@ -1582,7 +1640,8 @@ export const translations = {
 			copyCnPhone: '复制 CN 号码',
 			tmPhoneDataLabel: 'TM 号码',
 			cnPhoneDataLabel: 'CN 号码',
-			phonesBody: '如有 {portfolioName} 问题、合作想法或技术问题，可以致电我们。',
+			phonesBody:
+				'如有 {portfolioName} 问题、合作想法或技术问题，可以致电我们。',
 			callTm: '拨打 TM',
 			callCn: '拨打 CN',
 			emailTitle: '我们的邮箱',
@@ -1709,7 +1768,6 @@ export const translations = {
 	},
 	tr: {
 		common: {
-
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Tüm hakları saklıdır.',
 			builtWithNote: '❤️ ve kod ile yapıldı.',
@@ -1744,6 +1802,10 @@ export const translations = {
 			mediaPrevious: 'Önceki medya',
 			mediaNext: 'Sonraki medya',
 			mediaThumbnail: 'Küçük görsel',
+			testimonialPrevious: 'Önceki referans',
+			testimonialNext: 'Sonraki referans',
+			testimonialGoTo: '{index}. referansa git',
+			testimonialStatus: '{current} / {total}',
 		},
 		nav: {
 			menu: 'Menü',
@@ -1809,7 +1871,8 @@ export const translations = {
 			heroTitle: 'Merhaba! Ben {portfolioName}',
 			heroTagline:
 				'Fikirleri, wireframe’leri ve teknik şartnameleri hızlı, ölçeklenebilir, güzel ve üretime hazır uygulamalara dönüştürüyorum.',
-			heroImageAlt: 'Profesyonel yazılım mühendisi {portfolioName}’un fotoğrafı',
+			heroImageAlt:
+				'Profesyonel yazılım mühendisi {portfolioName}’un fotoğrafı',
 			heroCta: 'Benimle tanış',
 			calloutCta: 'Benimle iletişime geç',
 			servicesTitle: 'Neler Sunuyorum',
@@ -1902,9 +1965,25 @@ export const translations = {
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
 					organization: 'Girişimci',
-					photoAlt: 'Mutlu ve gülümseyen bir müşterinin fotoğrafı',
+					photoAlt: 'Meylis Sahetmammedov fotoğrafı',
 					comment:
 						'Agajan Sahatov’u tavsiye etmekten çok mutluyum. Çok güzel, duyarlı ve son derece hızlı mükemmel bir web sitesi teslim etti. Çok profesyonel, birlikte çalışması kolay ve iyi sonuçlar veriyor...',
+				},
+				{
+					id: 'chary-babaniyazov',
+					name: 'Chary Babaniyazov',
+					organization: 'Xcargo',
+					photoAlt: 'Chary Babaniyazov fotoğrafı',
+					comment:
+						'Xcargo’da Agajan Sahatov ile çalıştım; backend, web ve mobil platformlarımızı geliştirdi ve sürdürdü. Çalışmaları gönderi takibini, fiyatlandırma hizmetlerini ve operasyonel verimliliği iyileştirdi. Agajan güçlü teknik uzmanlık, sahiplenme, güvenilirlik ve inisiyatif gösteriyor. Onu yetenekli ve özverili bir yazılım mühendisi olarak güvenle tavsiye ederim.',
+				},
+				{
+					id: 'godwin-rapuluchukwu',
+					name: 'Godwin Rapuluchukwu',
+					organization: 'Zhilin Information Technology Co., Ltd.',
+					photoAlt: 'Godwin Rapuluchukwu fotoğrafı',
+					comment:
+						'Sahatov, Zhilin Information Technology Co., Ltd. bünyesindeki Yazılım Mühendisi stajı sırasında öğrenmeye ve yeniliğe olağanüstü bir bağlılık gösterdi. Sahatov’un özellikle IoT ve derin öğrenme alanlarındaki projelere katkıları etkileyiciydi. İş birliğine yatkınlığı ve teknolojiye olan tutkusu, onu herhangi bir yazılım mühendisliği rolü için öne çıkan bir aday yapıyor. Sahatov’u gelecekteki fırsatlar için gönülden tavsiye ederim.',
 				},
 			],
 			experiencesTitle: 'Son İş Deneyimlerim',
@@ -2260,7 +2339,8 @@ export const translations = {
 				},
 			],
 			portfolioTitle: 'Kişisel bilgiler',
-			portfolioSubtitle: '{portfolioName} hakkında geçmiş ve iletişim bilgileri.',
+			portfolioSubtitle:
+				'{portfolioName} hakkında geçmiş ve iletişim bilgileri.',
 			detailsTitle: 'Temel bilgiler',
 			detailsHint:
 				'İş birliği, serbest çalışma ya da sadece merhaba demek için en iyi iletişim yolu e-postadır.',
@@ -2287,7 +2367,6 @@ export const translations = {
 	},
 	ru: {
 		common: {
-
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Все права защищены.',
 			builtWithNote: 'Создано с ❤️ и кодом.',
@@ -2322,6 +2401,10 @@ export const translations = {
 			mediaPrevious: 'Предыдущий медиафайл',
 			mediaNext: 'Следующий медиафайл',
 			mediaThumbnail: 'Миниатюра',
+			testimonialPrevious: 'Предыдущий отзыв',
+			testimonialNext: 'Следующий отзыв',
+			testimonialGoTo: 'Перейти к отзыву {index}',
+			testimonialStatus: '{current} из {total}',
 		},
 		nav: {
 			menu: 'Меню',
@@ -2480,9 +2563,25 @@ export const translations = {
 					id: 'meylis-sahetmammedov',
 					name: 'Meylis Sahetmammedov',
 					organization: 'Предприниматель',
-					photoAlt: 'Фото довольного, улыбающегося клиента',
+					photoAlt: 'Фотография Meylis Sahetmammedov',
 					comment:
 						'Я с удовольствием рекомендую Агаджана Сахатова. Он сделал отличный сайт — красивый, адаптивный и очень быстрый. Он профессионален, с ним легко работать, и результаты хорошие...',
+				},
+				{
+					id: 'chary-babaniyazov',
+					name: 'Chary Babaniyazov',
+					organization: 'Xcargo',
+					photoAlt: 'Фотография Chary Babaniyazov',
+					comment:
+						'Я работал с Агаджаном Сахатовым в Xcargo, где он разрабатывал и поддерживал наши backend-, веб- и мобильные платформы. Его работа улучшила отслеживание отправлений, сервисы ценообразования и операционную эффективность. Агаджан демонстрирует сильную техническую экспертизу, ответственность, надежность и инициативность. Я с уверенностью рекомендую его как квалифицированного и преданного инженера-программиста.',
+				},
+				{
+					id: 'godwin-rapuluchukwu',
+					name: 'Godwin Rapuluchukwu',
+					organization: 'Zhilin Information Technology Co., Ltd.',
+					photoAlt: 'Фотография Godwin Rapuluchukwu',
+					comment:
+						'Во время стажировки Sahatov в должности инженера-программиста в Zhilin Information Technology Co., Ltd. он проявил замечательную преданность обучению и инновациям. Вклад Sahatov в наши проекты, особенно в области IoT и глубокого обучения, был впечатляющим. Его командный характер и страсть к технологиям делают его выдающимся кандидатом на любую роль в области разработки ПО. Я с энтузиазмом рекомендую Sahatov для будущих возможностей.',
 				},
 			],
 			experiencesTitle: 'Последний опыт работы',

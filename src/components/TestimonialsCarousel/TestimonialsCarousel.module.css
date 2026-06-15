@@ -1,0 +1,144 @@
+.carousel {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 00px;
+}
+
+@media screen and (min-width: 480px) {
+	.carousel {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.carousel__region {
+	outline: none;
+}
+
+.carousel__region:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 4px;
+	border-radius: 8px;
+}
+
+.carousel__controls {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.35rem;
+}
+
+.carousel__viewport {
+	--testimonial-shadow-space: 30px;
+	width: 100%;
+	min-width: 0;
+	touch-action: pan-y;
+}
+
+.carousel__viewport-clip {
+	overflow: hidden;
+}
+
+.carousel__track {
+	display: flex;
+	transition: transform 0.4s ease;
+}
+
+.carousel__slide {
+	flex: 0 0 100%;
+	min-width: 100%;
+	box-sizing: border-box;
+	padding-block: var(--testimonial-shadow-space);
+	padding-inline: 15px;
+	box-shadow: none;
+	background: transparent;
+}
+
+@media screen and (min-width: 480px) {
+	.carousel__slide {
+		padding: var(--testimonial-shadow-space);
+	}
+}
+
+.carousel__slide[aria-hidden='true'] > * {
+	box-shadow: none;
+}
+
+.carousel__nav {
+	flex-shrink: 0;
+	padding: 8px;
+	font-size: 1.75rem;
+	border-radius: 50%;
+	aspect-ratio: 1;
+}
+
+.carousel__status {
+	margin: 1rem 0 0;
+	text-align: center;
+	font-size: 0.9rem;
+	color: var(--color-foreground);
+}
+
+.carousel__dots {
+	display: flex;
+	justify-content: center;
+	gap: 0.75rem;
+	margin-top: 1rem;
+}
+
+.carousel__dot {
+	width: 0.75rem;
+	height: 0.75rem;
+	padding: 0;
+	border: none;
+	border-radius: 50%;
+	background: var(--color-foreground);
+	opacity: 0.4;
+	cursor: pointer;
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.carousel__dot:hover,
+.carousel__dot:focus-visible {
+	opacity: 0.8;
+	outline: 2px solid var(--color-accent);
+	outline-offset: 2px;
+}
+
+.carousel__dot--active {
+	opacity: 1;
+	background: var(--color-accent);
+	transform: scale(1.15);
+}
+
+@media screen and (min-width: 768px) {
+	.carousel__controls {
+		flex-direction: row;
+		align-items: center;
+		gap: 1.5rem;
+	}
+
+	.carousel__viewport {
+		flex: 1;
+		width: auto;
+	}
+
+	.carousel__nav {
+		align-self: center;
+		padding: 15px;
+		font-size: 2rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.carousel__track {
+		transition: none;
+	}
+
+	.carousel__dot {
+		transition: none;
+	}
+}

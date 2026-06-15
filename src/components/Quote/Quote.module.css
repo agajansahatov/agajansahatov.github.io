@@ -6,8 +6,68 @@
 }
 
 .quote__text {
+	width: 100%;
 	font-size: 1.8rem;
-	margin: 0 0 1.5rem;
+	margin: 0;
+}
+
+.quote__text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 1.5rem;
+}
+
+.quote__text--clamped {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	overflow: hidden;
+}
+
+.quote__expand-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 3.5rem;
+	min-height: 3.5rem;
+	margin-top: 0.75rem;
+	padding: 0.5rem;
+	border: 1px solid var(--color-background-strong);
+	border-radius: 50%;
+	background-color: var(--color-background);
+	color: var(--color-primary);
+	cursor: pointer;
+	transition:
+		border-color 0.2s ease,
+		background-color 0.2s ease,
+		transform 0.2s ease;
+}
+
+.quote__expand-button:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 3px;
+}
+
+@media (hover: hover) {
+	.quote__expand-button:hover {
+		border-color: var(--color-primary);
+		background-color: var(--color-background-medium);
+	}
+}
+
+.quote__expand-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	transition: transform 0.25s ease;
+}
+
+.quote__expand-button--expanded .quote__expand-icon {
+	transform: rotate(180deg);
 }
 
 .quote__text::before {
@@ -31,6 +91,12 @@
 	font-size: 1.6rem;
 	font-style: normal;
 	margin: 0;
+}
+
+@media screen and (min-width: 280px) {
+	.quote .quote__media {
+		align-items: center;
+	}
 }
 
 .quote__line {
@@ -70,6 +136,11 @@
 @media screen and (min-width: 768px) {
 	.quote__text {
 		font-size: 1.8rem;
+	}
+
+	.quote__text--clamped {
+		-webkit-line-clamp: 6;
+		line-clamp: 6;
 	}
 }
 
