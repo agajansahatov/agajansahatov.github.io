@@ -230,6 +230,69 @@ export const translations = {
 					tools: ['HTML', 'CSS', 'JavaScript'],
 					imageAlt: 'SADA admin dolandyryş şablonyň görnüş suraty',
 				},
+				{
+					id: 'home-guardian',
+					name: 'Home Guardian',
+					description:
+						'Zhilin IT-de iş tejribesinde Python, Arduino we PyMata4EX bilen gurlan mini tagtada IoT akylly öý gözegçilik ulgamy.',
+					tools: [
+						'Python',
+						'PyCharm',
+						'Arduino IDE',
+						'PyMata4EX',
+						'Arduino',
+					],
+					imageAlt: 'Home Guardian IoT akylly öý ulgamynyň görnüş suraty',
+				},
+				{
+					id: 'uds',
+					name: 'Udacity Driverless System (UDS)',
+					description:
+						'Çuň öwreniş we socket aragatnaşyk bilen Udacity Simulator-da awtonom sürüş taslamasy; 2024-nji ýylyň aprel stajynda guruldy.',
+					tools: [
+						'Python',
+						'Deep Learning',
+						'Socket Communication',
+						'Udacity Simulator',
+					],
+					imageAlt:
+						'Udacity Driverless System awtonom sürüş taslamasynyň görnüş suraty',
+				},
+				{
+					id: 'abms',
+					name: 'Address Book Management System (ABMS)',
+					description:
+						'Maý 2022-de Taiyuan uniwersitetinde C++ we Embarcadero RAD Studio bilen gurulan ABMS kontakt dolandyryş üçin iş stoly programma.',
+					tools: ['C++', 'Embarcadero RAD Studio'],
+					imageAlt:
+						'Address Book Management System (ABMS) iş stoly programmasynyň görnüş suraty',
+				},
+				{
+					id: 'circle',
+					name: 'Circle',
+					description:
+						'Circle — 2023-nji ýylyň iýun aýynda Taiyuan uniwersitetindäki stazhirovka çäginde PHP bilen gurulan web sosial ulgam.',
+					tools: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
+					imageAlt: 'Circle sosial ulgamynyň görnüş suraty',
+				},
+				{
+					id: 'utopia',
+					name: 'Utopia',
+					description:
+						'Utopia — Taiyuan Uniwersitetinde stazýowkada ýolbaşçylyk eden Spring Boot, MySQL we React bilen gurulan doly stek onlaýn dükany.',
+					tools: [
+						'Java',
+						'Spring Boot',
+						'MySQL',
+						'React',
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Bootstrap',
+						'Axios',
+					],
+					imageAlt: 'Utopia onlaýn dükany web programmasynyň görnüş suraty',
+				},
 			],
 			principlesTitle: 'Meniň esasy prinsiplerim',
 			principles: [
@@ -798,6 +861,69 @@ export const translations = {
 					tools: ['HTML', 'CSS', 'JavaScript'],
 					imageAlt: 'Preview of the SADA admin dashboard',
 				},
+				{
+					id: 'home-guardian',
+					name: 'Home Guardian',
+					description:
+						'An IoT smart home monitoring system using Python, Arduino, and PyMata4EX on a mini practice board, built at Zhilin IT internship.',
+					tools: [
+						'Python',
+						'PyCharm',
+						'Arduino IDE',
+						'PyMata4EX',
+						'Arduino',
+					],
+					imageAlt: 'Preview of the Home Guardian IoT smart home system',
+				},
+				{
+					id: 'uds',
+					name: 'Udacity Driverless System (UDS)',
+					description:
+						'Autonomous driving project using deep learning and socket communication with Udacity Simulator, built during a 2024 internship.',
+					tools: [
+						'Python',
+						'Deep Learning',
+						'Socket Communication',
+						'Udacity Simulator',
+					],
+					imageAlt:
+						'Preview of the Udacity Driverless System autonomous driving project',
+				},
+				{
+					id: 'abms',
+					name: 'Address Book Management System (ABMS)',
+					description:
+						'The Address Book Management System (ABMS) is a desktop application I developed during an apprenticeship at Taiyuan University of Technology in May 2022. ABMS helps users efficiently manage contact information with full create, read, update, and delete capabilities. Built with C++ and Embarcadero RAD Studio, it applies object-oriented design through a Person class that encapsulates name, phone, email, age, and gender. Contact data persists in a binary file for reliable storage, and the app offers both a tabbed graphical interface and a console version. Features include keyword search, input validation, and list management using vectors. This project strengthened my skills in software design, data structures, and building user-friendly desktop tools from the ground up.',
+					tools: ['C++', 'Embarcadero RAD Studio'],
+					imageAlt:
+						'Preview of the Address Book Management System (ABMS) desktop application',
+				},
+				{
+					id: 'circle',
+					name: 'Circle',
+					description:
+						'Full-stack social network from a June 2023 Taiyuan University internship with auth, profiles, friends, messaging, and posts.',
+					tools: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
+					imageAlt: 'Preview of the Circle social networking platform',
+				},
+				{
+					id: 'utopia',
+					name: 'Utopia',
+					description:
+						'Utopia is a full-stack e-commerce store I led at Taiyuan University of Technology, built with Spring Boot, MySQL, and React.',
+					tools: [
+						'Java',
+						'Spring Boot',
+						'MySQL',
+						'React',
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Bootstrap',
+						'Axios',
+					],
+					imageAlt: 'Preview of the Utopia online store web application',
+				},
 			],
 			principlesTitle: 'My core principles',
 			principles: [
@@ -1358,6 +1484,67 @@ export const translations = {
 					tools: ['HTML', 'CSS', 'JavaScript'],
 					imageAlt: 'SADA 管理后台模板预览图',
 				},
+				{
+					id: 'home-guardian',
+					name: 'Home Guardian',
+					description:
+						'在志凌信息技术有限公司与太原理工大学联合组织的 2024 年实习期间，使用 Python、Arduino 和 PyMata4EX 在迷你 Arduino 实践板上搭建的物联网智能家居环境监测系统，支持温湿度监控。',
+					tools: [
+						'Python',
+						'PyCharm',
+						'Arduino IDE',
+						'PyMata4EX',
+						'Arduino',
+					],
+					imageAlt: 'Home Guardian 物联网智能家居系统预览图',
+				},
+				{
+					id: 'uds',
+					name: 'Udacity Driverless System (UDS)',
+					description:
+						'基于深度学习与 Socket 通信的自动驾驶项目，通过 Udacity 模拟器实现车辆自主行驶，于 2024 年 4 月 10 日至 23 日在志凌信息技术有限公司与太原理工大学联合组织的实习期间完成。',
+					tools: [
+						'Python',
+						'Deep Learning',
+						'Socket Communication',
+						'Udacity Simulator',
+					],
+					imageAlt: 'Udacity Driverless System 自动驾驶项目预览图',
+				},
+				{
+					id: 'abms',
+					name: 'Address Book Management System (ABMS)',
+					description:
+						'Address Book Management System（ABMS）是我在 2022 年 5 月于太原理工大学实习期间开发的桌面通讯录管理应用。ABMS 为用户提供完整的联系人增删改查功能，帮助高效管理姓名、电话、邮箱、年龄和性别等信息。项目使用 C++ 与 Embarcadero RAD Studio 构建，通过 Person 类实现面向对象设计，并利用向量管理内存中的联系人列表。数据以二进制文件持久化存储，应用同时提供带标签页的图形界面和控制台版本。系统支持关键词搜索、输入校验等特性，是我在软件设计、数据结构和桌面应用开发方面的重要实践。',
+					tools: ['C++', 'Embarcadero RAD Studio'],
+					imageAlt: 'Address Book Management System（ABMS）桌面应用预览图',
+				},
+				{
+					id: 'circle',
+					name: 'Circle',
+					description:
+						'Circle 是我在 2023 年 6 月太原理工大学实践生产实习期间使用 PHP、HTML、CSS、JavaScript 与 MySQL 开发的全栈社交网络平台，支持注册登录、资料管理、好友、私信、发帖与评论。',
+					tools: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
+					imageAlt: 'Circle 社交网络平台预览图',
+				},
+				{
+					id: 'utopia',
+					name: 'Utopia',
+					description:
+						'Utopia 是我在太原理工大学组织的实践生产实习项目中主导开发的全栈在线商城，使用 Java Spring Boot、MySQL、React、Bootstrap 和 Axios 等技术栈实现用户认证与购物流程。',
+					tools: [
+						'Java',
+						'Spring Boot',
+						'MySQL',
+						'React',
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Bootstrap',
+						'Axios',
+					],
+					imageAlt: 'Utopia 在线商城 Web 应用预览图',
+				},
 			],
 			principlesTitle: '我的核心原则',
 			principles: [
@@ -1902,6 +2089,69 @@ export const translations = {
 						'Profil yönetimi, metrik özeti ve temiz bileşen tabanlı düzen sunan duyarlı bir yönetim paneli şablonu.',
 					tools: ['HTML', 'CSS', 'JavaScript'],
 					imageAlt: 'SADA yönetim paneli şablonu önizlemesi',
+				},
+				{
+					id: 'home-guardian',
+					name: 'Home Guardian',
+					description:
+						'Zhilin IT stajında Python, Arduino ve PyMata4EX ile mini pratik kart üzerinde geliştirilen IoT akıllı ev izleme sistemi.',
+					tools: [
+						'Python',
+						'PyCharm',
+						'Arduino IDE',
+						'PyMata4EX',
+						'Arduino',
+					],
+					imageAlt: 'Home Guardian IoT akıllı ev sistemi önizlemesi',
+				},
+				{
+					id: 'uds',
+					name: 'Udacity Driverless System (UDS)',
+					description:
+						'Udacity Simulator ile derin öğrenme ve soket iletişimi kullanan otonom sürüş projesi; 2024 Nisan stajında geliştirildi.',
+					tools: [
+						'Python',
+						'Deep Learning',
+						'Socket Communication',
+						'Udacity Simulator',
+					],
+					imageAlt:
+						'Udacity Driverless System otonom sürüş projesi önizlemesi',
+				},
+				{
+					id: 'abms',
+					name: 'Address Book Management System (ABMS)',
+					description:
+						'Mayıs 2022 stajında Taiyuan Üniversitesinde C++ ve Embarcadero RAD Studio ile geliştirdiğim masaüstü adres defteri uygulamasıdır.',
+					tools: ['C++', 'Embarcadero RAD Studio'],
+					imageAlt:
+						'Address Book Management System (ABMS) masaüstü uygulaması önizlemesi',
+				},
+				{
+					id: 'circle',
+					name: 'Circle',
+					description:
+						'Haziran 2023 Taiyuan Teknoloji Üniversitesi stajında geliştirdiğim PHP tabanlı sosyal ağ: profil, arkadaş, mesaj ve gönderi.',
+					tools: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
+					imageAlt: 'Circle sosyal ağ platformu önizlemesi',
+				},
+				{
+					id: 'utopia',
+					name: 'Utopia',
+					description:
+						'Utopia, Taiyuan Üniversitesi stajında liderlik ettiğim Spring Boot, MySQL ve React tabanlı tam yığın e-ticaret uygulamasıdır.',
+					tools: [
+						'Java',
+						'Spring Boot',
+						'MySQL',
+						'React',
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Bootstrap',
+						'Axios',
+					],
+					imageAlt: 'Utopia çevrimiçi mağaza web uygulaması önizlemesi',
 				},
 			],
 			principlesTitle: 'Temel ilkelerim',
@@ -2468,6 +2718,69 @@ export const translations = {
 						'Адаптивный шаблон админ-панели с управлением профилем, обзором метрик и аккуратной компонентной вёрсткой.',
 					tools: ['HTML', 'CSS', 'JavaScript'],
 					imageAlt: 'Превью шаблона админ-панели SADA',
+				},
+				{
+					id: 'home-guardian',
+					name: 'Home Guardian',
+					description:
+						'Home Guardian — это IoT-система умного дома, созданная в апреле 2024 года во время стажировки в Zhilin Information Technology Co., Ltd., организованной совместно с Тайюаньским технологическим университетом. Работая в командах в офисе компании, мы разработали платформу мониторинга окружающей среды на Python и Arduino. Система считывает температуру и влажность с датчиков на мини-плате Arduino Practice Board, имитирующей домашние устройства в уменьшенном масштабе. Python-приложение через библиотеку PyMata4EX обменивается данными с платой, отображает показания на LCD и управляет исполнительными механизмами — вентиляторами, RGB-светодиодами и зуммерами — в зависимости от порогов температуры. Прошивку писали в Arduino IDE, логику управления — в PyCharm, применяя ООП и паттерны Strategy и Observer для модульности и расширяемости.',
+					tools: [
+						'Python',
+						'PyCharm',
+						'Arduino IDE',
+						'PyMata4EX',
+						'Arduino',
+					],
+					imageAlt: 'Превью IoT-системы умного дома Home Guardian',
+				},
+				{
+					id: 'uds',
+					name: 'Udacity Driverless System (UDS)',
+					description:
+						'Проект автономного вождения на основе глубокого обучения и сокет-связи с Udacity Simulator, создан на стажировке в 2024 году.',
+					tools: [
+						'Python',
+						'Deep Learning',
+						'Socket Communication',
+						'Udacity Simulator',
+					],
+					imageAlt:
+						'Превью проекта автономного вождения Udacity Driverless System',
+				},
+				{
+					id: 'abms',
+					name: 'Address Book Management System (ABMS)',
+					description:
+						'Приложение ABMS на C++ и RAD Studio для контактов, созданное в мае 2022 на стажировке в Тайюаньском технологическом университете.',
+					tools: ['C++', 'Embarcadero RAD Studio'],
+					imageAlt:
+						'Превью настольного приложения Address Book Management System (ABMS)',
+				},
+				{
+					id: 'circle',
+					name: 'Circle',
+					description:
+						'Веб-соцсеть на PHP, созданная на стажировке в Тайюаньском технологическом университете в июне 2023: профили, друзья, чат, посты.',
+					tools: ['PHP', 'HTML', 'CSS', 'JavaScript', 'MySQL'],
+					imageAlt: 'Превью социальной платформы Circle',
+				},
+				{
+					id: 'utopia',
+					name: 'Utopia',
+					description:
+						'Utopia — магазин на Spring Boot, MySQL и React, которым я руководил на стажировке в Тайюаньском технологическом университете.',
+					tools: [
+						'Java',
+						'Spring Boot',
+						'MySQL',
+						'React',
+						'HTML',
+						'CSS',
+						'JavaScript',
+						'Bootstrap',
+						'Axios',
+					],
+					imageAlt: 'Превью веб-приложения интернет-магазина Utopia',
 				},
 			],
 			principlesTitle: 'Мои основные принципы',

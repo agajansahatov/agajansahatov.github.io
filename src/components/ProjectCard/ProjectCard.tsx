@@ -27,13 +27,7 @@ const ProjectCard = ({
 			className={styles['project-card']}
 			variant='default'
 			isScalableOnHover
-			header={
-				<Picture
-					src={image}
-					alt={imageAlt}
-					className={styles.image}
-				/>
-			}
+			header={<Picture src={image} alt={imageAlt} className={styles.image} />}
 			headerClassName={styles['media-header']}
 		>
 			<main className={styles.content}>

@@ -10,7 +10,9 @@ import styles from './ProjectsPage.module.css';
 
 const ProjectsPage = () => {
 	const { t } = useTranslation();
-	const projects = TopProjectsSection.resolveAllProjects(t.explore.topProjects);
+	const projects = TopProjectsSection.resolveAllProjectsSorted(
+		t.explore.topProjects,
+	);
 
 	return (
 		<>

@@ -1,4 +1,12 @@
-export type HomeProjectId = 'xcargo' | 'game-hub' | 'sada';
+export type HomeProjectId =
+	| 'xcargo'
+	| 'game-hub'
+	| 'sada'
+	| 'home-guardian'
+	| 'uds'
+	| 'abms'
+	| 'circle'
+	| 'utopia';
 
 export type ProjectContent = {
 	readonly id: HomeProjectId;
@@ -11,4 +19,5 @@ export type ProjectContent = {
 export type ResolvedHomeProject = ProjectContent & {
 	readonly image: string;
 	readonly projectUrl: string;
+	readonly createdDate: string;
 };
