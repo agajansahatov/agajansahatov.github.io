@@ -6,7 +6,7 @@ export const translations = {
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Ähli hukuklar goralan.',
 			builtWithNote: 'Kod we ❤️ bilen gurlan.',
-			learnMore: 'Dowam et',
+			learnMore: 'Has köp gör',
 			email: 'Email',
 			phone: 'Telefon',
 			address: 'Salgymyz',
@@ -15,7 +15,7 @@ export const translations = {
 				'Näme gurýandygym barada täzelikler üçin meni sosial torlarda yzarlap bilersiňiz.',
 		},
 		documentTitle: {
-			tagline: 'Hünärmen programmist',
+			tagline: 'Doly-stack programmist',
 		},
 		languages: {
 			turkmen: 'Türkmen',
@@ -102,7 +102,7 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Salam! Men {portfolioName}',
+			heroTitle: 'HÜNÄRMEN DOLY-STACK PROGRAMMIST',
 			heroTagline:
 				'Men pikirleri, çyzgylary we tehniki talapnamalary çalt, giňeldip we ulaldyp bolýan, owadan we ulanmaga taýýar programmalara öwürýärin.',
 			heroImageAlt: 'Hünärmen programmist {portfolioName}yň suraty',
@@ -636,7 +636,7 @@ export const translations = {
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'All rights reserved.',
 			builtWithNote: 'Built with ❤️ and code.',
-			learnMore: 'Learn more',
+			learnMore: 'View more',
 			email: 'Email',
 			phone: 'Phone',
 			address: 'Address',
@@ -645,7 +645,7 @@ export const translations = {
 				'Follow me on social media for updates on what I am building.',
 		},
 		documentTitle: {
-			tagline: 'Professional Software Engineer',
+			tagline: 'Full-Stack Software Engineer',
 		},
 		languages: {
 			turkmen: 'Turkmen',
@@ -732,7 +732,7 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: "Hey there! I'm {portfolioName}",
+			heroTitle: 'PROFESSIONAL FULL-STACK SOFTWARE ENGINEER',
 			heroTagline:
 				'I turn ideas, wireframes, and technical specifications into fast, scalable, beautiful and production-ready applications.',
 			heroImageAlt:
@@ -1264,7 +1264,7 @@ export const translations = {
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: '保留所有权利。',
 			builtWithNote: '用 ❤️ 和代码构建。',
-			learnMore: '了解更多',
+			learnMore: '查看更多',
 			email: '邮箱',
 			phone: '电话',
 			address: '地址',
@@ -1272,7 +1272,7 @@ export const translations = {
 			socialNote: '关注我的社交账号，了解我正在构建的内容。',
 		},
 		documentTitle: {
-			tagline: '专业软件工程师',
+			tagline: '全栈软件工程师',
 		},
 		languages: {
 			turkmen: '土库曼语',
@@ -1357,7 +1357,7 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: '你好！我是 {portfolioName}',
+			heroTitle: '专业全栈软件工程师',
 			heroTagline:
 				'我将想法、线框图和技术规格转化为快速、可扩展、美观且可投入生产的应用程序。',
 			heroImageAlt: '专业软件工程师 {portfolioName} 的照片',
@@ -1864,7 +1864,7 @@ export const translations = {
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Tüm hakları saklıdır.',
 			builtWithNote: '❤️ ve kod ile yapıldı.',
-			learnMore: 'Devam et',
+			learnMore: 'Daha fazlasını gör',
 			email: 'E-posta',
 			phone: 'Telefon',
 			address: 'Adres',
@@ -1873,7 +1873,7 @@ export const translations = {
 				'Neler geliştirdiğimi takip etmek için beni sosyal medyada izleyebilirsiniz.',
 		},
 		documentTitle: {
-			tagline: 'Profesyonel yazılım mühendisi',
+			tagline: 'Full-stack yazılım mühendisi',
 		},
 		languages: {
 			turkmen: 'Türkmence',
@@ -1961,7 +1961,7 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Merhaba! Ben {portfolioName}',
+			heroTitle: 'PROFESYONEL FULL-STACK YAZILIM MÜHENDİSİ',
 			heroTagline:
 				'Fikirleri, wireframe’leri ve teknik şartnameleri hızlı, ölçeklenebilir, güzel ve üretime hazır uygulamalara dönüştürüyorum.',
 			heroImageAlt:
@@ -2494,7 +2494,7 @@ export const translations = {
 			copyrightPrefix: 'Copyright',
 			allRightsReserved: 'Все права защищены.',
 			builtWithNote: 'Создано с ❤️ и кодом.',
-			learnMore: 'Подробнее',
+			learnMore: 'Смотреть больше',
 			email: 'Email',
 			phone: 'Телефон',
 			address: 'Адрес',
@@ -2503,7 +2503,7 @@ export const translations = {
 				'Подписывайтесь на меня в соцсетях, чтобы следить за тем, что я создаю.',
 		},
 		documentTitle: {
-			tagline: 'Профессиональный инженер-программист',
+			tagline: 'Full-stack инженер-программист',
 		},
 		languages: {
 			turkmen: 'Туркменский',
@@ -2591,7 +2591,7 @@ export const translations = {
 			},
 		},
 		explore: {
-			heroTitle: 'Привет! Я {portfolioName}',
+			heroTitle: 'ПРОФЕССИОНАЛЬНЫЙ FULL-STACK ИНЖЕНЕР-ПРОГРАММИСТ',
 			heroTagline:
 				'Я превращаю идеи, вайрфреймы и технические спецификации в быстрые, масштабируемые, красивые и готовые к продакшену приложения.',
 			heroImageAlt:

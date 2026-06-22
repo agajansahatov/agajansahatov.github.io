@@ -1,6 +1,7 @@
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
 import ButtonLink from '../../../../components/Button/ButtonLink';
+import { ROUTES } from '../../../../config/navigation';
 import { useTranslation } from '../../../../i18n';
 import styles from './BannerSection.module.css';
 
@@ -23,7 +24,7 @@ const BannerSection = () => {
 				</p>
 
 				<ButtonLink
-					href='#services-section'
+					href={ROUTES.about}
 					variant='accent'
 					layout='stretched'
 				>

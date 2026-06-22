@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import Block from '../../components/Block';
 import BlockHeader from '../../components/Block/BlockHeader';
 import Collapsible from '../../components/Collapsible';
@@ -19,6 +20,7 @@ const ExpertisePage = ({
 	catalog = ExpertiseCatalog.instance,
 }: ExpertisePageProps) => {
 	const { t } = useTranslation();
+	const { hash } = useLocation();
 	const sections = catalog.getSections();
 	const resolveLabel = (key: ExpertiseLabelKey) => t.expertise.labels[key];
 	const officialWebsiteLabel = (name: string) =>
@@ -34,10 +36,16 @@ const ExpertisePage = ({
 
 				<div className={styles.sections}>
 					{sections.map((section) => (
-						<section key={section.id} className={styles.section}>
+						<section
+							key={section.id}
+							id={section.id}
+							className={styles.section}
+						>
 							<Collapsible
 								header={resolveLabel(section.titleKey)}
-								defaultExpanded={section.defaultExpanded}
+								defaultExpanded={
+									section.defaultExpanded || hash === `#${section.id}`
+								}
 								headingLevel={2}
 								className={styles.collapsible}
 								headerClassName={styles['collapsible-header']}

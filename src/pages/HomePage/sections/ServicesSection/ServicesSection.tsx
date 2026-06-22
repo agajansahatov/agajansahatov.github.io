@@ -10,7 +10,9 @@ import BlockHeader from '../../../../components/Block/BlockHeader';
 import Feature from '../../../../components/Feature';
 import Icon from '../../../../components/Icon';
 import type { SkinVariant } from '../../../../components/types';
+import { ROUTES } from '../../../../config/navigation';
 import { useTranslation } from '../../../../i18n';
+import type { ExpertiseSectionId } from '../../../../types/expertise';
 
 const ServicesSection = () => {
 	const { t } = useTranslation();
@@ -54,25 +56,32 @@ type ServiceAsset = {
 	readonly isTheImageMultiSource?: boolean;
 };
 
+const serviceExpertiseSectionIds: readonly ExpertiseSectionId[] = [
+	'front-end',
+	'back-end',
+	'mobile',
+	'full-stack',
+] as const;
+
 const serviceAssets: readonly ServiceAsset[] = [
 	{
 		imageUrl: '/images/web.svg',
-		link: '#services2',
+		link: `${ROUTES.expertise}#${serviceExpertiseSectionIds[0]}`,
 		iconVariant: 'primary',
 	},
 	{
 		imageUrl: '/images/server.svg',
-		link: '#services3',
+		link: `${ROUTES.expertise}#${serviceExpertiseSectionIds[1]}`,
 		iconVariant: 'secondary',
 	},
 	{
 		imageUrl: '/images/mobile.svg',
-		link: '#services4',
+		link: `${ROUTES.expertise}#${serviceExpertiseSectionIds[2]}`,
 		iconVariant: 'success',
 	},
 	{
 		imageUrl: '/images/devices.png',
-		link: '#section-expertise',
+		link: `${ROUTES.expertise}#${serviceExpertiseSectionIds[3]}`,
 		iconVariant: 'info',
 		isTheImageMultiSource: true,
 	},
