@@ -1,6 +1,7 @@
 import {
 	useCallback,
 	useEffect,
+	useLayoutEffect,
 	useRef,
 	useState,
 	type KeyboardEvent,
@@ -27,7 +28,31 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
 	const [isPaused, setIsPaused] = useState(false);
 	const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 	const pointerStartX = useRef<number | null>(null);
+	const viewportClipRef = useRef<HTMLDivElement>(null);
+	const slideRefs = useRef<(HTMLDivElement | null)[]>([]);
 	const total = testimonials.length;
+
+	const syncViewportHeight = useCallback(() => {
+		const clip = viewportClipRef.current;
+		const activeSlide = slideRefs.current[activeIndex];
+		if (!clip || !activeSlide) return;
+
+		clip.style.height = `${activeSlide.offsetHeight}px`;
+	}, [activeIndex]);
+
+	useLayoutEffect(() => {
+		syncViewportHeight();
+
+		const activeSlide = slideRefs.current[activeIndex];
+		if (!activeSlide) return;
+
+		const resizeObserver = new ResizeObserver(syncViewportHeight);
+		resizeObserver.observe(activeSlide);
+
+		return () => {
+			resizeObserver.disconnect();
+		};
+	}, [activeIndex, syncViewportHeight, testimonials]);
 
 	const goTo = useCallback(
 		(index: number) => {
@@ -147,7 +172,10 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
 						onPointerCancel={handlePointerCancel}
 						onPointerLeave={handlePointerCancel}
 					>
-						<div className={styles['carousel__viewport-clip']}>
+						<div
+							ref={viewportClipRef}
+							className={styles['carousel__viewport-clip']}
+						>
 							<div
 								className={styles.carousel__track}
 								style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -155,6 +183,9 @@ const TestimonialsCarousel = ({ testimonials }: Props) => {
 								{testimonials.map((testimonial, index) => (
 									<div
 										key={testimonial.id}
+										ref={(element) => {
+											slideRefs.current[index] = element;
+										}}
 										className={styles.carousel__slide}
 										aria-hidden={index !== activeIndex}
 									>

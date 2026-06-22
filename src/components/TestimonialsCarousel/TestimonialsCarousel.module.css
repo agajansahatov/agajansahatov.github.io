@@ -41,6 +41,7 @@
 
 .carousel__track {
 	display: flex;
+	align-items: flex-start;
 	transition: transform 0.4s ease;
 }
 
@@ -117,13 +118,14 @@
 @media screen and (min-width: 768px) {
 	.carousel__controls {
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-start;
 		gap: 1.5rem;
 	}
 
 	.carousel__viewport {
 		flex: 1;
 		width: auto;
+		align-self: flex-start;
 	}
 
 	.carousel__nav {

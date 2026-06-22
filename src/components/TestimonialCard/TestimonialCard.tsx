@@ -29,9 +29,7 @@ const TestimonialCard = ({
 	return (
 		<div className={styles.card} {...aosAttributes}>
 			<div className={styles['card__surface']}>
-				<div
-					className={`grid grid--cols-1 md:grid--cols-2 ${styles['card__layout']}`}
-				>
+				<div className={`grid grid--cols-1 ${styles['card__layout']}`}>
 					<div className={styles['image-container']}>
 						<Picture
 							src={photo}
@@ -47,14 +45,16 @@ const TestimonialCard = ({
 							/>
 						</span>
 					</div>
-					<Quote
-						author={name}
-						organization={organization}
-						readMoreLabel={t.experience.readMore}
-						readLessLabel={t.experience.readLess}
-					>
-						{comment}
-					</Quote>
+					<div className={styles['card__quote']}>
+						<Quote
+							author={name}
+							organization={organization}
+							readMoreLabel={t.experience.readMore}
+							readLessLabel={t.experience.readLess}
+						>
+							{comment}
+						</Quote>
+					</div>
 				</div>
 			</div>
 		</div>
