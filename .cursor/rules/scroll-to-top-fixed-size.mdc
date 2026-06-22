@@ -1,0 +1,22 @@
+---
+description: Scroll-to-top button must stay a fixed size at all breakpoints
+globs: src/components/Button/ScrollToTopButton.*
+alwaysApply: false
+---
+
+# Scroll-to-top fixed size
+
+The scroll-to-top button must **not** change size at any breakpoint.
+
+## Canonical dimensions
+
+- Button: **62px** × **62px**
+- Icon: **52px** × **52px**
+- Padding: **5px** (use `px`, not `rem`/`em`)
+
+## Rules
+
+- Do **not** add responsive `width`, `height`, `padding`, or `--size` rules to `ScrollToTopButton.module.css`.
+- Keep sizing decoupled from [`Icon.module.css`](src/components/Icon/Icon.module.css), which scales icons at `400px+`.
+- If `Icon` breakpoints change, scroll-to-top must keep its own explicit `px` overrides on `.scroll-to-top__icon`.
+- Do not switch padding to relative units — they can scale with global typography changes.

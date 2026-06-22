@@ -1,7 +1,20 @@
+/*
+ * Scroll-to-top button: fixed size at ALL breakpoints.
+ * DO NOT add responsive width/height/padding/--size rules here.
+ * Canonical: 62px button, 52px icon, 5px padding.
+ */
 .scroll-to-top {
+	--scroll-to-top-icon-size: 52px;
+	--scroll-to-top-padding: 5px;
+	--scroll-to-top-size: calc(
+		var(--scroll-to-top-icon-size) + 2 * var(--scroll-to-top-padding)
+	); /* 62px */
+
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
+	width: var(--scroll-to-top-size);
+	height: var(--scroll-to-top-size);
 	border-radius: 100%;
 	border: none;
 	display: none;
@@ -9,7 +22,7 @@
 	cursor: pointer;
 	box-shadow: 0 0 10px #393939;
 	margin: 0;
-	padding: 0.5rem;
+	padding: var(--scroll-to-top-padding);
 	opacity: 0.7;
 	transition: opacity 0.2s;
 	overflow: hidden;
@@ -21,6 +34,43 @@
 }
 
 .scroll-to-top .scroll-to-top__icon {
-	--size: 52px;
-	font-size: calc(var(--size) - 30px);
+	--size: var(--scroll-to-top-icon-size);
+	width: var(--scroll-to-top-icon-size);
+	height: var(--scroll-to-top-icon-size);
+	min-width: var(--scroll-to-top-icon-size);
+	font-size: 22px;
+}
+
+@media screen and (min-width: 480px) {
+	/* sm — same fixed size */
+	.scroll-to-top {
+		width: var(--scroll-to-top-size);
+		height: var(--scroll-to-top-size);
+		padding: var(--scroll-to-top-padding);
+	}
+
+	.scroll-to-top .scroll-to-top__icon {
+		--size: var(--scroll-to-top-icon-size);
+		width: var(--scroll-to-top-icon-size);
+		height: var(--scroll-to-top-icon-size);
+		min-width: var(--scroll-to-top-icon-size);
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	/* md — same fixed size */
+	.scroll-to-top {
+		width: var(--scroll-to-top-size);
+		height: var(--scroll-to-top-size);
+		padding: var(--scroll-to-top-padding);
+	}
+
+	.scroll-to-top .scroll-to-top__icon {
+		--size: var(--scroll-to-top-icon-size);
+		width: var(--scroll-to-top-icon-size);
+		height: var(--scroll-to-top-icon-size);
+		min-width: var(--scroll-to-top-icon-size);
+		font-size: 22px;
+	}
 }
