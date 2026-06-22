@@ -6,6 +6,7 @@ import {
 	SiSpringboot,
 	SiTypescript,
 } from 'react-icons/si';
+import { resolveExpertiseIconColor } from './expertiseIconColors';
 import type {
 	ExpertiseCatalogItem,
 	ExpertiseItemCatalogPort,
@@ -19,6 +20,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'TypeScript',
 		icon: SiTypescript,
 		officialUrl: 'https://www.typescriptlang.org/',
+		iconColor: resolveExpertiseIconColor('typescript'),
 	},
 	{
 		id: 'react',
@@ -26,6 +28,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'React',
 		icon: SiReact,
 		officialUrl: 'https://react.dev/',
+		iconColor: resolveExpertiseIconColor('react'),
 	},
 	{
 		id: 'nodejs',
@@ -33,6 +36,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'Node.js',
 		icon: SiNodedotjs,
 		officialUrl: 'https://nodejs.org/',
+		iconColor: resolveExpertiseIconColor('nodejs'),
 	},
 	{
 		id: 'nextjs',
@@ -40,6 +44,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'Next.js',
 		icon: SiNextdotjs,
 		officialUrl: 'https://nextjs.org/',
+		iconColor: resolveExpertiseIconColor('nextjs'),
 	},
 	{
 		id: 'spring-boot',
@@ -47,6 +52,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'Spring Boot',
 		icon: SiSpringboot,
 		officialUrl: 'https://spring.io/projects/spring-boot',
+		iconColor: resolveExpertiseIconColor('spring-boot'),
 	},
 	{
 		id: 'mysql',
@@ -54,6 +60,7 @@ export const HOME_EXPERTISE_ITEMS: readonly ExpertiseCatalogItem[] = [
 		label: 'MySQL',
 		icon: SiMysql,
 		officialUrl: 'https://www.mysql.com/',
+		iconColor: resolveExpertiseIconColor('mysql'),
 	},
 ] as const;
 

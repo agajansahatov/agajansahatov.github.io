@@ -217,6 +217,8 @@ export type ExpertiseCatalogItem = {
 	readonly label?: string;
 	readonly labelKey?: ExpertiseLabelKey;
 	readonly officialUrl?: string;
+	/** Brand color revealed on link-tile hover, focus, and active states. */
+	readonly iconColor?: string;
 };
 
 export type SkillGraphItemNode = {

@@ -63,6 +63,7 @@ import {
 	SiVuedotjs,
 } from 'react-icons/si';
 import { HOME_EXPERTISE_ITEMS } from './homeExpertiseCatalog';
+import { resolveExpertiseIconColor } from './expertiseIconColors';
 import type {
 	ExpertiseCatalogItem,
 	ExpertiseCatalogPort,
@@ -100,6 +101,7 @@ const technology = (
 	label,
 	icon,
 	officialUrl,
+	iconColor: resolveExpertiseIconColor(id),
 });
 
 const concept = (

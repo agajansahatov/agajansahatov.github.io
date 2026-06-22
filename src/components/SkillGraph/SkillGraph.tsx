@@ -109,6 +109,7 @@ const SkillGraphItem = ({
 			label={label}
 			icon={catalogItem.icon}
 			href={catalogItem.officialUrl}
+			iconColor={catalogItem.iconColor}
 			officialWebsiteLabel={
 				catalogItem.officialUrl ? officialWebsiteLabel(label) : undefined
 			}

@@ -37,12 +37,19 @@
 	outline-offset: 2px;
 }
 
+.tile--link:hover .icon,
+.tile--link:focus-visible .icon,
+.tile--link:active .icon {
+	color: var(--skill-tile-icon-color, var(--color-primary));
+}
+
 .icon {
 	--size: 2.9rem;
 	width: var(--size);
 	height: var(--size);
 	min-width: var(--size);
 	font-size: 1.55rem;
+	transition: color 0.2s ease;
 }
 
 .label {
@@ -92,6 +99,10 @@
 
 @media (prefers-reduced-motion: reduce) {
 	.tile {
+		transition: none;
+	}
+
+	.icon {
 		transition: none;
 	}
 }
