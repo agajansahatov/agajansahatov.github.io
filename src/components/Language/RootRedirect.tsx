@@ -1,23 +1,34 @@
+import { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { DEFAULT_LANGUAGE_CODE } from '../../config/preferences';
-import {
-	CountryIsGeoCountryService,
-	LanguageResolver,
-} from '../../services/preferences/languageResolver';
+import { LanguageResolver } from '../../services/preferences/languageResolver';
 import { LocalPreferencesStorage } from '../../services/preferences/localPreferencesStorage';
+import { CachedGeoCountryService } from '../../services/preferences/cachedGeoCountryService';
+import type { LanguageCode } from '../../types/preferences';
 
 const languageResolver = new LanguageResolver(
 	new LocalPreferencesStorage(),
-	new CountryIsGeoCountryService(),
+	CachedGeoCountryService.instance,
 );
 
 const RootRedirect = () => {
-	const language =
-		languageResolver.resolveStoredLanguage() ??
-		languageResolver.resolveBrowserLanguage() ??
-		DEFAULT_LANGUAGE_CODE;
+	const [language, setLanguage] = useState<LanguageCode | null>(() =>
+		languageResolver.resolveStoredLanguage(),
+	);
 
-	return <Navigate to={`/${language}`} replace />;
+	useEffect(() => {
+		if (language) return;
+
+		let isCancelled = false;
+		void languageResolver.resolveInitialLanguage().then((resolvedLanguage) => {
+			if (!isCancelled) setLanguage(resolvedLanguage);
+		});
+
+		return () => {
+			isCancelled = true;
+		};
+	}, [language]);
+
+	return language ? <Navigate to={`/${language}`} replace /> : null;
 };
 
 export default RootRedirect;

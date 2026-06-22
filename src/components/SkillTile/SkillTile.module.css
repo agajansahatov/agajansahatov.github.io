@@ -1,0 +1,97 @@
+.tile {
+	display: grid;
+	place-items: center;
+	align-content: center;
+	gap: 0.35rem;
+	width: 6.4rem;
+	height: 6.4rem;
+	padding: 0.45rem 0.3rem;
+	border: 1px solid var(--color-background-strong);
+	border-radius: 11px;
+	background: var(--color-background);
+	color: var(--color-foreground-strong);
+	box-shadow: 0 0.3rem 0.9rem var(--color-shadow);
+	text-align: center;
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.tile--concept {
+	background: var(--color-background-medium);
+}
+
+.tile--link {
+	cursor: pointer;
+}
+
+.tile--link:hover {
+	transform: translateY(-2px);
+	border-color: var(--color-primary);
+	box-shadow: 0 0.5rem 1.2rem var(--color-shadow);
+}
+
+.tile--link:focus-visible {
+	outline: 2px solid var(--color-primary);
+	outline-offset: 2px;
+}
+
+.icon {
+	--size: 2.9rem;
+	width: var(--size);
+	height: var(--size);
+	min-width: var(--size);
+	font-size: 1.55rem;
+}
+
+.label {
+	display: -webkit-box;
+	max-width: 100%;
+	overflow: hidden;
+	font-size: 0.82rem;
+	font-weight: 700;
+	line-height: 1.05;
+	overflow-wrap: anywhere;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+@media screen and (min-width: 300px) {
+	.tile {
+		width: 6.8rem;
+		height: 6.8rem;
+	}
+
+	.icon {
+		--size: 3.1rem;
+		font-size: 1.65rem;
+	}
+
+	.label {
+		font-size: 0.88rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.tile {
+		width: 7.2rem;
+		height: 7.2rem;
+		padding: 0.55rem 0.35rem;
+	}
+
+	.icon {
+		--size: 3.3rem;
+		font-size: 1.75rem;
+	}
+
+	.label {
+		font-size: 0.92rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.tile {
+		transition: none;
+	}
+}

@@ -1,54 +1,64 @@
-import React, { useState, useEffect, type ReactNode } from 'react';
-import styles from './Collapsible.module.css';
-import Icon from '../Icon';
+import {
+	useEffect,
+	useId,
+	useState,
+	type ElementType,
+	type ReactNode,
+} from 'react';
 import { MdOutlineArrowForwardIos } from 'react-icons/md';
+import Icon from '../Icon';
 import type { SkinVariant } from '../types';
+import styles from './Collapsible.module.css';
 
-interface Props {
-	header: string;
-	headerClassName?: string;
-	headingClassName?: string;
-	chevronIconClassName?: string;
-	isHiddenInitially: boolean;
-	className?: string;
-	children: ReactNode;
-	alwaysExpandedOn?: number; // screen width in pixels above which the collapsible should always be expanded
-	chevronSkinVariant?: SkinVariant;
-}
+type HeadingLevel = 2 | 3 | 4 | 5 | 6;
 
-const Collapsible: React.FC<Props> = ({
+type CollapsibleProps = {
+	readonly header: ReactNode;
+	readonly defaultExpanded?: boolean;
+	readonly headingLevel?: HeadingLevel;
+	readonly headerClassName?: string;
+	readonly headingClassName?: string;
+	readonly chevronIconClassName?: string;
+	readonly className?: string;
+	readonly children: ReactNode;
+	readonly alwaysExpandedOn?: number;
+	readonly chevronSkinVariant?: SkinVariant;
+};
+
+const Collapsible = ({
 	header,
+	defaultExpanded = false,
+	headingLevel = 2,
 	headerClassName,
 	headingClassName,
 	chevronIconClassName,
-	isHiddenInitially,
 	className,
 	children,
 	alwaysExpandedOn = 0,
 	chevronSkinVariant = 'default',
-}) => {
-	const [isExpanded, setExpanded] = useState(!isHiddenInitially);
-	const [isAlwaysExpanded, setAlwaysExpanded] = useState(false);
+}: CollapsibleProps) => {
+	const [isExpanded, setExpanded] = useState(defaultExpanded);
+	const [isAlwaysExpanded, setAlwaysExpanded] = useState(
+		() =>
+			alwaysExpandedOn > 0 &&
+			typeof window !== 'undefined' &&
+			window.matchMedia(`(min-width: ${alwaysExpandedOn}px)`).matches,
+	);
+	const generatedId = useId();
+	const contentId = `collapsible-${generatedId.replace(/:/g, '')}`;
+	const Heading = `h${headingLevel}` as ElementType;
 
-	// This effect listens for changes in the screen width and updates the isAlwaysExpanded state accordingly
-	// If in the future we want to switch to a CSS-based solution for this, we can remove this effect and the isAlwaysExpanded state, and instead use CSS media queries to control the display of the collapsible content and the chevron icon.
-	// But to do that we can only support several predefined breakpoints (e.g., 640px, 768px, 1024px, etc.) instead of allowing any custom pixel value for the alwaysExpandedOn prop.
 	useEffect(() => {
-		if (alwaysExpandedOn <= 0) return;
+		if (alwaysExpandedOn <= 0 || typeof window === 'undefined') return;
 
 		const mediaQuery = window.matchMedia(`(min-width: ${alwaysExpandedOn}px)`);
+		const handleChange = (event: MediaQueryListEvent | MediaQueryList) => {
+			setAlwaysExpanded(event.matches);
+		};
 
-		const handleChange = (e: MediaQueryListEvent | MediaQueryList) =>
-			setAlwaysExpanded(e.matches);
-
-		handleChange(mediaQuery);
 		mediaQuery.addEventListener('change', handleChange);
 		return () => mediaQuery.removeEventListener('change', handleChange);
 	}, [alwaysExpandedOn]);
-
-	const handleToggle = () => {
-		setExpanded(!isExpanded);
-	};
 
 	const shouldExpand = isAlwaysExpanded || isExpanded;
 
@@ -65,29 +75,41 @@ const Collapsible: React.FC<Props> = ({
 			<header
 				className={`${styles['collapsible__header']} ${headerClassName ?? ''}`.trim()}
 			>
-				<h2
+				<Heading
 					className={`${styles['collapsible__heading']} ${headingClassName ?? ''}`.trim()}
 				>
-					{header}
-				</h2>
-				{!isAlwaysExpanded && (
-					<button
-						type='button'
-						className={styles['collapsible__chevron']}
-						onClick={handleToggle}
-						aria-expanded={shouldExpand}
-						aria-label={header}
-					>
-						<Icon
-							icon={MdOutlineArrowForwardIos}
-							variant={chevronSkinVariant}
-							isSmall
-							className={chevronIconClassName}
-						/>
-					</button>
-				)}
+					{isAlwaysExpanded ? (
+						<span className={styles['collapsible__heading-label']}>
+							{header}
+						</span>
+					) : (
+						<button
+							type='button'
+							className={styles['collapsible__trigger']}
+							onClick={() => setExpanded((current) => !current)}
+							aria-expanded={shouldExpand}
+							aria-controls={contentId}
+						>
+							<span className={styles['collapsible__heading-label']}>
+								{header}
+							</span>
+							<Icon
+								icon={MdOutlineArrowForwardIos}
+								variant={chevronSkinVariant}
+								isSmall
+								className={`${styles['collapsible__chevron']} ${chevronIconClassName ?? ''}`.trim()}
+							/>
+						</button>
+					)}
+				</Heading>
 			</header>
-			<div className={styles['collapsible__content']}>{children}</div>
+			<div
+				id={contentId}
+				className={styles['collapsible__content']}
+				aria-hidden={!shouldExpand}
+			>
+				<div className={styles['collapsible__content-inner']}>{children}</div>
+			</div>
 		</div>
 	);
 };

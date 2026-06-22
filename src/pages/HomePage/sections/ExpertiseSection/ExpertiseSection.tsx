@@ -1,123 +1,88 @@
-import type { ComponentType, ReactElement } from 'react';
-import {
-	SiHtml5,
-	SiJavascript,
-	SiMysql,
-	SiNodedotjs,
-	SiReact,
-	SiTypescript,
-} from 'react-icons/si';
+import type { ReactElement } from 'react';
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
+import ButtonLink from '../../../../components/Button/ButtonLink';
 import Icon from '../../../../components/Icon';
 import Media from '../../../../components/Media';
 import type { SkinVariant } from '../../../../components/types';
+import { ROUTES } from '../../../../config/navigation';
+import { HomeExpertiseCatalog } from '../../../../data/homeExpertiseCatalog';
+import type { ExpertiseItemCatalogPort } from '../../../../types/expertise';
+import type { HomeExpertiseId } from '../../../../i18n/expertiseTranslations';
 import { useTranslation } from '../../../../i18n';
 import styles from './ExpertiseSection.module.css';
 
-const ExpertiseSection = () => {
+type ExpertiseSectionProps = {
+	readonly catalog?: ExpertiseItemCatalogPort;
+};
+
+const ExpertiseSection = ({
+	catalog = HomeExpertiseCatalog.instance,
+}: ExpertiseSectionProps) => {
 	const { t } = useTranslation();
 
 	return (
 		<Block
 			variant='inverted'
-			direction='left'
 			id='section-expertise'
-			className={styles['section__expertise']}
+			className={styles.section}
 		>
-			<BlockHeader className={styles['section__header']}>
+			<BlockHeader className={styles.header}>
 				<h2>{t.explore.expertiseTitle}</h2>
 			</BlockHeader>
-			<ul>
-				<div
-					className={`grid grid--cols-1 md:grid--cols-2 ${styles['expertise-grid']}`}
-				>
-					{t.explore.expertises.map((expertise) => {
-						const assetIndex = expertiseAssets.findIndex(
-							(entry) => entry.id === expertise.id,
-						);
-						const asset = expertiseAssets[assetIndex];
-						if (!asset) return null;
 
-						return (
-							<li key={expertise.id} className={styles['expertise-item']}>
-								<Media
-									className={styles['expertise-media']}
-									image={createExpertiseIcon(
-										assetIndex,
-										asset.iconVariant,
-										asset.iconForegroundColor,
-									)}
-									title={expertise.title}
-									titleStyles={styles['expertise-title']}
-								>
-									<p>{expertise.body}</p>
-								</Media>
-							</li>
-						);
-					})}
-				</div>
+			<ul
+				className={`grid grid--cols-1 md:grid--cols-2 lg:grid--cols-3 ${styles.grid}`}
+			>
+				{t.explore.expertises.map((expertise) => {
+					const catalogItem = catalog.getItem(expertise.id);
+
+					return (
+						<li key={expertise.id} className={styles.item}>
+							<Media
+								className={styles.media}
+								image={createExpertiseIcon(
+									catalogItem.icon,
+									expertiseVariants[expertise.id],
+								)}
+								title={expertise.title}
+								titleStyles={styles.title}
+							>
+								<p>{expertise.body}</p>
+							</Media>
+						</li>
+					);
+				})}
 			</ul>
+
+			<footer className={styles.footer}>
+				<ButtonLink
+					href={ROUTES.expertise}
+					layout='stretched'
+					variant='accent'
+					className={styles.cta}
+				>
+					{t.explore.expertiseCta}
+				</ButtonLink>
+			</footer>
 		</Block>
 	);
 };
 
-export default ExpertiseSection;
-
-type ExpertiseId =
-	| 'html-css'
-	| 'javascript'
-	| 'typescript'
-	| 'react'
-	| 'nodejs'
-	| 'mysql';
-
-type ExpertiseAsset = {
-	readonly id: ExpertiseId;
-	readonly iconVariant: SkinVariant;
-	readonly iconForegroundColor?: string;
+const expertiseVariants: Readonly<Record<HomeExpertiseId, SkinVariant>> = {
+	typescript: 'secondary',
+	react: 'success',
+	nodejs: 'info',
+	nextjs: 'light',
+	'spring-boot': 'success',
+	mysql: 'primary',
 };
 
-const javascriptBrandColor = '#F7DF1E' as const;
-const typescriptBrandColor = 'var(--color-primary)' as const;
-
-const expertiseAssets: readonly ExpertiseAsset[] = [
-	{ id: 'html-css', iconVariant: 'primary' },
-	{
-		id: 'javascript',
-		iconVariant: 'accent',
-		iconForegroundColor: javascriptBrandColor,
-	},
-	{
-		id: 'typescript',
-		iconVariant: 'secondary',
-		iconForegroundColor: typescriptBrandColor,
-	},
-	{ id: 'react', iconVariant: 'success' },
-	{ id: 'nodejs', iconVariant: 'info' },
-	{ id: 'mysql', iconVariant: 'primary' },
-] as const;
-
-const expertiseIconComponents: readonly ComponentType[] = [
-	SiHtml5,
-	SiJavascript,
-	SiTypescript,
-	SiReact,
-	SiNodedotjs,
-	SiMysql,
-] as const;
-
 function createExpertiseIcon(
-	index: number,
+	icon: Parameters<typeof Icon>[0]['icon'],
 	variant: SkinVariant,
-	foregroundColor?: string,
 ): ReactElement {
-	const IconComponent = expertiseIconComponents[index];
-	return (
-		<Icon
-			icon={IconComponent}
-			variant={variant}
-			foregroundColor={foregroundColor}
-		/>
-	);
+	return <Icon icon={icon} variant={variant} />;
 }
+
+export default ExpertiseSection;

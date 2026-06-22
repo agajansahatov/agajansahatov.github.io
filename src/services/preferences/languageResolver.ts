@@ -4,6 +4,7 @@ import {
 	DEFAULT_LANGUAGE_CODE,
 	GEOLOCATION_API_URL,
 	SUPPORTED_LANGUAGE_CODES,
+	TURKMENISTAN_COUNTRY_CODE,
 } from '../../config/preferences';
 import type { LanguageCode } from '../../types/preferences';
 import type { PreferencesStoragePort } from './localPreferencesStorage';
@@ -18,10 +19,19 @@ type CountryApiResponse = {
 
 export class CountryIsGeoCountryService implements GeoCountryServicePort {
 	static readonly endpoint = GEOLOCATION_API_URL;
+	static readonly timeoutMs = 2500;
 
 	async getCountryCode(): Promise<string | null> {
+		const controller = new AbortController();
+		const timeoutId = window.setTimeout(
+			() => controller.abort(),
+			CountryIsGeoCountryService.timeoutMs,
+		);
+
 		try {
-			const response = await fetch(CountryIsGeoCountryService.endpoint);
+			const response = await fetch(CountryIsGeoCountryService.endpoint, {
+				signal: controller.signal,
+			});
 			if (!response.ok) return null;
 
 			const data = (await response.json()) as CountryApiResponse;
@@ -30,6 +40,8 @@ export class CountryIsGeoCountryService implements GeoCountryServicePort {
 				: null;
 		} catch {
 			return null;
+		} finally {
+			window.clearTimeout(timeoutId);
 		}
 	}
 }
@@ -68,6 +80,16 @@ export class LanguageResolver {
 		}
 
 		return null;
+	}
+
+	async resolveInitialLanguage(): Promise<LanguageCode> {
+		const storedLanguage = this.resolveStoredLanguage();
+		if (storedLanguage) return storedLanguage;
+
+		const countryCode = await this.geoCountryService.getCountryCode();
+		if (countryCode === TURKMENISTAN_COUNTRY_CODE) return 'tk';
+
+		return this.resolveBrowserLanguage() ?? DEFAULT_LANGUAGE_CODE;
 	}
 
 	async resolveGeoLanguage(): Promise<LanguageCode> {

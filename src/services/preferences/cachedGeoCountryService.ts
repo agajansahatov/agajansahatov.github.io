@@ -1,4 +1,7 @@
-import { CountryIsGeoCountryService } from './languageResolver';
+import {
+	CountryIsGeoCountryService,
+	type GeoCountryServicePort,
+} from './languageResolver';
 
 let cachedCountryCode: string | null | undefined;
 let inflightRequest: Promise<string | null> | null = null;
@@ -24,4 +27,13 @@ export async function getCachedCountryCode(): Promise<string | null> {
 	}
 
 	return inflightRequest;
+}
+
+export class CachedGeoCountryService implements GeoCountryServicePort {
+	static readonly instance: GeoCountryServicePort =
+		new CachedGeoCountryService();
+
+	getCountryCode(): Promise<string | null> {
+		return getCachedCountryCode();
+	}
 }

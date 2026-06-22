@@ -1,0 +1,130 @@
+.page {
+	padding-top: 3rem;
+	padding-bottom: 5rem;
+}
+
+.header {
+	margin-bottom: 3rem;
+}
+
+.heading {
+	margin: 0;
+	padding-top: 1rem;
+}
+
+.tagline {
+	max-width: 82rem;
+	margin: 1.2rem auto 0;
+	color: var(--color-foreground);
+	font-size: 1.35rem;
+	line-height: 1.65;
+}
+
+.sections {
+	display: grid;
+	gap: 1.4rem;
+}
+
+.section {
+	min-width: 0;
+	border: 1px solid var(--color-background-strong);
+	border-radius: 18px;
+	background: var(--color-background-medium);
+	box-shadow: 0 0.7rem 2.2rem var(--color-shadow);
+	overflow: hidden;
+}
+
+.collapsible {
+	gap: 0;
+	padding: 0;
+}
+
+.collapsible-header {
+	padding: 1.4rem;
+	background: var(--color-background);
+}
+
+.collapsible-heading {
+	font-size: 1.55rem;
+	line-height: 1.25;
+}
+
+.chevron {
+	--size: 3.4rem;
+	width: var(--size);
+	height: var(--size);
+	min-width: var(--size);
+	font-size: 1.5rem;
+}
+
+.content {
+	padding: 1.5rem 1rem 1.8rem;
+	border-top: 1px solid var(--color-background-strong);
+}
+
+.full-stack-copy {
+	max-width: 92rem;
+	margin: 0 auto;
+	padding: 1rem;
+	color: var(--color-foreground);
+	font-size: 1.4rem;
+	line-height: 1.75;
+	text-align: left;
+}
+
+@media screen and (min-width: 300px) {
+	.collapsible-header {
+		padding: 1.6rem;
+	}
+
+	.collapsible-heading {
+		font-size: 1.8rem;
+	}
+
+	.content {
+		padding-inline: 1.4rem;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	.page {
+		padding-top: 5rem;
+		padding-bottom: 7rem;
+	}
+
+	.header {
+		margin-bottom: 4rem;
+	}
+
+	.tagline {
+		font-size: 1.65rem;
+		line-height: 1.7;
+	}
+
+	.sections {
+		gap: 1.8rem;
+	}
+
+	.collapsible-header {
+		padding: 2rem;
+	}
+
+	.collapsible-heading {
+		font-size: 2.2rem;
+	}
+
+	.content {
+		padding: 2rem 1.8rem 2.4rem;
+	}
+
+	.full-stack-copy {
+		padding: 1.5rem;
+		font-size: 1.65rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.content {
+		padding: 2.5rem 2.2rem 3rem;
+	}
+}

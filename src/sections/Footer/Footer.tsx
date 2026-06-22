@@ -36,7 +36,7 @@ const Footer = ({ hasTopBorder = true }: Props) => {
 								chevronIconClassName={
 									styles['footer__collapsible-chevron-icon']
 								}
-								isHiddenInitially={footerGroup.isHidden}
+								defaultExpanded={!footerGroup.isHidden}
 								alwaysExpandedOn={768}
 								chevronSkinVariant='light'
 							>

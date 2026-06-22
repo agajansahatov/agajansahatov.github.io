@@ -22,8 +22,7 @@ const FAQSection = () => {
 							header={faq.question}
 							headingClassName={styles.question}
 							chevronIconClassName={styles['chevron-icon']}
-							isHiddenInitially
-							alwaysExpandedOn={0}
+							headingLevel={3}
 							chevronSkinVariant='secondary'
 						>
 							<p className={styles.answer}>{faq.answer}</p>

@@ -1,3 +1,5 @@
+import { expertiseTranslations } from './expertiseTranslations';
+
 export const translations = {
 	tk: {
 		common: {
@@ -131,39 +133,9 @@ export const translations = {
 					body: '"Bir okda iki towşan awla", ýagny birnäçe dürli enjamlarda işleýän programmany has çalt alyň! Sebäbi men dürli-platforma çözgütli gurallary ulanyp bir kod binýadyndan web, iOS, we android platformalarda işleýän owadan programmalary düzýän. Bu usul, her platformanyň özüne mahsus bolan programmalar bilen deňe-deň hil we tizligi saklamak bilen bir wagtda kodlama wagtyny azaldýar. Şol sebäpli, maddy ýa-da wagt çäklendirmeleri bolan kompaniýalar üçin bu iň amatly çözgütdir.',
 				},
 			],
-			expertiseTitle: 'Işleýän tehnologiýalarym',
-			expertises: [
-				{
-					id: 'html-css',
-					title: 'HTML we CSS',
-					body: 'Elýeterli, duýgur web interfeýsleri üçin esasy tehnologiýalar: HTML gurluşy, CSS ýerleşişi.',
-				},
-				{
-					id: 'javascript',
-					title: 'JavaScript',
-					body: 'Iň meşhur programmirleme dili; web, mobil, real wagt ulgamlary we CLI gurallary üçin.',
-				},
-				{
-					id: 'typescript',
-					title: 'TypeScript',
-					body: 'JavaScript üstünde gurlýar, JS-e öwrilýär; güýçli tipleme bilen uly programmalar üçin.',
-				},
-				{
-					id: 'react',
-					title: 'React we React Native',
-					body: 'Meta JavaScript çarçuwalary: React web interfeýsleri, React Native mobil programmalar üçin.',
-				},
-				{
-					id: 'nodejs',
-					title: 'Node.js',
-					body: 'Açyk çeşmeli JS runtime; serwer skriptleri we API. Çalt, ölçeglanýan bäkend üçin.',
-				},
-				{
-					id: 'mysql',
-					title: 'MySQL',
-					body: 'Açyk çeşmeli relýasion DB; serwerde maglumat goşmak, okamak we işlemek üçin.',
-				},
-			],
+			expertiseTitle: expertiseTranslations.tk.home.title,
+			expertiseCta: expertiseTranslations.tk.home.cta,
+			expertises: expertiseTranslations.tk.home.items,
 			statsTitle: 'Ynam sizden netije bizden',
 			stats: [
 				{
@@ -259,7 +231,7 @@ export const translations = {
 					imageAlt: 'SADA admin dolandyryş şablonyň görnüş suraty',
 				},
 			],
-			principlesTitle: 'Meniň esasy prinsipleri',
+			principlesTitle: 'Meniň esasy prinsiplerim',
 			principles: [
 				{
 					title: 'Hil',
@@ -381,11 +353,7 @@ export const translations = {
 				],
 			},
 		},
-		expertise: {
-			title: 'Hünär',
-			tagline:
-				'Tehnologiýalar, çarçuwalar we hünärler boýunça maglumat ýakynda goşular.',
-		},
+		expertise: expertiseTranslations.tk.page,
 		resumeCv: {
 			title: 'Rezume we CV',
 			tagline: 'Hünärmen resminamalarymy PDF görnüşinde görüň we göçürip alyň.',
@@ -731,39 +699,9 @@ export const translations = {
 					body: "Get a multi-device app faster with a single strike, because I develop beautiful applications that run across web and mobile platforms from a shared codebase. This approach reduces development time while maintaining native-like performance and quality, that's why it is a perfect solution for companies that face budget or time constraints.",
 				},
 			],
-			expertiseTitle: 'Technologies I Work With',
-			expertises: [
-				{
-					id: 'html-css',
-					title: 'HTML & CSS',
-					body: 'Core tech for accessible, responsive web UIs. HTML builds structure; CSS handles layout.',
-				},
-				{
-					id: 'javascript',
-					title: 'JavaScript',
-					body: "The world's most popular language for web, mobile, real-time apps, CLI tools, and games.",
-				},
-				{
-					id: 'typescript',
-					title: 'TypeScript',
-					body: 'Built on JavaScript; compiles to JS. Strong typing for reliable web and mobile apps I build.',
-				},
-				{
-					id: 'react',
-					title: 'React & React Native',
-					body: 'Meta JavaScript frameworks: React for modern web UIs, React Native for cross-platform mobile.',
-				},
-				{
-					id: 'nodejs',
-					title: 'Node.js',
-					body: 'Open-source JS runtime for server scripts and CLIs. I use it for fast, scalable APIs and backends.',
-				},
-				{
-					id: 'mysql',
-					title: 'MySQL',
-					body: 'Open-source relational database for storing, reading, and processing data on the server.',
-				},
-			],
+			expertiseTitle: expertiseTranslations.en.home.title,
+			expertiseCta: expertiseTranslations.en.home.cta,
+			expertises: expertiseTranslations.en.home.items,
 			statsTitle: 'Why People Choose Me?',
 			stats: [
 				{
@@ -980,11 +918,7 @@ export const translations = {
 				],
 			},
 		},
-		expertise: {
-			title: 'Expertise',
-			tagline:
-				'Technologies, frameworks, and skills I work with will be listed here soon.',
-		},
+		expertise: expertiseTranslations.en.page,
 		resumeCv: {
 			title: 'Resume & CV',
 			tagline: 'View and download my professional documents in PDF format.',
@@ -1324,39 +1258,9 @@ export const translations = {
 					body: '借助共享代码库，我开发可在 Web 和移动平台运行的精美应用，让您更快获得多设备应用。这种方式在保持接近原生性能与质量的同时缩短开发周期，非常适合预算或时间有限的公司。',
 				},
 			],
-			expertiseTitle: '我使用的技术',
-			expertises: [
-				{
-					id: 'html-css',
-					title: 'HTML 和 CSS',
-					body: '用于构建可访问、响应式网页用户界面的基础技术，HTML定义页面结构，CSS控制多设备布局样式。',
-				},
-				{
-					id: 'javascript',
-					title: 'JavaScript',
-					body: '全球最流行的编程语言之一，广泛用于网页应用、移动应用、实时网络应用、命令行工具及游戏等多种场景。',
-				},
-				{
-					id: 'typescript',
-					title: 'TypeScript',
-					body: '基于JavaScript语言构建并在编译后转为JavaScript，以强类型提升可靠性，是我开发交互式网页和移动应用的首选技术。',
-				},
-				{
-					id: 'react',
-					title: 'React 和 React Native',
-					body: '由Meta公司开发的JavaScript前端框架技术，其中React专用于构建现代网页用户界面，React Native专用于跨平台移动应用程序开发。',
-				},
-				{
-					id: 'nodejs',
-					title: 'Node.js',
-					body: '免费开源的跨平台JavaScript运行时环境，可在浏览器之外运行服务端脚本，我主要用于构建快速且可扩展的后端服务与接口。',
-				},
-				{
-					id: 'mysql',
-					title: 'MySQL',
-					body: '开源关系型数据库管理系统，用于在服务器端添加、访问、处理和管理各类业务数据，保障应用数据持久化存储。',
-				},
-			],
+			expertiseTitle: expertiseTranslations.zh.home.title,
+			expertiseCta: expertiseTranslations.zh.home.cta,
+			expertises: expertiseTranslations.zh.home.items,
 			statsTitle: '为什么人们选择我？',
 			stats: [
 				{
@@ -1568,10 +1472,7 @@ export const translations = {
 				],
 			},
 		},
-		expertise: {
-			title: '专长',
-			tagline: '我使用的技术、框架与技能即将在此列出。',
-		},
+		expertise: expertiseTranslations.zh.page,
 		resumeCv: {
 			title: '简历与 CV',
 			tagline: '以 PDF 格式查看并下载我的专业文档。',
@@ -1900,39 +1801,9 @@ export const translations = {
 					body: 'Paylaşılan bir kod tabanından web ve mobil platformlarda çalışan güzel uygulamalar geliştirdiğim için çoklu cihaz uygulamanızı daha hızlı alırsınız. Bu yaklaşım, yerel benzeri performans ve kaliteyi korurken geliştirme süresini kısaltır; bütçe veya zaman kısıtı olan şirketler için mükemmel bir çözümdür.',
 				},
 			],
-			expertiseTitle: 'Kullandığım Teknolojiler',
-			expertises: [
-				{
-					id: 'html-css',
-					title: 'HTML ve CSS',
-					body: 'Erişilebilir, duyarlı web arayüzleri için temel teknolojiler; HTML yapı, CSS yerleşim sağlar.',
-				},
-				{
-					id: 'javascript',
-					title: 'JavaScript',
-					body: 'Dünyanın en popüler dili; web, mobil, gerçek zamanlı uygulamalar ve CLI araçları için.',
-				},
-				{
-					id: 'typescript',
-					title: 'TypeScript',
-					body: "JavaScript üzerine kurulur, JS'e derlenir; güçlü tipleme ile büyük uygulamalar için.",
-				},
-				{
-					id: 'react',
-					title: 'React ve React Native',
-					body: 'Meta JavaScript çerçeveleri: React web arayüzleri, React Native çapraz platform mobil.',
-				},
-				{
-					id: 'nodejs',
-					title: 'Node.js',
-					body: "Açık kaynak JS runtime; sunucu betikleri ve CLI. Hızlı, ölçeklenebilir API'ler için.",
-				},
-				{
-					id: 'mysql',
-					title: 'MySQL',
-					body: 'Açık kaynak ilişkisel veritabanı; sunucuda veri ekleme, erişme ve işleme için.',
-				},
-			],
+			expertiseTitle: expertiseTranslations.tr.home.title,
+			expertiseCta: expertiseTranslations.tr.home.cta,
+			expertises: expertiseTranslations.tr.home.items,
 			statsTitle: 'İnsanlar Neden Beni Seçiyor?',
 			stats: [
 				{
@@ -2149,11 +2020,7 @@ export const translations = {
 				],
 			},
 		},
-		expertise: {
-			title: 'Uzmanlık',
-			tagline:
-				'Çalıştığım teknolojiler, çerçeveler ve beceriler yakında burada listelenecek.',
-		},
+		expertise: expertiseTranslations.tr.page,
 		resumeCv: {
 			title: 'Özgeçmiş ve CV',
 			tagline:
@@ -2499,39 +2366,9 @@ export const translations = {
 					body: 'Благодаря общей кодовой базе я разрабатываю красивые приложения для веба и мобильных платформ, поэтому вы быстрее получаете мультиустройственное приложение. Такой подход сокращает время разработки, сохраняя производительность и качество близкие к нативным — идеально для компаний с ограниченным бюджетом или сроками.',
 				},
 			],
-			expertiseTitle: 'Технологии, с которыми я работаю',
-			expertises: [
-				{
-					id: 'html-css',
-					title: 'HTML и CSS',
-					body: 'Основа адаптивных веб-интерфейсов: HTML — структура, CSS — вёрстка.',
-				},
-				{
-					id: 'javascript',
-					title: 'JavaScript',
-					body: 'Популярнейший язык для веба, мобильных, real-time и CLI-приложений.',
-				},
-				{
-					id: 'typescript',
-					title: 'TypeScript',
-					body: 'Надстройка над JS; компиляция в JS. Типизация для приложений.',
-				},
-				{
-					id: 'react',
-					title: 'React и React Native',
-					body: 'Фреймворки Meta: React для веб-UI, React Native для мобильных apps.',
-				},
-				{
-					id: 'nodejs',
-					title: 'Node.js',
-					body: 'JS runtime вне браузера для быстрых масштабируемых backend и API.',
-				},
-				{
-					id: 'mysql',
-					title: 'MySQL',
-					body: 'Открытая СУБД: добавление, доступ и обработка данных на сервере.',
-				},
-			],
+			expertiseTitle: expertiseTranslations.ru.home.title,
+			expertiseCta: expertiseTranslations.ru.home.cta,
+			expertises: expertiseTranslations.ru.home.items,
 			statsTitle: 'Почему люди выбирают меня?',
 			stats: [
 				{
@@ -2748,11 +2585,7 @@ export const translations = {
 				],
 			},
 		},
-		expertise: {
-			title: 'Экспертиза',
-			tagline:
-				'Технологии, фреймворки и навыки, с которыми я работаю, скоро будут перечислены здесь.',
-		},
+		expertise: expertiseTranslations.ru.page,
 		resumeCv: {
 			title: 'Резюме и CV',
 			tagline:

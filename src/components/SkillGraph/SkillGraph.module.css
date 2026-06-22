@@ -1,0 +1,305 @@
+.graph {
+	--connector-color: var(--color-primary);
+	--connector-width: 2px;
+	width: 100%;
+	min-width: 0;
+	overflow: hidden;
+	padding: 0.4rem 0.1rem 1rem;
+}
+
+.group {
+	display: grid;
+	justify-items: center;
+	width: 100%;
+	min-width: 0;
+}
+
+.group__label {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	place-items: center;
+	min-height: 3.5rem;
+	max-width: min(100%, 24rem);
+	padding: 0.65rem 1rem;
+	border: 1px solid var(--color-primary);
+	border-radius: 10px;
+	background: var(--color-background);
+	color: var(--color-foreground-strong);
+	font-size: 1.1rem;
+	font-weight: 800;
+	line-height: 1.2;
+	text-align: center;
+	box-shadow: 0 0.35rem 1.1rem var(--color-shadow);
+}
+
+.group--root > .group__label {
+	border-color: var(--color-secondary);
+	background: var(--color-primary);
+	color: var(--color-primary-content);
+	font-size: 1.3rem;
+}
+
+.children {
+	position: relative;
+	display: grid;
+	width: 100%;
+	min-width: 0;
+	margin-top: 1.1rem;
+	padding-top: 1.1rem;
+	gap: 1.1rem;
+}
+
+.children::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 1.1rem;
+	border-left: var(--connector-width) solid var(--connector-color);
+	transform: translateX(-50%);
+}
+
+.children--items {
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(100%, 6.4rem), 1fr)
+	);
+	justify-items: center;
+	align-items: start;
+	padding: 1rem 0.6rem 0.7rem;
+	width: fit-content;
+	max-width: 100%;
+	justify-self: center;
+	border: var(--connector-width) solid var(--connector-color);
+	border-radius: 8px;
+	background: color-mix(
+		in srgb,
+		var(--color-background) 55%,
+		transparent
+	);
+}
+
+.children--groups {
+	grid-template-columns: minmax(0, 1fr);
+}
+
+.child {
+	position: relative;
+	display: grid;
+	justify-items: center;
+	width: 100%;
+	min-width: 0;
+}
+
+@media screen and (min-width: 480px) {
+	.graph {
+		padding-inline: 0.5rem;
+	}
+
+	.group__label {
+		font-size: 1.25rem;
+	}
+
+	.group--root > .group__label {
+		font-size: 1.5rem;
+	}
+
+	.children--items {
+		grid-template-columns: repeat(
+			auto-fit,
+			minmax(min(100%, 6.8rem), 1fr)
+		);
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.graph {
+		--root-label-width: 16rem;
+		--root-spine-left: calc(0.6rem + (var(--root-label-width) / 2));
+		padding: 0.5rem 0.8rem 1.5rem;
+	}
+
+	.group--root {
+		position: relative;
+		justify-items: stretch;
+	}
+
+	.group--root > .group__label {
+		justify-self: start;
+		width: var(--root-label-width);
+		min-width: var(--root-label-width);
+		margin-left: 0.6rem;
+	}
+
+	.group--root > .children--groups {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		width: auto;
+		gap: 2.2rem;
+		margin-top: 1.4rem;
+		margin-left: var(--root-spine-left);
+		padding: 0 0 0 2.8rem;
+	}
+
+	.group--root > .children--groups::before {
+		top: -1.4rem;
+		left: calc(-1 * var(--connector-width));
+		height: 1.4rem;
+		border-left-width: var(--connector-width);
+		transform: none;
+	}
+
+	.group--root > .children--groups > .child {
+		justify-items: stretch;
+	}
+
+	.group--root > .children--groups > .child::before,
+	.group--root > .children--groups > .child::after {
+		content: '';
+		position: absolute;
+		left: -2.8rem;
+		border-left: var(--connector-width) solid var(--connector-color);
+	}
+
+	.group--root > .children--groups > .child::before {
+		top: -2.2rem;
+		bottom: 50%;
+	}
+
+	.group--root > .children--groups > .child:first-child::before {
+		top: 0;
+	}
+
+	.group--root > .children--groups > .child:not(:last-child)::after {
+		top: 50%;
+		bottom: -2.2rem;
+	}
+
+	.group--root > .children--groups > .child:last-child::after {
+		display: none;
+	}
+
+	.group--root
+		> .children--groups
+		> .child
+		> .group
+		> .group__label::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: calc(-2.8rem - var(--connector-width));
+		width: calc(2.8rem + var(--connector-width));
+		border-top: var(--connector-width) solid var(--connector-color);
+		transform: translateY(-50%);
+	}
+
+	.group:not(.group--root) {
+		grid-template-columns: minmax(12rem, 18rem) minmax(0, 1fr);
+		align-items: center;
+		justify-items: stretch;
+		column-gap: 2.4rem;
+	}
+
+	.group:not(.group--root) > .group__label {
+		justify-self: start;
+		width: 100%;
+		max-width: 18rem;
+	}
+
+	.group:not(.group--root) > .group__label::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		right: calc(-2.4rem - var(--connector-width));
+		width: calc(2.4rem + var(--connector-width));
+		border-top: var(--connector-width) solid var(--connector-color);
+		transform: translateY(-50%);
+	}
+
+	.group:not(.group--root) > .children {
+		margin: 0;
+		padding-top: 0;
+	}
+
+	.group:not(.group--root) > .children::before {
+		display: none;
+	}
+
+	.group:not(.group--root) > .children--items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 0.65rem;
+		padding: 0.7rem;
+		width: max-content;
+		max-width: 100%;
+		justify-self: start;
+	}
+
+	.group:not(.group--root) > .children--items > .child {
+		width: auto;
+	}
+
+	.group:not(.group--root) > .children--groups {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: 1.4rem;
+		width: auto;
+		justify-self: stretch;
+	}
+
+	.group:not(.group--root) > .children--groups > .child::before,
+	.group:not(.group--root) > .children--groups > .child::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		border-left: var(--connector-width) solid var(--connector-color);
+	}
+
+	.group:not(.group--root) > .children--groups > .child::before {
+		top: -1.4rem;
+		bottom: 50%;
+	}
+
+	.group:not(.group--root)
+		> .children--groups
+		> .child:first-child::before {
+		top: 50%;
+	}
+
+	.group:not(.group--root)
+		> .children--groups
+		> .child:not(:last-child)::after {
+		top: 50%;
+		bottom: -1.4rem;
+	}
+
+	.group:not(.group--root)
+		> .children--groups
+		> .child:last-child::after {
+		display: none;
+	}
+
+	.group:not(.group--root) > .children--groups > .child {
+		padding-left: 2.4rem;
+	}
+
+	.group:not(.group--root)
+		> .children--groups
+		> .child
+		> .group
+		> .group__label::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 50%;
+		left: calc(-2.4rem - var(--connector-width));
+		width: calc(2.4rem + var(--connector-width));
+		border-top: var(--connector-width) solid var(--connector-color);
+		transform: translateY(-50%);
+	}
+}
