@@ -9,7 +9,7 @@
 		var(--color-accent),
 		var(--color-warning)
 	);
-	color: var(--color-foreground-strong);
+	color: #11043f;
 	font-family: inherit;
 	font-weight: 700;
 	line-height: 1;
