@@ -509,7 +509,7 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: '{portfolioName} barada',
+			badge: '{portfolioFirstName} barada',
 			title: 'Doly çarçuwaly web we mobil programmalary gurýan injener',
 			tagline:
 				'{portfolioName} — doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýär.',
@@ -1074,7 +1074,7 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'About {portfolioName}',
+			badge: 'About {portfolioFirstName}',
 			title: 'Software engineer building full-stack web and mobile apps',
 			tagline:
 				'{portfolioName} is a software engineer specializing in full-stack web and mobile development. He focuses on building practical, reliable systems that solve real-world problems.',
@@ -1617,7 +1617,7 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: '关于 {portfolioName}',
+			badge: '关于 {portfolioFirstName}',
 			title: '构建全栈 Web 与移动应用的软件工程师',
 			tagline:
 				'{portfolioName} 是一名专注于全栈 Web 与移动开发的软件工程师。他致力于构建解决真实问题的实用、可靠的系统。',
@@ -2180,7 +2180,7 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: '{portfolioName} Hakkında',
+			badge: '{portfolioFirstName} Hakkında',
 			title: 'Tam yığın web ve mobil uygulamalar geliştiren yazılım mühendisi',
 			tagline:
 				'{portfolioName}, tam yığın web ve mobil geliştirmede uzmanlaşmış bir yazılım mühendisidir. Gerçek dünyadaki sorunları çözen pratik ve güvenilir sistemler kurmaya odaklanır.',
@@ -2747,7 +2747,7 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'О {portfolioName}',
+			badge: 'О {portfolioFirstName}',
 			title:
 				'Инженер-программист, создающий full-stack web- и мобильные приложения',
 			tagline:

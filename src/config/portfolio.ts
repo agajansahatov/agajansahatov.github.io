@@ -11,6 +11,13 @@ export const PORTFOLIO = {
 		tr: 'Ağacan Sahatov',
 		ru: 'Агаджан Сахатов',
 	},
+	firstNames: {
+		en: 'Agajan',
+		tk: 'Agajan',
+		zh: '阿哥战',
+		tr: 'Ağacan',
+		ru: 'Агаджан',
+	},
 	country: 'Turkmenistan',
 	address: 'Mary, Turkmenistan',
 	phones: {
@@ -22,6 +29,10 @@ export const PORTFOLIO = {
 
 export function getPortfolioName(language: LanguageCode): string {
 	return PORTFOLIO.names[language];
+}
+
+export function getPortfolioFirstName(language: LanguageCode): string {
+	return PORTFOLIO.firstNames[language];
 }
 
 export function getPortfolioLegalName(): string {
