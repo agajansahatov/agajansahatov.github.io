@@ -14,7 +14,8 @@
 		"preview": "vite preview",
 		"typecheck": "tsc -b --noEmit",
 		"format": "prettier --write \"src/**/*.{ts,tsx}\"",
-		"check": "npm run lint && npm run typecheck && npm run build"
+		"validate:projects": "node scripts/validate-project-descriptions.mjs",
+		"check": "npm run lint && npm run typecheck && npm run validate:projects && npm run build"
 	},
 	"dependencies": {
 		"aos": "^2.3.4",
