@@ -39,7 +39,10 @@ export const useSeo = () => {
 		const suffix = routePath === '/' ? '' : routePath;
 
 		document.title = resolveDocumentTitle(routePath, t, portfolioName);
-		upsertMetaDescription(head, resolveMetaDescription(routePath, t));
+		upsertMetaDescription(
+			head,
+			resolveMetaDescription(routePath, t, portfolioName),
+		);
 
 		head.querySelectorAll(`[${MANAGED_ATTRIBUTE}]`).forEach((element) =>
 			element.remove(),

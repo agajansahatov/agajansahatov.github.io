@@ -16,18 +16,19 @@
 	z-index: 98;
 }
 
-.navbar :global(.logo__icon) {
-	height: calc(var(--navbar-height) * 0.8);
+.navbar .navbar__logo-icon {
 	width: calc(var(--navbar-height) * 0.8);
-	font-size: calc(var(--navbar-height) * 0.32);
+	height: calc(var(--navbar-height) * 0.8);
+	font-size: calc(var(--navbar-height) * 0.3);
+	flex-shrink: 0;
 }
 
-.navbar :global(.logo__title) {
+.navbar .navbar__logo-title {
 	font-size: 1.2rem;
 }
 
 @media screen and (min-width: 1024px) {
-	.navbar :global(.logo__title) {
+	.navbar .navbar__logo-title {
 		font-size: 1.35rem;
 	}
 }

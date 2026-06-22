@@ -1,3 +1,4 @@
+import { interpolate } from './interpolate';
 import type { TranslationDictionary } from './translations';
 
 const normalizePathname = (pathname: string): string => {
@@ -7,7 +8,7 @@ const normalizePathname = (pathname: string): string => {
 
 const DESCRIPTION_BY_PATH: Record<
 	string,
-	(translations: TranslationDictionary) => string
+	(translations: TranslationDictionary, portfolioName: string) => string
 > = {
 	'/experience': (translations) => translations.experience.tagline,
 	'/projects': (translations) => translations.projects.tagline,
@@ -15,13 +16,15 @@ const DESCRIPTION_BY_PATH: Record<
 	'/resume-cv': (translations) => translations.resumeCv.tagline,
 	'/pricing': (translations) => translations.pricing.tagline,
 	'/contact': (translations) => translations.contact.formSubtitle,
-	'/about': (translations) => translations.about.tagline,
+	'/about': (translations, portfolioName) =>
+		interpolate(translations.about.tagline, { portfolioName }),
 	'/settings': (translations) => translations.settings.subtitle,
 };
 
 export const resolveMetaDescription = (
 	pathname: string,
 	translations: TranslationDictionary,
+	portfolioName: string,
 ): string => {
 	const normalizedPath = normalizePathname(pathname);
 
@@ -31,6 +34,6 @@ export const resolveMetaDescription = (
 
 	const resolveDescription = DESCRIPTION_BY_PATH[normalizedPath];
 	return resolveDescription
-		? resolveDescription(translations)
+		? resolveDescription(translations, portfolioName)
 		: translations.explore.heroTagline;
 };

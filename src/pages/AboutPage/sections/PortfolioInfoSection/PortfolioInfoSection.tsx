@@ -93,7 +93,7 @@ const PortfolioInfoSection = () => {
 						<li className={styles.actionRow}>
 							<SocialLinks
 								variant='inverted'
-								note={t.common.socialNote}
+								note={interpolate(t.about.socialNote)}
 							/>
 						</li>
 					</ul>

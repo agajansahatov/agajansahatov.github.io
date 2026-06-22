@@ -15,7 +15,7 @@ const PAGE_TITLE_BY_PATH: Record<
 	'/resume-cv': (translations) => translations.resumeCv.title,
 	'/pricing': (translations) => translations.pricing.title,
 	'/contact': (translations) => translations.contact.title,
-	'/about': (translations) => translations.about.badge,
+	'/about': (translations) => translations.nav.items.about,
 	'/settings': (translations) => translations.settings.title,
 };
 

@@ -1,3 +1,4 @@
+import Avatar from '../../../../components/Avatar';
 import Block from '../../../../components/Block';
 import BlockHeader from '../../../../components/Block/BlockHeader';
 import { useTranslation } from '../../../../i18n';
@@ -12,8 +13,17 @@ const IntroSection = () => {
 			containerClassName={`grid grid--cols-1 lg:grid--cols-2 ${styles.hero__grid}`}
 		>
 			<BlockHeader className={styles.hero__content}>
-				<span className={styles.badge}>{t.about.badge}</span>
-				<h1 className='word-break'>{interpolate(t.about.title)}</h1>
+				<span className={styles.badge}>
+					<Avatar
+						size='sm'
+						className={styles.badge__avatar}
+						isDecorative
+					/>
+					<span className={styles.badge__text}>
+						{interpolate(t.about.badge)}
+					</span>
+				</span>
+				<h1 className={styles.hero__title}>{interpolate(t.about.title)}</h1>
 				<p className={`${styles.hero__tagline} word-break`}>
 					{interpolate(t.about.tagline)}
 				</p>

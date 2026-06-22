@@ -509,22 +509,22 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'Men barada',
+			badge: '{portfolioName} barada',
 			title: 'Doly çarçuwaly web we mobil programmalary gurýan injener',
 			tagline:
-				'Men {portfolioName}, doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Men hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýärin.',
+				'{portfolioName} — doly çarçuwaly web we mobil programma öndürmäge ýöriteleşen programma injeneri. Hakyky meseleleri çözýän amaly we ygtybarly ulgamlary gurmaga ünsi jemleýär.',
 			imageAlt: 'Hünärmen programmist {portfolioName}yň suraty',
-			missionTitle: 'Maksadym',
+			missionTitle: 'Maksady',
 			missionBody:
 				'Hakyky meseleleri çözýän, ony ulanýan adamlara we kärhanalara hakyky bähbit getirýän ygtybarly we amaly programma üpjünçiligini gurmak.',
-			visionTitle: 'Ünsüm',
+			visionTitle: 'Ünsi',
 			visionBody:
-				'web, mobil we bäkend ugurlarynda doly çarçuwaly injener hökmünde ösmegi dowam etdirip, arassa arhitektura we ajaýyp ulanyjy tejribesi bilen öndürijilige taýýar ulgamlary hödürlemek.',
-			principlesTitle: 'Nähili işleýärin',
+				'Web, mobil we bäkend ugurlarynda doly çarçuwaly injener hökmünde ösmegi dowam etdirip, arassa arhitektura we ajaýyp ulanyjy tejribesi bilen öndürijilige taýýar ulgamlary hödürlemek.',
+			principlesTitle: 'Nähili işleýär',
 			principles: [
 				{
 					title: 'Hil',
-					body: 'Hakyky ulanyş üçin gurlan, ýokary hilli we öndürijilige taýýar işleri hödürleýärin.',
+					body: 'Hakyky ulanyş üçin gurlan, ýokary hilli we öndürijilige taýýar işleri hödürleýär.',
 				},
 				{
 					title: 'Ussatlyk',
@@ -532,11 +532,11 @@ export const translations = {
 				},
 				{
 					title: 'Hyzmatdaşlyk',
-					body: '4 dilde gepleýärin, halkara toparlar bilen işleýärin.',
+					body: '4 dilde gepleýär we halkara toparlar bilen işleýär.',
 				},
 				{
 					title: 'Hakyky täsir',
-					body: 'Hakyky meseleleri çözýän, kärhanalar üçin peýdaly programma.',
+					body: 'Hakyky meseleleri çözýän, kärhanalar üçin peýdaly programma gurýar.',
 				},
 			],
 			portfolioTitle: 'Şahsy maglumatlar',
@@ -551,11 +551,13 @@ export const translations = {
 			focusValue:
 				'Doly çarçuwaly web we mobil programma öndürmek, bäkend API-ler, maglumat binýady dizaýny we ulgam arhitekturasy.',
 			footerNote:
-				'Häzirki wagtda Nançaň uniwersitetinde programma injenerligi boýunça magistr derejesini alýaryn we şol bir wagtda öndürijilige taýýar programma üpjünçiligini gurýaryn.',
+				'Häzirki wagtda Nançaň uniwersitetinde programma injenerligi boýunça magistr derejesini alýar we şol bir wagtda öndürijilige taýýar programma üpjünçiligini gurýar.',
 			contactTitle: 'Habarlaşmak',
 			contactSubtitle:
 				'Erkin iş, hyzmatdaşlyk ýa-da diňe tanyşmak üçin habarlaşyň.',
 			phoneLabel: 'Telefon (TM, CN)',
+			socialNote:
+				'Näme gurýandygy barada täzelikler üçin ony sosial torlarda yzarlap bilersiňiz.',
 		},
 		errors: {
 			genericTitle: 'Näsazlyk boldy',
@@ -1072,23 +1074,23 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'About me',
-			title: 'Software engineer building full-stack web & mobile apps',
+			badge: 'About {portfolioName}',
+			title: 'Software engineer building full-stack web and mobile apps',
 			tagline:
-				'I am {portfolioName}, a software engineer specializing in full-stack web and mobile development. I focus on building practical, reliable systems that solve real-world problems.',
+				'{portfolioName} is a software engineer specializing in full-stack web and mobile development. He focuses on building practical, reliable systems that solve real-world problems.',
 			imageAlt:
 				'Photo of {portfolioName} who is a professional software engineer',
-			missionTitle: 'My mission',
+			missionTitle: 'His mission',
 			missionBody:
 				'Build reliable, practical software that solves real-world problems and creates real value for the people and businesses who use it.',
-			visionTitle: 'My focus',
+			visionTitle: 'His focus',
 			visionBody:
-				'Keep growing as a full-stack engineer across web, mobile, and backend, shipping production systems with clean architecture and a great user experience.',
-			principlesTitle: 'How I work',
+				'He continues to grow as a full-stack engineer across web, mobile, and backend, shipping production systems with clean architecture and a great user experience.',
+			principlesTitle: 'How he works',
 			principles: [
 				{
 					title: 'Quality',
-					body: 'I ship polished, production-ready work built for real-world use.',
+					body: 'He ships polished, production-ready work built for real-world use.',
 				},
 				{
 					title: 'Craftsmanship',
@@ -1107,18 +1109,20 @@ export const translations = {
 			portfolioSubtitle: 'Background and contact details for {portfolioName}.',
 			detailsTitle: 'Key details',
 			detailsHint:
-				'For collaboration, freelance work, or just to say hi, email is the best way to reach me.',
+				'For collaboration, freelance work, or just to say hi, email is the best way to reach him.',
 			nameLabel: 'Name',
 			addressLabel: 'Location',
 			focusLabel: 'Main focus',
 			focusValue:
 				'Full-stack web and mobile development, backend APIs, database design, and system architecture.',
 			footerNote:
-				"Currently pursuing a Master's in Software Engineering at Nanchang University while building production software.",
+				"He is currently pursuing a Master's in Software Engineering at Nanchang University while building production software.",
 			contactTitle: 'Get in touch',
 			contactSubtitle:
 				'Reach out about freelance work, collaboration, or just to connect.',
 			phoneLabel: 'Phone (TM, CN)',
+			socialNote:
+				'Follow him on social media for updates on what he is building.',
 		},
 		errors: {
 			genericTitle: 'Something went wrong',
@@ -1613,22 +1617,22 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: '关于我',
+			badge: '关于 {portfolioName}',
 			title: '构建全栈 Web 与移动应用的软件工程师',
 			tagline:
-				'我是 {portfolioName}，一名专注于全栈 Web 与移动开发的软件工程师。我致力于构建解决真实问题的实用、可靠的系统。',
+				'{portfolioName} 是一名专注于全栈 Web 与移动开发的软件工程师。他致力于构建解决真实问题的实用、可靠的系统。',
 			imageAlt: '专业软件工程师 {portfolioName} 的照片',
-			missionTitle: '我的使命',
+			missionTitle: '他的使命',
 			missionBody:
 				'构建可靠、实用的软件，解决真实问题，为使用它的人和企业创造真正的价值。',
-			visionTitle: '我的方向',
+			visionTitle: '他的方向',
 			visionBody:
 				'在 Web、移动与后端持续成长为全栈工程师，以清晰的架构和出色的用户体验交付可投入生产的系统。',
-			principlesTitle: '我的工作方式',
+			principlesTitle: '他的工作方式',
 			principles: [
 				{
 					title: '质量',
-					body: '我交付面向真实使用、精致且可投入生产的成果。',
+					body: '他交付面向真实使用、精致且可投入生产的成果。',
 				},
 				{
 					title: '匠心',
@@ -1647,16 +1651,17 @@ export const translations = {
 			portfolioSubtitle: '{portfolioName} 的背景与联系方式。',
 			detailsTitle: '关键信息',
 			detailsHint:
-				'关于合作、自由职业，或只是打个招呼，邮箱是联系我的最佳方式。',
+				'关于合作、自由职业，或只是打个招呼，邮箱是联系他的最佳方式。',
 			nameLabel: '姓名',
 			addressLabel: '所在地',
 			focusLabel: '主要方向',
 			focusValue: '全栈 Web 与移动开发、后端 API、数据库设计与系统架构。',
 			footerNote:
-				'目前在南昌大学攻读软件工程硕士学位，同时构建可投入生产的软件。',
+				'他目前在南昌大学攻读软件工程硕士学位，同时构建可投入生产的软件。',
 			contactTitle: '联系我',
-			contactSubtitle: '关于自由职业、合作，或只是想认识，欢迎与我联系。',
+			contactSubtitle: '关于自由职业、合作，或只是想认识，欢迎与他联系。',
 			phoneLabel: '电话（TM、CN）',
+			socialNote: '关注他的社交账号，了解他正在构建的内容。',
 		},
 		errors: {
 			genericTitle: '出现问题',
@@ -2175,22 +2180,22 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'Hakkımda',
+			badge: '{portfolioName} Hakkında',
 			title: 'Tam yığın web ve mobil uygulamalar geliştiren yazılım mühendisi',
 			tagline:
-				'Ben {portfolioName}, tam yığın web ve mobil geliştirmede uzmanlaşmış bir yazılım mühendisiyim. Gerçek dünyadaki sorunları çözen pratik ve güvenilir sistemler kurmaya odaklanıyorum.',
+				'{portfolioName}, tam yığın web ve mobil geliştirmede uzmanlaşmış bir yazılım mühendisidir. Gerçek dünyadaki sorunları çözen pratik ve güvenilir sistemler kurmaya odaklanır.',
 			imageAlt: 'Profesyonel yazılım mühendisi {portfolioName}’un fotoğrafı',
-			missionTitle: 'Misyonum',
+			missionTitle: 'Misyonu',
 			missionBody:
 				'Gerçek dünyadaki sorunları çözen, onu kullanan insanlara ve işletmelere gerçek değer katan güvenilir ve pratik yazılımlar geliştirmek.',
-			visionTitle: 'Odağım',
+			visionTitle: 'Odağı',
 			visionBody:
 				'Web, mobil ve backend alanlarında tam yığın bir mühendis olarak büyümeyi sürdürmek; temiz mimari ve harika bir kullanıcı deneyimiyle üretime hazır sistemler sunmak.',
-			principlesTitle: 'Nasıl çalışırım',
+			principlesTitle: 'Nasıl çalışır',
 			principles: [
 				{
 					title: 'Kalite',
-					body: 'Gerçek kullanım için tasarlanmış, özenli ve üretime hazır işler sunarım.',
+					body: 'Gerçek kullanım için tasarlanmış, özenli ve üretime hazır işler sunar.',
 				},
 				{
 					title: 'Ustalık',
@@ -2198,11 +2203,11 @@ export const translations = {
 				},
 				{
 					title: 'İş birliği',
-					body: 'Dört dilde çalışır, uluslararası ekiplerle uyumlu iş birliği yaparım.',
+					body: 'Dört dilde çalışır ve uluslararası ekiplerle uyumlu iş birliği yapar.',
 				},
 				{
 					title: 'Gerçek etki',
-					body: 'Gerçek işletmeler için pratik yazılımlar geliştiririm.',
+					body: 'Gerçek işletmeler için pratik yazılımlar geliştirir.',
 				},
 			],
 			portfolioTitle: 'Kişisel bilgiler',
@@ -2217,11 +2222,13 @@ export const translations = {
 			focusValue:
 				'Tam yığın web ve mobil geliştirme, backend API’ler, veritabanı tasarımı ve sistem mimarisi.',
 			footerNote:
-				'Şu anda Nanchang Üniversitesi’nde Yazılım Mühendisliği yüksek lisansı yaparken üretime hazır yazılımlar geliştiriyorum.',
+				'Şu anda Nanchang Üniversitesi’nde Yazılım Mühendisliği yüksek lisansı yaparken üretime hazır yazılımlar geliştiriyor.',
 			contactTitle: 'İletişim',
 			contactSubtitle:
-				'Serbest çalışma, iş birliği ya da sadece tanışmak için bana yazın.',
+				'Serbest çalışma, iş birliği ya da sadece tanışmak için iletişime geçin.',
 			phoneLabel: 'Telefon (TM, CN)',
+			socialNote:
+				'Neler geliştirdiğini takip etmek için onu sosyal medyada izleyebilirsiniz.',
 		},
 		errors: {
 			genericTitle: 'Bir şeyler ters gitti',
@@ -2740,20 +2747,20 @@ export const translations = {
 			],
 		},
 		about: {
-			badge: 'Обо мне',
+			badge: 'О {portfolioName}',
 			title:
 				'Инженер-программист, создающий full-stack web- и мобильные приложения',
 			tagline:
-				'Я {portfolioName}, инженер-программист, специализирующийся на full-stack web- и мобильной разработке. Я сосредоточен на создании практичных и надёжных систем, которые решают реальные задачи.',
+				'{portfolioName} — инженер-программист, специализирующийся на full-stack web- и мобильной разработке. Он сосредоточен на создании практичных и надёжных систем, которые решают реальные задачи.',
 			imageAlt:
 				'Фотография {portfolioName}, профессионального инженера-программиста',
-			missionTitle: 'Моя миссия',
+			missionTitle: 'Его миссия',
 			missionBody:
 				'Создавать надёжное и практичное программное обеспечение, которое решает реальные задачи и приносит реальную пользу людям и компаниям, которые им пользуются.',
-			visionTitle: 'Мой фокус',
+			visionTitle: 'Его фокус',
 			visionBody:
 				'Продолжать расти как full-stack инженер в web, mobile и backend, выпуская готовые к продакшену системы с чистой архитектурой и отличным пользовательским опытом.',
-			principlesTitle: 'Как я работаю',
+			principlesTitle: 'Как он работает',
 			principles: [
 				{
 					title: 'Качество',
@@ -2776,18 +2783,20 @@ export const translations = {
 			portfolioSubtitle: 'Сведения и контактная информация об {portfolioName}.',
 			detailsTitle: 'Ключевая информация',
 			detailsHint:
-				'По вопросам сотрудничества, фриланса или просто чтобы поздороваться, лучший способ связи - email.',
+				'По вопросам сотрудничества, фриланса или просто чтобы поздороваться, лучший способ связи — email.',
 			nameLabel: 'Имя',
 			addressLabel: 'Местоположение',
 			focusLabel: 'Основное направление',
 			focusValue:
 				'Full-stack web- и мобильная разработка, backend-API, проектирование баз данных и системная архитектура.',
 			footerNote:
-				'Сейчас получаю степень магистра по программной инженерии в Университете Наньчана и параллельно создаю готовое к продакшену ПО.',
+				'Сейчас он получает степень магистра по программной инженерии в Университете Наньчана и параллельно создаёт готовое к продакшену ПО.',
 			contactTitle: 'Связаться',
 			contactSubtitle:
-				'Напишите мне по вопросам фриланса, сотрудничества или просто чтобы познакомиться.',
+				'Напишите по вопросам фриланса, сотрудничества или просто чтобы познакомиться.',
 			phoneLabel: 'Телефон (TM, CN)',
+			socialNote:
+				'Подписывайтесь на него в соцсетях, чтобы следить за тем, что он создаёт.',
 		},
 		errors: {
 			genericTitle: 'Что-то пошло не так',

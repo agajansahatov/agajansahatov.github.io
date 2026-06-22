@@ -18,8 +18,11 @@
 	margin-bottom: 0;
 }
 
-.hero__content h1 {
+.hero__title {
 	margin-bottom: 1.2rem;
+	overflow-wrap: break-word;
+	word-break: normal;
+	hyphens: none;
 }
 
 .hero__tagline {
@@ -72,8 +75,10 @@
 }
 
 .badge {
-	display: inline-block;
-	padding: 1.5rem 2.5rem;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.875rem 1.5rem 0.875rem 0;
 	border-radius: 30px;
 	background: var(--color-background-medium);
 	color: var(--color-foreground);
@@ -81,4 +86,15 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 1.2rem;
+}
+
+.badge__avatar {
+	flex-shrink: 0;
+	width: 4.5rem;
+	height: 4.5rem;
+	font-size: 1.7rem;
+}
+
+.badge__text {
+	line-height: 1.2;
 }

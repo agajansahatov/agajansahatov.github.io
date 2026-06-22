@@ -56,7 +56,12 @@ const Navbar = () => {
 	return (
 		<>
 			<nav className={styles.navbar}>
-				<Logo href='/' shouldHideTitleOnSmallScreens />
+				<Logo
+					href='/'
+					shouldHideTitleOnSmallScreens
+					iconClassName={styles['navbar__logo-icon']}
+					titleClassName={styles['navbar__logo-title']}
+				/>
 
 				<ul className={styles.navbar__items}>
 					{NAV_ITEMS.map((item) => (
