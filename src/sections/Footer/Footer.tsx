@@ -1,4 +1,4 @@
-import footerLogo from '../../assets/agajansahatov_xs.png';
+import Avatar from '../../components/Avatar';
 import Collapsible from '../../components/Collapsible';
 import Link from '../../components/Link';
 import Block from '../../components/Block';
@@ -60,9 +60,9 @@ const Footer = ({ hasTopBorder = true }: Props) => {
 				<article
 					className={`${styles['footer__item']} ${styles['footer__brand']}`}
 				>
-					<img
-						src={footerLogo}
-						alt={t.components.footerLogoAlt}
+					<Avatar
+						size='lg'
+						aria-label={t.components.footerLogoAlt}
 						className={styles['footer__logo']}
 					/>
 					<p className={styles['footer__copyright']}>

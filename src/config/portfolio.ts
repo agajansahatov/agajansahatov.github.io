@@ -32,6 +32,15 @@ export function getPortfolioLegalNameSlug(): string {
 	return PORTFOLIO.legalName.replace(/\s+/g, '-');
 }
 
+export function getPortfolioInitials(): string {
+	return PORTFOLIO.legalName
+		.trim()
+		.split(/\s+/)
+		.slice(0, 2)
+		.map((part) => part.charAt(0).toUpperCase())
+		.join('');
+}
+
 export function getPortfolioPhone(region: PortfolioPhoneRegion): string {
 	return PORTFOLIO.phones[region];
 }

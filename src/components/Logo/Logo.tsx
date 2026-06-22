@@ -1,4 +1,5 @@
 import { useTranslation } from '../../i18n';
+import Avatar from '../Avatar';
 import Link from '../Link';
 import styles from './Logo.module.css';
 
@@ -28,10 +29,10 @@ const Logo = ({
 			href={href}
 			onClick={onClick}
 		>
-			<img
+			<Avatar
 				className={`${styles.logo__icon} ${iconClassName || ''}`}
-				src='/favicon-128x128.png'
-				alt={t.components.logoAlt}
+				size='md'
+				aria-label={t.components.logoAlt}
 			/>
 			<span
 				className={`${styles.logo__title} ${
