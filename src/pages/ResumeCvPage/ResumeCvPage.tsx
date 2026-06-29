@@ -3,7 +3,7 @@ import { LuFileText, LuGraduationCap } from 'react-icons/lu';
 import Block from '../../components/Block';
 import BlockHeader from '../../components/Block/BlockHeader';
 import DocumentActionCard from '../../components/DocumentActionCard';
-import { DOCUMENTS } from '../../config/documents';
+import { DOCUMENTS, resolveResumeDocument } from '../../config/documents';
 import { useTranslation } from '../../i18n';
 import { DocumentDownloadService } from '../../services/documents/documentDownloadService';
 import type { DocumentDownloadServicePort } from '../../services/documents/documentDownloadServicePort';
@@ -17,12 +17,12 @@ type ResumeCvPageProps = {
 const ResumeCvPage = ({
 	downloadService = DocumentDownloadService.instance,
 }: ResumeCvPageProps) => {
-	const { t } = useTranslation();
+	const { language, t } = useTranslation();
 
 	const handleResumeDownload = useCallback(() => {
-		const { publicPath, downloadFileName } = DOCUMENTS.resume;
+		const { publicPath, downloadFileName } = resolveResumeDocument(language);
 		downloadService.openAndDownload(publicPath, downloadFileName);
-	}, [downloadService]);
+	}, [downloadService, language]);
 
 	const cards = useMemo(
 		() => [
