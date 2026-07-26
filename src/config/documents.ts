@@ -39,6 +39,7 @@ const RESUME_PUBLIC_PATHS_BY_LANGUAGE: Partial<Record<LanguageCode, string>> = {
 	tr: '/resume/Agajan_Sahatov_Ozgecmis.pdf',
 	zh: '/resume/AGAJAN_SAHATOV_JIANLI.pdf',
 	ru: '/resume/Agajan_Sahatov_Rezyume.pdf',
+	tk: '/resume/Agajan_Sahatov_Terjimehal.pdf',
 };
 
 export function resolveResumeDocument(language: LanguageCode) {
