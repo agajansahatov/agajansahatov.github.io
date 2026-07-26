@@ -1315,7 +1315,7 @@ export const translations = {
 				home: '首页',
 				experience: '经验',
 				projects: '项目',
-				resumeCv: '简历/CV',
+				resumeCv: '个人简历/学术简历',
 				github: 'GitHub',
 				expertise: '专长',
 				about: '关于',
@@ -1665,15 +1665,16 @@ export const translations = {
 		},
 		expertise: expertiseTranslations.zh.page,
 		resumeCv: {
-			title: '简历与 CV',
+			title: '个人简历与学术简历',
 			tagline: '以 PDF 格式查看并下载我的专业文档。',
 			resume: {
-				title: '简历',
-				description: '打开并下载包含工作经验、技能与教育背景的最新简历。',
+				title: '个人简历',
+				description:
+					'打开并下载包含工作经验、技能与教育背景的最新个人简历。',
 			},
 			cv: {
-				title: 'CV',
-				description: '打开并下载包含学术与职业详细信息的 CV。',
+				title: '学术简历',
+				description: '打开并下载包含学术与职业详细信息的学术简历。',
 				unavailable: '目前不可用。',
 			},
 		},
