@@ -977,10 +977,10 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: 'Front-end Intern',
-						organization: 'Smart Walnut Technology',
+						organization: 'Nanchang Smart Walnut Technology Co., Ltd.',
 						location: 'Nanchang, Jiangxi, China',
 						description:
-							'Worked on-site as a front-end intern at Smart Walnut Technology in Nanchang, Jiangxi, China. Built user interfaces with TypeScript, React, Ant Design, and Git.',
+							'Worked on-site as a front-end intern at Nanchang Smart Walnut Technology Co., Ltd. (Nov 15 – Dec 31, 2024). Developed and maintained front-end web applications with React 18, TypeScript, Vite, React Router, Jotai, Less, and Ant Design; assisted with Relation Graph and Force Graph visualizations; participated in code reviews.',
 					},
 					{
 						id: 'zhilin',
@@ -1597,10 +1597,10 @@ export const translations = {
 					{
 						id: 'smart-walnut',
 						role: '前端实习生',
-						organization: '智慧核桃科技',
+						organization: '南昌市小核桃科技有限公司',
 						location: '中国江西南昌',
 						description:
-							'在江西南昌的智慧核桃科技公司现场担任前端实习生。使用 TypeScript、React、Ant Design 和 Git 等技术开发用户界面。',
+							'在江西南昌的南昌市小核桃科技有限公司现场担任前端开发实习生（2024年11月15日–12月31日）。使用 React 18、TypeScript、Vite、React Router、Jotai、Less 和 Ant Design 开发与维护前端 Web 应用，并参与关系图、力导向图等数据可视化与代码评审。',
 					},
 					{
 						id: 'zhilin',

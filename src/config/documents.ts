@@ -10,7 +10,7 @@ export type DocumentDefinition = {
 
 const portfolioNameSlug = getPortfolioLegalNameSlug();
 
-const DEFAULT_RESUME_PUBLIC_PATH = '/Resume.pdf';
+const DEFAULT_RESUME_PUBLIC_PATH = '/resume/Agajan_Sahatov_Resume.pdf';
 
 function getDownloadFileNameFromPublicPath(publicPath: string): string {
 	const fileName = publicPath.split('/').pop();
@@ -35,7 +35,7 @@ export const DOCUMENTS = {
 } as const satisfies Record<string, DocumentDefinition>;
 
 const RESUME_PUBLIC_PATHS_BY_LANGUAGE: Partial<Record<LanguageCode, string>> = {
-	en: '/resume/Agajan_Sahatov_Resume.pdf',
+	en: DEFAULT_RESUME_PUBLIC_PATH,
 	tr: '/resume/Agajan_Sahatov_Ozgecmis.pdf',
 	zh: '/resume/AGAJAN_SAHATOV_GeRenJianLi.pdf',
 	ru: '/resume/Agajan_Sahatov_Rezyume.pdf',
